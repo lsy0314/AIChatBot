@@ -7,3 +7,4 @@ artifical intelligent chatbot using deep-learning techolnology
 # Reference
 https://danbee.ai/landing.html 
 https://calyfactory.github.io/api.ai-chatbot
+https://www.slideshare.net/KimSungdong1/20170227-72644192 
