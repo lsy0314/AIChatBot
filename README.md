@@ -6,7 +6,7 @@ artifical intelligent chatbot using deep-learning techolnology
 
 
 # Motivation
-음식 주문하려고 전화를 할때 많은 주문으로 인해 전화주문이 지연될 수 있음
+When calling to order food, many orders can delay the call.
 
 # video
 <img src=https://github.com/Limsuyoun/DeepLearningChatBot/blob/master/image/demo..JPG border=0 width=350 height=250> </img>
