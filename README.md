@@ -4,7 +4,7 @@ artifical intelligent chatbot using deep-learning techolnology
 # Requirement
 
 
-# Demo
+# Design
 <img src=https://github.com/Limsuyoun/DeepLearningChatBot/blob/master/image/dd.JPG border=0 width=350 height=250> </img>
 
 
