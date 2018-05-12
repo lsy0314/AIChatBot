@@ -1,14 +1,14 @@
 # DeepLearningChatBot
 artifical intelligent chatbot using deep-learning techolnology
 
-# design
-<img src=https://github.com/Limsuyoun/DeepLearningChatBot/blob/master/image/design.JPG border=0 width=350 height=250> </img>
+# Design
+<img src=https://github.com/Limsuyoun/DeepLearningChatBot/blob/master/image/dd.JPG border=0 width=350 height=250> </img>
 
 
 # Motivation
 When calling to order food, many orders can delay the call.
 
-# video
+# Video
 <img src=https://github.com/Limsuyoun/DeepLearningChatBot/blob/master/image/demo..JPG border=0 width=350 height=250> </img>
 
 # Reference
