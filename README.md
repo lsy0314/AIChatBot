@@ -2,7 +2,7 @@
 artifical intelligent chatbot using deep-learning techolnology.
 
 # Motivation
-Users talk to chatbots when they are bored. Through it, it is going to create chatbot that helps users relax.
+Users talk to chatbots when they are bored. Through it, it is going to create chatbot that helps users relax. It also ensures that there are no questions that can not be answered.
 
 # Design
 <img src=https://github.com/Limsuyoun/DeepLearningChatBot/blob/master/image/dd.JPG border=0 width=350 height=250> </img>
