@@ -1,15 +1,11 @@
 # DeepLearningChatBot
-artifical intelligent chatbot using deep-learning techolnology
+artifical intelligent chatbot using deep-learning techolnology.
 
-# Requirement
-
+# Motivation
+Users talk to chatbots when they are bored. Through it, it is going to create chatbot that helps users relax.
 
 # Design
 <img src=https://github.com/Limsuyoun/DeepLearningChatBot/blob/master/image/dd.JPG border=0 width=350 height=250> </img>
-
-
-# Motivation
-When calling to order food, many orders can delay the call.
 
 # Video
 <img src=https://github.com/Limsuyoun/DeepLearningChatBot/blob/master/image/demo..JPG border=0 width=350 height=250> </img>
