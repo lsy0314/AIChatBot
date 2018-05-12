@@ -26,7 +26,5 @@ https://korchris.github.io/2017/06/29/FB_chatbot/
 https://www.selvasai.com/chatbot-solution.php 
 
 https://partner.talk.naver.com/
-
 https://blog.kovalevskyi.com/rnn-based-chatbot-for-6-hours-b847d2d92c43 
-
 https://github.com/tensorflow/models/tree/master/tutorials/rnn/ 
