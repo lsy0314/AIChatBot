@@ -1,5 +1,5 @@
 # DeepLearningChatBot
-artifical intelligent chatbot using deep-learning techolnology.
+Artifical intelligent chatbot using deep-learning techolnology.
 
 # Motivation
 Users talk to chatbots when they are bored. Through it, it is going to create chatbot that helps users relax. It also ensures that there are no questions that can not be answered.
