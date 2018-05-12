@@ -25,4 +25,4 @@ https://www.tensorflow.org/versions/master/tutorials/recurrent_quickdraw<br>
 https://korchris.github.io/2017/06/29/FB_chatbot/ <br>
 
 # Contact
-I am a student in Maehyun mid-school. My homepage is http://Limsuyoun.github.io. If you have any questions, Please contact me lsy0314@gmail.com. I make an effort to write english statement by utilizing https://translate.google.com to talk about my project with foreigners all over the world.
+I am a student in [Maehyun mid-school](http://www.maehyeon.ms.kr/). My homepage is http://Limsuyoun.github.io. If you have any questions, Please contact me lsy0314@gmail.com. I make an effort to write english statement by utilizing https://translate.google.com to talk about my project with foreigners all over the world.
