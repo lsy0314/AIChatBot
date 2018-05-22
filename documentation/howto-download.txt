@@ -1,0 +1,40 @@
+
+   Website to download *.whl files
+   ================================
+
+1. for x86-64
+===================
+$ sudo -H pip install --upgrade http://mirrors.nju.edu.cn/tensorflow/linux/gpu/tensorflow-0.11.0-cp27-none-linux_x86_64.whl # to use GPU
+$ sudo -H pip install --upgrade http://mirrors.nju.edu.cn/tensorflow/linux/cpu/tensorflow-0.11.0-cp27-none-linux_x86_64.whl # to use CPU 
+
+invain@u1604:/work/olympiad/chatbot/binary-wheel-packages/x86-64$ ls -al cpu
+-rw-rw-r-- 1 invain invain  39,765,989 11월 10  2016 tensorflow-0.11.0-cp27-none-linux_x86_64.whl
+
+invain@u1604:/work/olympiad/chatbot/binary-wheel-packages/x86-64$ ls -al gpu
+-rw-rw-r-- 1 invain invain 119,068,645 11월 10  2016 tensorflow-0.11.0-cp27-none-linux_x86_64.whl
+
+invain@u1604:/work/olympiad/chatbot$ pip list | grep tensorflow
+tensorflow                         0.11.0
+
+
+
+
+2. for arm(rpi3)
+===================
+$ firefox https://github.com/samjabrahams/tensorflow-on-raspberry-pi/releases
+
+# For Python 2.7
+$ wget https://github.com/samjabrahams/tensorflow-on-raspberry-pi/raw/master/bin/tensorflow-0.11.0-cp27-none-linux_armv7l.whl
+$ sudo pip install tensorflow-0.11.0-cp27-none-linux_armv7l.whl
+
+# For Python 3.3+
+$ wget https://github.com/samjabrahams/tensorflow-on-raspberry-pi/raw/master/bin/tensorflow-0.11.0-py3-none-any.whl
+$ sudo pip3 install tensorflow-0.11.0-py3-none-any.whl
+
+invain@u1604:/work/olympiad/chatbot/binary-wheel-packages$ ls -al armv7l-rpi3/
+-rw-rw-r-- 1 invain invain 38796783  5월 25  2017 tensorflow-0.11.0-cp27-none-linux_armv7l.whl
+-rw-rw-r-- 1 invain invain 38619708  5월 25  2017 tensorflow-0.11.0-py3-none-any.whl
+-rw-rw-r-- 1 invain invain  1175008  5월 20 22:12 v0.11.0.tar.gz
+
+
+End 

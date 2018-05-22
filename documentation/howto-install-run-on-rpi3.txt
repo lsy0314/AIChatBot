@@ -1,0 +1,1069 @@
+
+
+# install tensorflow-0.11 on rpi3 and run translate bot
+==========================================================
+https://github.com/samjabrahams/tensorflow-on-raspberry-pi/tree/v0.11.0
+
+
+# For Python 2.7
+$ wget https://github.com/samjabrahams/tensorflow-on-raspberry-pi/raw/master/bin/tensorflow-0.11.0-cp27-none-linux_armv7l.whl
+$ sudo pip install tensorflow-0.11.0-cp27-none-linux_armv7l.whl
+
+# For Python 3.3+
+$ wget https://github.com/samjabrahams/tensorflow-on-raspberry-pi/raw/master/bin/tensorflow-0.11.0-py3-none-any.whl
+$ sudo pip3 install tensorflow-0.11.0-py3-none-any.whl
+
+
+hjoon0510@hjoon0510-desktop:/var/www/chatbot/armv7l-rpi3$ pip list | grep tensorflow
+tensorflow (0.11.0)
+
+
+# OOM on rpi3
+==================================
+
+hjoon0510@hjoon0510-desktop:~/chatbot/tensorflow-on-x86_64-r0.11/tensorflow/models/rnn/translate$ time python ./translate.py  --en_vocab_size=40000 --fr_vocab_size=40000 --data_dir=/home/hjoon0510/chatbot/train/  --train_dir=/home/hjoon0510/chatbot/train --decode
+Created model with fresh parameters.
+Killed
+
+real    3m44.836s
+user    3m40.580s
+sys 0m2.690s
+hjoon0510@hjoon0510-desktop:~/chatbot/tensorflow-on-x86_64-r0.11/tensorflow/models/rnn/translate$ 
+
+
+hjoon0510@hjoon0510-desktop:~/chatbot/tensorflow-on-x86_64-r0.11/tensorflow/models/rnn/translate$ free
+              total        used        free      shared  buff/cache   available
+Mem:         947732      229544       28532       23708      689656      628460
+Swap:        277236           0      277236
+
+
+invain@u1604:/work/olympiad/chatbot$ du -sh ./train
+6.7G    ./train
+invain@u1604:/work/olympiad/chatbot$ du -sh ./train-i5-3570-cpu-1600-008h/
+3.4G    ./train-i5-3570-cpu-1600-008h/
+invain@u1604:/work/olympiad/chatbot$ 
+
+
+* strace output: 
+
+
+
+    . . . OMISSION . . . . 
+
+mmap2(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x6123d000
+munmap(0x6123d000, 262144)              = 0
+mmap2(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x6123d000
+mmap2(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x611fd000
+munmap(0x611fd000, 262144)              = 0
+mmap2(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x611fd000
+mmap2(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x611bd000
+munmap(0x611bd000, 262144)              = 0
+mmap2(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x611bd000
+mmap2(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x6117d000
+mmap2(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x6113d000
+mmap2(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x610fd000
+mmap2(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x610bd000
+mmap2(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x6107d000
+mmap2(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x6103d000
+mmap2(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x60ffd000
+munmap(0x60ffd000, 262144)              = 0
+mmap2(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x60ffd000
+munmap(0x60ffd000, 262144)              = 0
+mmap2(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x60ffd000
+mmap2(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x60fbd000
+munmap(0x60fbd000, 262144)              = 0
+mmap2(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x60fbd000
+mmap2(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x60f7d000
+munmap(0x60f7d000, 262144)              = 0
+mmap2(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x60f7d000
+munmap(0x60f7d000, 262144)              = 0
+mmap2(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x60f7d000
+mmap2(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x60f3d000
+munmap(0x60f3d000, 262144)              = 0
+mmap2(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x60f3d000
+brk(0x366f000)                          = 0x366f000
+brk(0x3690000)                          = 0x3690000
+brk(0x36ed000)                          = 0x36ed000
+mmap2(NULL, 700416, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x60e92000
+mremap(0x60e92000, 700416, 790528, MREMAP_MAYMOVE) = 0x60dd1000
+mremap(0x60dd1000, 790528, 888832, MREMAP_MAYMOVE) = 0x60dd1000
+mremap(0x60dd1000, 888832, 999424, MREMAP_MAYMOVE) = 0x60dd1000
+mremap(0x60dd1000, 999424, 1122304, MREMAP_MAYMOVE) = 0x60dd1000
+mremap(0x60dd1000, 1122304, 1265664, MREMAP_MAYMOVE) = 0x60dd1000
+mremap(0x60dd1000, 1265664, 1421312, MREMAP_MAYMOVE) = 0x60dd1000
+mremap(0x60dd1000, 1421312, 1597440, MREMAP_MAYMOVE) = 0x60c4b000
+mremap(0x60c4b000, 1597440, 1798144, MREMAP_MAYMOVE) = 0x60c4b000
+mremap(0x60c4b000, 1798144, 2023424, MREMAP_MAYMOVE) = 0x60c4b000
+mremap(0x60c4b000, 2023424, 2277376, MREMAP_MAYMOVE) = 0x60c4b000
+mremap(0x60c4b000, 2277376, 2560000, MREMAP_MAYMOVE) = 0x60c4b000
+mremap(0x60c4b000, 2560000, 2879488, MREMAP_MAYMOVE) = 0x60c4b000
+mremap(0x60c4b000, 2879488, 3239936, MREMAP_MAYMOVE) = 0x60934000
+mremap(0x60934000, 3239936, 3645440, MREMAP_MAYMOVE) = 0x60934000
+mremap(0x60934000, 3645440, 4100096, MREMAP_MAYMOVE) = 0x60934000
+mremap(0x60934000, 4100096, 4612096, MREMAP_MAYMOVE) = 0x60934000
+mremap(0x60934000, 4612096, 5189632, MREMAP_MAYMOVE) = 0x60934000
+mremap(0x60934000, 5189632, 5840896, MREMAP_MAYMOVE) = 0x60934000
+mremap(0x60934000, 5840896, 6569984, MREMAP_MAYMOVE) = 0x602f0000
+mremap(0x602f0000, 6569984, 7389184, MREMAP_MAYMOVE) = 0x602f0000
+mremap(0x602f0000, 7389184, 8314880, MREMAP_MAYMOVE) = 0x602f0000
+mmap2(NULL, 8077312, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x5fb3c000
+munmap(0x602f0000, 8314880)             = 0
+brk(0x370e000)                          = 0x370e000
+brk(0x372f000)                          = 0x372f000
+brk(0x3751000)                          = 0x3751000
+brk(0x3772000)                          = 0x3772000
+brk(0x3793000)                          = 0x3793000
+brk(0x37b4000)                          = 0x37b4000
+brk(0x37d5000)                          = 0x37d5000
+brk(0x37f6000)                          = 0x37f6000
+brk(0x3817000)                          = 0x3817000
+brk(0x3838000)                          = 0x3838000
+brk(0x3859000)                          = 0x3859000
+brk(0x387a000)                          = 0x387a000
+brk(0x389b000)                          = 0x389b000
+brk(0x38bc000)                          = 0x38bc000
+brk(0x38dd000)                          = 0x38dd000
+brk(0x38fe000)                          = 0x38fe000
+brk(0x391f000)                          = 0x391f000
+brk(0x3940000)                          = 0x3940000
+brk(0x3961000)                          = 0x3961000
+brk(0x3982000)                          = 0x3982000
+brk(0x39a3000)                          = 0x39a3000
+brk(0x39c4000)                          = 0x39c4000
+brk(0x39e5000)                          = 0x39e5000
+brk(0x3a06000)                          = 0x3a06000
+brk(0x3a27000)                          = 0x3a27000
+brk(0x3a48000)                          = 0x3a48000
+brk(0x3a69000)                          = 0x3a69000
+brk(0x3a8a000)                          = 0x3a8a000
+brk(0x3aab000)                          = 0x3aab000
+brk(0x3acc000)                          = 0x3acc000
+brk(0x3aed000)                          = 0x3aed000
+brk(0x3b0e000)                          = 0x3b0e000
+brk(0x3b2f000)                          = 0x3b2f000
+brk(0x3b50000)                          = 0x3b50000
+brk(0x3b71000)                          = 0x3b71000
+brk(0x3b92000)                          = 0x3b92000
+brk(0x3bb3000)                          = 0x3bb3000
+brk(0x3bd4000)                          = 0x3bd4000
+brk(0x3bf5000)                          = 0x3bf5000
+brk(0x3c16000)                          = 0x3c16000
+brk(0x3c37000)                          = 0x3c37000
+brk(0x3c58000)                          = 0x3c58000
+brk(0x3c79000)                          = 0x3c79000
+brk(0x3c9a000)                          = 0x3c9a000
+brk(0x3cbb000)                          = 0x3cbb000
+brk(0x3cdc000)                          = 0x3cdc000
+brk(0x3cfd000)                          = 0x3cfd000
+brk(0x3d1e000)                          = 0x3d1e000
+brk(0x3d3f000)                          = 0x3d3f000
+brk(0x3d60000)                          = 0x3d60000
+brk(0x3d81000)                          = 0x3d81000
+brk(0x3da2000)                          = 0x3da2000
+brk(0x3dc3000)                          = 0x3dc3000
+brk(0x3de4000)                          = 0x3de4000
+brk(0x3e05000)                          = 0x3e05000
+brk(0x3e26000)                          = 0x3e26000
+brk(0x3e47000)                          = 0x3e47000
+brk(0x3e68000)                          = 0x3e68000
+brk(0x3e89000)                          = 0x3e89000
+brk(0x3eaa000)                          = 0x3eaa000
+brk(0x3ecb000)                          = 0x3ecb000
+brk(0x3eec000)                          = 0x3eec000
+brk(0x3f0d000)                          = 0x3f0d000
+brk(0x3f2e000)                          = 0x3f2e000
+brk(0x3f4f000)                          = 0x3f4f000
+brk(0x3f70000)                          = 0x3f70000
+brk(0x3f91000)                          = 0x3f91000
+brk(0x3fb2000)                          = 0x3fb2000
+brk(0x3fd3000)                          = 0x3fd3000
+brk(0x3ff4000)                          = 0x3ff4000
+brk(0x4015000)                          = 0x4015000
+brk(0x4036000)                          = 0x4036000
+brk(0x4057000)                          = 0x4057000
+brk(0x4078000)                          = 0x4078000
+brk(0x4099000)                          = 0x4099000
+brk(0x40ba000)                          = 0x40ba000
+brk(0x40db000)                          = 0x40db000
+brk(0x40fc000)                          = 0x40fc000
+brk(0x411d000)                          = 0x411d000
+brk(0x413e000)                          = 0x413e000
+brk(0x415f000)                          = 0x415f000
+brk(0x4180000)                          = 0x4180000
+brk(0x41a1000)                          = 0x41a1000
+brk(0x41c2000)                          = 0x41c2000
+brk(0x41e3000)                          = 0x41e3000
+brk(0x4204000)                          = 0x4204000
+brk(0x4225000)                          = 0x4225000
+brk(0x4246000)                          = 0x4246000
+brk(0x4267000)                          = 0x4267000
+brk(0x4288000)                          = 0x4288000
+brk(0x42a9000)                          = 0x42a9000
+brk(0x42ca000)                          = 0x42ca000
+brk(0x42eb000)                          = 0x42eb000
+brk(0x430c000)                          = 0x430c000
+brk(0x432d000)                          = 0x432d000
+brk(0x434e000)                          = 0x434e000
+brk(0x436f000)                          = 0x436f000
+brk(0x4390000)                          = 0x4390000
+brk(0x43b1000)                          = 0x43b1000
+brk(0x43d2000)                          = 0x43d2000
+brk(0x43f3000)                          = 0x43f3000
+brk(0x4414000)                          = 0x4414000
+brk(0x4435000)                          = 0x4435000
+brk(0x4456000)                          = 0x4456000
+brk(0x4477000)                          = 0x4477000
+brk(0x4498000)                          = 0x4498000
+brk(0x44b9000)                          = 0x44b9000
+brk(0x44f9000)                          = 0x44f9000
+brk(0x451a000)                          = 0x451a000
+brk(0x453b000)                          = 0x453b000
+brk(0x455c000)                          = 0x455c000
+brk(0x457d000)                          = 0x457d000
+brk(0x459e000)                          = 0x459e000
+brk(0x45bf000)                          = 0x45bf000
+brk(0x45e0000)                          = 0x45e0000
+brk(0x4601000)                          = 0x4601000
+brk(0x4622000)                          = 0x4622000
+brk(0x4643000)                          = 0x4643000
+brk(0x4664000)                          = 0x4664000
+brk(0x4685000)                          = 0x4685000
+brk(0x46a6000)                          = 0x46a6000
+brk(0x46c7000)                          = 0x46c7000
+brk(0x46e8000)                          = 0x46e8000
+brk(0x4709000)                          = 0x4709000
+brk(0x472a000)                          = 0x472a000
+brk(0x474b000)                          = 0x474b000
+brk(0x476c000)                          = 0x476c000
+brk(0x478d000)                          = 0x478d000
+brk(0x47ae000)                          = 0x47ae000
+brk(0x47cf000)                          = 0x47cf000
+brk(0x47f0000)                          = 0x47f0000
+brk(0x4811000)                          = 0x4811000
+brk(0x4832000)                          = 0x4832000
+brk(0x4853000)                          = 0x4853000
+brk(0x4874000)                          = 0x4874000
+brk(0x4895000)                          = 0x4895000
+brk(0x48b6000)                          = 0x48b6000
+brk(0x48d7000)                          = 0x48d7000
+brk(0x48f8000)                          = 0x48f8000
+brk(0x4919000)                          = 0x4919000
+brk(0x493a000)                          = 0x493a000
+brk(0x495b000)                          = 0x495b000
+brk(0x497c000)                          = 0x497c000
+brk(0x499d000)                          = 0x499d000
+brk(0x49be000)                          = 0x49be000
+brk(0x49df000)                          = 0x49df000
+brk(0x4a00000)                          = 0x4a00000
+brk(0x4a21000)                          = 0x4a21000
+brk(0x4a42000)                          = 0x4a42000
+brk(0x4a63000)                          = 0x4a63000
+brk(0x4a84000)                          = 0x4a84000
+brk(0x4aa5000)                          = 0x4aa5000
+brk(0x4ac6000)                          = 0x4ac6000
+brk(0x4ae7000)                          = 0x4ae7000
+brk(0x4b08000)                          = 0x4b08000
+brk(0x4b29000)                          = 0x4b29000
+brk(0x4b4a000)                          = 0x4b4a000
+brk(0x4b6b000)                          = 0x4b6b000
+brk(0x4b8c000)                          = 0x4b8c000
+brk(0x4bad000)                          = 0x4bad000
+brk(0x4bce000)                          = 0x4bce000
+brk(0x4bef000)                          = 0x4bef000
+brk(0x4c10000)                          = 0x4c10000
+brk(0x4c31000)                          = 0x4c31000
+brk(0x4c52000)                          = 0x4c52000
+brk(0x4c73000)                          = 0x4c73000
+brk(0x4c94000)                          = 0x4c94000
+brk(0x4cb5000)                          = 0x4cb5000
+brk(0x4cd6000)                          = 0x4cd6000
+brk(0x4cf7000)                          = 0x4cf7000
+brk(0x4d18000)                          = 0x4d18000
+brk(0x4d39000)                          = 0x4d39000
+brk(0x4d5a000)                          = 0x4d5a000
+brk(0x4d7b000)                          = 0x4d7b000
+brk(0x4d9c000)                          = 0x4d9c000
+brk(0x4dbd000)                          = 0x4dbd000
+brk(0x4dde000)                          = 0x4dde000
+brk(0x4dff000)                          = 0x4dff000
+brk(0x4e20000)                          = 0x4e20000
+brk(0x4e41000)                          = 0x4e41000
+brk(0x4e62000)                          = 0x4e62000
+brk(0x4e83000)                          = 0x4e83000
+brk(0x4ea4000)                          = 0x4ea4000
+brk(0x4ec5000)                          = 0x4ec5000
+brk(0x4ee6000)                          = 0x4ee6000
+brk(0x4f07000)                          = 0x4f07000
+brk(0x4f28000)                          = 0x4f28000
+brk(0x4f49000)                          = 0x4f49000
+brk(0x4f6a000)                          = 0x4f6a000
+brk(0x4f8b000)                          = 0x4f8b000
+brk(0x4fad000)                          = 0x4fad000
+brk(0x4fce000)                          = 0x4fce000
+brk(0x4fef000)                          = 0x4fef000
+brk(0x5010000)                          = 0x5010000
+brk(0x5031000)                          = 0x5031000
+brk(0x5052000)                          = 0x5052000
+brk(0x5073000)                          = 0x5073000
+brk(0x5094000)                          = 0x5094000
+brk(0x50b5000)                          = 0x50b5000
+brk(0x50d6000)                          = 0x50d6000
+brk(0x50f7000)                          = 0x50f7000
+brk(0x5118000)                          = 0x5118000
+brk(0x5139000)                          = 0x5139000
+brk(0x515a000)                          = 0x515a000
+brk(0x517b000)                          = 0x517b000
+brk(0x519c000)                          = 0x519c000
+brk(0x51c1000)                          = 0x51c1000
+brk(0x51e2000)                          = 0x51e2000
+brk(0x5203000)                          = 0x5203000
+brk(0x5224000)                          = 0x5224000
+brk(0x5245000)                          = 0x5245000
+brk(0x5266000)                          = 0x5266000
+brk(0x5287000)                          = 0x5287000
+brk(0x52a8000)                          = 0x52a8000
+brk(0x52c9000)                          = 0x52c9000
+brk(0x52ea000)                          = 0x52ea000
+brk(0x530b000)                          = 0x530b000
+brk(0x532c000)                          = 0x532c000
+brk(0x534d000)                          = 0x534d000
+brk(0x536e000)                          = 0x536e000
+brk(0x538f000)                          = 0x538f000
+brk(0x53b0000)                          = 0x53b0000
+brk(0x53d1000)                          = 0x53d1000
+brk(0x53f2000)                          = 0x53f2000
+brk(0x5413000)                          = 0x5413000
+brk(0x5434000)                          = 0x5434000
+brk(0x5455000)                          = 0x5455000
+brk(0x5476000)                          = 0x5476000
+brk(0x5497000)                          = 0x5497000
+brk(0x54b8000)                          = 0x54b8000
+brk(0x54d9000)                          = 0x54d9000
+brk(0x54fa000)                          = 0x54fa000
+brk(0x551b000)                          = 0x551b000
+brk(0x553c000)                          = 0x553c000
+brk(0x555d000)                          = 0x555d000
+brk(0x557e000)                          = 0x557e000
+brk(0x559f000)                          = 0x559f000
+brk(0x55c0000)                          = 0x55c0000
+brk(0x55e1000)                          = 0x55e1000
+brk(0x5602000)                          = 0x5602000
+brk(0x5623000)                          = 0x5623000
+brk(0x5644000)                          = 0x5644000
+brk(0x5665000)                          = 0x5665000
+brk(0x5686000)                          = 0x5686000
+brk(0x56a7000)                          = 0x56a7000
+brk(0x56c8000)                          = 0x56c8000
+brk(0x56e9000)                          = 0x56e9000
+brk(0x570a000)                          = 0x570a000
+brk(0x572b000)                          = 0x572b000
+brk(0x574c000)                          = 0x574c000
+brk(0x576d000)                          = 0x576d000
+brk(0x578e000)                          = 0x578e000
+brk(0x57af000)                          = 0x57af000
+brk(0x57d0000)                          = 0x57d0000
+brk(0x57f1000)                          = 0x57f1000
+brk(0x5812000)                          = 0x5812000
+brk(0x5833000)                          = 0x5833000
+brk(0x5854000)                          = 0x5854000
+brk(0x5875000)                          = 0x5875000
+brk(0x5896000)                          = 0x5896000
+brk(0x58b7000)                          = 0x58b7000
+brk(0x58d8000)                          = 0x58d8000
+brk(0x58f9000)                          = 0x58f9000
+brk(0x591a000)                          = 0x591a000
+brk(0x593b000)                          = 0x593b000
+brk(0x595c000)                          = 0x595c000
+brk(0x597d000)                          = 0x597d000
+brk(0x599e000)                          = 0x599e000
+brk(0x59bf000)                          = 0x59bf000
+brk(0x59e0000)                          = 0x59e0000
+brk(0x5a01000)                          = 0x5a01000
+brk(0x5a22000)                          = 0x5a22000
+brk(0x5a43000)                          = 0x5a43000
+brk(0x5a64000)                          = 0x5a64000
+brk(0x5a85000)                          = 0x5a85000
+brk(0x5aa6000)                          = 0x5aa6000
+brk(0x5ac7000)                          = 0x5ac7000
+brk(0x5ae8000)                          = 0x5ae8000
+brk(0x5b09000)                          = 0x5b09000
+brk(0x5b2a000)                          = 0x5b2a000
+brk(0x5b4b000)                          = 0x5b4b000
+brk(0x5b6c000)                          = 0x5b6c000
+brk(0x5b8d000)                          = 0x5b8d000
+brk(0x5bae000)                          = 0x5bae000
+brk(0x5bcf000)                          = 0x5bcf000
+brk(0x5bf0000)                          = 0x5bf0000
+brk(0x5c11000)                          = 0x5c11000
+brk(0x5c32000)                          = 0x5c32000
+brk(0x5c53000)                          = 0x5c53000
+brk(0x5c74000)                          = 0x5c74000
+brk(0x5c95000)                          = 0x5c95000
+brk(0x5cb6000)                          = 0x5cb6000
+brk(0x5cd7000)                          = 0x5cd7000
+brk(0x5cf8000)                          = 0x5cf8000
+brk(0x5d19000)                          = 0x5d19000
+brk(0x5d3a000)                          = 0x5d3a000
+brk(0x5d5b000)                          = 0x5d5b000
+brk(0x5d7c000)                          = 0x5d7c000
+brk(0x5d9d000)                          = 0x5d9d000
+brk(0x5dbe000)                          = 0x5dbe000
+brk(0x5ddf000)                          = 0x5ddf000
+brk(0x5e00000)                          = 0x5e00000
+brk(0x5e21000)                          = 0x5e21000
+brk(0x5e42000)                          = 0x5e42000
+brk(0x5e63000)                          = 0x5e63000
+brk(0x5e84000)                          = 0x5e84000
+brk(0x5ea5000)                          = 0x5ea5000
+brk(0x5ec6000)                          = 0x5ec6000
+brk(0x5ee7000)                          = 0x5ee7000
+brk(0x5f08000)                          = 0x5f08000
+brk(0x5f29000)                          = 0x5f29000
+brk(0x5f4a000)                          = 0x5f4a000
+brk(0x5f6b000)                          = 0x5f6b000
+brk(0x5f8c000)                          = 0x5f8c000
+brk(0x5fad000)                          = 0x5fad000
+brk(0x5fce000)                          = 0x5fce000
+brk(0x5fef000)                          = 0x5fef000
+brk(0x6010000)                          = 0x6010000
+brk(0x6031000)                          = 0x6031000
+brk(0x6052000)                          = 0x6052000
+brk(0x6073000)                          = 0x6073000
+brk(0x6094000)                          = 0x6094000
+brk(0x60b5000)                          = 0x60b5000
+brk(0x60d6000)                          = 0x60d6000
+brk(0x60f7000)                          = 0x60f7000
+brk(0x6118000)                          = 0x6118000
+brk(0x6139000)                          = 0x6139000
+brk(0x615a000)                          = 0x615a000
+brk(0x617b000)                          = 0x617b000
+brk(0x619c000)                          = 0x619c000
+brk(0x61bd000)                          = 0x61bd000
+brk(0x61de000)                          = 0x61de000
+brk(0x61ff000)                          = 0x61ff000
+brk(0x6220000)                          = 0x6220000
+brk(0x6241000)                          = 0x6241000
+brk(0x6262000)                          = 0x6262000
+brk(0x6283000)                          = 0x6283000
+brk(0x62a4000)                          = 0x62a4000
+brk(0x62c5000)                          = 0x62c5000
+brk(0x62e6000)                          = 0x62e6000
+brk(0x6307000)                          = 0x6307000
+brk(0x6328000)                          = 0x6328000
+brk(0x6349000)                          = 0x6349000
+brk(0x636a000)                          = 0x636a000
+brk(0x638b000)                          = 0x638b000
+brk(0x63ac000)                          = 0x63ac000
+brk(0x63cd000)                          = 0x63cd000
+brk(0x63ee000)                          = 0x63ee000
+brk(0x640f000)                          = 0x640f000
+brk(0x6430000)                          = 0x6430000
+brk(0x6451000)                          = 0x6451000
+brk(0x6472000)                          = 0x6472000
+brk(0x6493000)                          = 0x6493000
+brk(0x64b4000)                          = 0x64b4000
+brk(0x64d5000)                          = 0x64d5000
+brk(0x64f6000)                          = 0x64f6000
+brk(0x6517000)                          = 0x6517000
+brk(0x6538000)                          = 0x6538000
+brk(0x6559000)                          = 0x6559000
+brk(0x657a000)                          = 0x657a000
+brk(0x659b000)                          = 0x659b000
+brk(0x65bc000)                          = 0x65bc000
+brk(0x65dd000)                          = 0x65dd000
+brk(0x65fe000)                          = 0x65fe000
+brk(0x661f000)                          = 0x661f000
+brk(0x6640000)                          = 0x6640000
+brk(0x6661000)                          = 0x6661000
+brk(0x6682000)                          = 0x6682000
+brk(0x66a3000)                          = 0x66a3000
+brk(0x66c4000)                          = 0x66c4000
+brk(0x66e5000)                          = 0x66e5000
+brk(0x6706000)                          = 0x6706000
+brk(0x6727000)                          = 0x6727000
+brk(0x6748000)                          = 0x6748000
+brk(0x6769000)                          = 0x6769000
+brk(0x678a000)                          = 0x678a000
+brk(0x67ab000)                          = 0x67ab000
+brk(0x67cc000)                          = 0x67cc000
+brk(0x67ed000)                          = 0x67ed000
+brk(0x680e000)                          = 0x680e000
+brk(0x682f000)                          = 0x682f000
+brk(0x6850000)                          = 0x6850000
+brk(0x6871000)                          = 0x6871000
+brk(0x6892000)                          = 0x6892000
+brk(0x68b3000)                          = 0x68b3000
+brk(0x68d4000)                          = 0x68d4000
+brk(0x68f5000)                          = 0x68f5000
+brk(0x6916000)                          = 0x6916000
+brk(0x6937000)                          = 0x6937000
+brk(0x6958000)                          = 0x6958000
+brk(0x6979000)                          = 0x6979000
+brk(0x699a000)                          = 0x699a000
+brk(0x69bb000)                          = 0x69bb000
+brk(0x69dc000)                          = 0x69dc000
+munmap(0x5fb3c000, 8077312)             = 0
+munmap(0x60f7d000, 262144)              = 0
+munmap(0x60ffd000, 262144)              = 0
+munmap(0x6103d000, 262144)              = 0
+munmap(0x6107d000, 262144)              = 0
+munmap(0x610bd000, 262144)              = 0
+munmap(0x610fd000, 262144)              = 0
+munmap(0x6113d000, 262144)              = 0
+munmap(0x6117d000, 262144)              = 0
+munmap(0x611bd000, 262144)              = 0
+munmap(0x611fd000, 262144)              = 0
+munmap(0x6123d000, 262144)              = 0
+munmap(0x6127d000, 262144)              = 0
+munmap(0x612bd000, 262144)              = 0
+munmap(0x612fd000, 262144)              = 0
+munmap(0x6133d000, 262144)              = 0
+munmap(0x6137d000, 262144)              = 0
+munmap(0x613bd000, 262144)              = 0
+munmap(0x613fd000, 262144)              = 0
+munmap(0x6143d000, 262144)              = 0
+munmap(0x6147d000, 262144)              = 0
+munmap(0x614bd000, 262144)              = 0
+munmap(0x614fd000, 262144)              = 0
+munmap(0x6153d000, 262144)              = 0
+munmap(0x6157d000, 262144)              = 0
+munmap(0x615bd000, 262144)              = 0
+munmap(0x615fd000, 262144)              = 0
+munmap(0x6163d000, 262144)              = 0
+munmap(0x6167d000, 262144)              = 0
+munmap(0x616bd000, 262144)              = 0
+munmap(0x616fd000, 262144)              = 0
+munmap(0x6173d000, 262144)              = 0
+munmap(0x6177d000, 262144)              = 0
+munmap(0x617bd000, 262144)              = 0
+munmap(0x617fd000, 262144)              = 0
+munmap(0x6183d000, 262144)              = 0
+munmap(0x6187d000, 262144)              = 0
+munmap(0x618bd000, 262144)              = 0
+munmap(0x618fd000, 262144)              = 0
+munmap(0x6193d000, 262144)              = 0
+munmap(0x6197d000, 262144)              = 0
+munmap(0x619bd000, 262144)              = 0
+munmap(0x619fd000, 262144)              = 0
+munmap(0x61a3d000, 262144)              = 0
+munmap(0x61a7d000, 262144)              = 0
+munmap(0x61abd000, 262144)              = 0
+munmap(0x61afd000, 262144)              = 0
+munmap(0x61b3d000, 262144)              = 0
+munmap(0x61b7d000, 262144)              = 0
+munmap(0x61bbd000, 262144)              = 0
+munmap(0x61bfd000, 262144)              = 0
+munmap(0x61c3d000, 262144)              = 0
+munmap(0x61c7d000, 262144)              = 0
+munmap(0x61cbd000, 262144)              = 0
+munmap(0x61cfd000, 262144)              = 0
+munmap(0x61d3d000, 262144)              = 0
+munmap(0x61d7d000, 262144)              = 0
+munmap(0x61dbd000, 262144)              = 0
+munmap(0x61dfd000, 262144)              = 0
+munmap(0x61e3d000, 262144)              = 0
+munmap(0x61e7d000, 262144)              = 0
+munmap(0x61ebd000, 262144)              = 0
+munmap(0x61efd000, 262144)              = 0
+munmap(0x61f3d000, 262144)              = 0
+munmap(0x61f7d000, 262144)              = 0
+munmap(0x61fbd000, 262144)              = 0
+munmap(0x61ffd000, 262144)              = 0
+munmap(0x6203d000, 262144)              = 0
+munmap(0x6207d000, 262144)              = 0
+munmap(0x620bd000, 262144)              = 0
+munmap(0x620fd000, 262144)              = 0
+munmap(0x6213d000, 262144)              = 0
+munmap(0x6217d000, 262144)              = 0
+munmap(0x621bd000, 262144)              = 0
+munmap(0x621fd000, 262144)              = 0
+munmap(0x6223d000, 262144)              = 0
+munmap(0x6227d000, 262144)              = 0
+munmap(0x622bd000, 262144)              = 0
+munmap(0x622fd000, 262144)              = 0
+munmap(0x6233d000, 262144)              = 0
+munmap(0x6237d000, 262144)              = 0
+munmap(0x623bd000, 262144)              = 0
+munmap(0x623fd000, 262144)              = 0
+munmap(0x6243d000, 262144)              = 0
+munmap(0x6247d000, 262144)              = 0
+munmap(0x624bd000, 262144)              = 0
+munmap(0x624fd000, 262144)              = 0
+munmap(0x6253d000, 262144)              = 0
+munmap(0x6257d000, 262144)              = 0
+munmap(0x625bd000, 262144)              = 0
+munmap(0x625fd000, 262144)              = 0
+munmap(0x6263d000, 262144)              = 0
+munmap(0x6267d000, 262144)              = 0
+munmap(0x626fd000, 262144)              = 0
+munmap(0x6273d000, 262144)              = 0
+munmap(0x6277d000, 262144)              = 0
+munmap(0x627bd000, 262144)              = 0
+munmap(0x627fd000, 262144)              = 0
+munmap(0x6283d000, 262144)              = 0
+munmap(0x6287d000, 262144)              = 0
+munmap(0x628bd000, 262144)              = 0
+munmap(0x628fd000, 262144)              = 0
+munmap(0x6293d000, 262144)              = 0
+munmap(0x6297d000, 262144)              = 0
+munmap(0x629bd000, 262144)              = 0
+munmap(0x629fd000, 262144)              = 0
+munmap(0x62a3d000, 262144)              = 0
+munmap(0x62a7d000, 262144)              = 0
+munmap(0x62abd000, 262144)              = 0
+munmap(0x62afd000, 262144)              = 0
+munmap(0x62b3d000, 262144)              = 0
+munmap(0x62b7d000, 262144)              = 0
+munmap(0x62bbd000, 262144)              = 0
+munmap(0x62bfd000, 262144)              = 0
+munmap(0x62c3d000, 262144)              = 0
+munmap(0x62c7d000, 262144)              = 0
+munmap(0x62cbd000, 262144)              = 0
+munmap(0x62cfd000, 262144)              = 0
+munmap(0x62d3d000, 262144)              = 0
+munmap(0x62d7d000, 262144)              = 0
+munmap(0x62dbd000, 262144)              = 0
+munmap(0x62dfd000, 262144)              = 0
+munmap(0x62e3d000, 262144)              = 0
+munmap(0x62e7d000, 262144)              = 0
+munmap(0x62ebd000, 262144)              = 0
+munmap(0x62efd000, 262144)              = 0
+munmap(0x62f3d000, 262144)              = 0
+munmap(0x62f7d000, 262144)              = 0
+munmap(0x62fbd000, 262144)              = 0
+munmap(0x62ffd000, 262144)              = 0
+munmap(0x6303d000, 262144)              = 0
+munmap(0x6307d000, 262144)              = 0
+munmap(0x630bd000, 262144)              = 0
+munmap(0x630fd000, 262144)              = 0
+munmap(0x6313d000, 262144)              = 0
+munmap(0x6317d000, 262144)              = 0
+munmap(0x631bd000, 262144)              = 0
+munmap(0x631fd000, 262144)              = 0
+munmap(0x6323d000, 262144)              = 0
+munmap(0x6327d000, 262144)              = 0
+munmap(0x632bd000, 262144)              = 0
+munmap(0x632fd000, 262144)              = 0
+munmap(0x6333d000, 262144)              = 0
+munmap(0x6337d000, 262144)              = 0
+munmap(0x633bd000, 262144)              = 0
+munmap(0x633fd000, 262144)              = 0
+munmap(0x6343d000, 262144)              = 0
+munmap(0x6347d000, 262144)              = 0
+munmap(0x634bd000, 262144)              = 0
+munmap(0x634fd000, 262144)              = 0
+munmap(0x6353d000, 262144)              = 0
+munmap(0x6357d000, 262144)              = 0
+munmap(0x635bd000, 262144)              = 0
+munmap(0x635fd000, 262144)              = 0
+munmap(0x6363d000, 262144)              = 0
+munmap(0x6367d000, 262144)              = 0
+munmap(0x636bd000, 262144)              = 0
+munmap(0x636fd000, 262144)              = 0
+munmap(0x6373d000, 262144)              = 0
+munmap(0x6377d000, 262144)              = 0
+munmap(0x637bd000, 262144)              = 0
+munmap(0x637fd000, 262144)              = 0
+munmap(0x6383d000, 262144)              = 0
+munmap(0x6387d000, 262144)              = 0
+munmap(0x638bd000, 262144)              = 0
+munmap(0x638fd000, 262144)              = 0
+munmap(0x6393d000, 262144)              = 0
+munmap(0x6397d000, 262144)              = 0
+munmap(0x639bd000, 262144)              = 0
+munmap(0x639fd000, 262144)              = 0
+munmap(0x63a3d000, 262144)              = 0
+munmap(0x63a7d000, 262144)              = 0
+munmap(0x63abd000, 262144)              = 0
+munmap(0x63afd000, 262144)              = 0
+munmap(0x63b3d000, 262144)              = 0
+munmap(0x63b7d000, 262144)              = 0
+munmap(0x63bbd000, 262144)              = 0
+munmap(0x63bfd000, 262144)              = 0
+munmap(0x63c3d000, 262144)              = 0
+munmap(0x63c7d000, 262144)              = 0
+munmap(0x63cbd000, 262144)              = 0
+munmap(0x63cfd000, 262144)              = 0
+munmap(0x63d3d000, 262144)              = 0
+munmap(0x63d7d000, 262144)              = 0
+munmap(0x63dbd000, 262144)              = 0
+munmap(0x63dfd000, 262144)              = 0
+munmap(0x63e3d000, 262144)              = 0
+munmap(0x63e7d000, 262144)              = 0
+munmap(0x63ebd000, 262144)              = 0
+munmap(0x63efd000, 262144)              = 0
+munmap(0x63f3d000, 262144)              = 0
+munmap(0x63f7d000, 262144)              = 0
+munmap(0x63fbd000, 262144)              = 0
+munmap(0x63ffd000, 262144)              = 0
+munmap(0x6403d000, 262144)              = 0
+munmap(0x6407d000, 262144)              = 0
+munmap(0x640bd000, 262144)              = 0
+munmap(0x640fd000, 262144)              = 0
+munmap(0x6413d000, 262144)              = 0
+munmap(0x6417d000, 262144)              = 0
+munmap(0x641bd000, 262144)              = 0
+munmap(0x641fd000, 262144)              = 0
+munmap(0x6423d000, 262144)              = 0
+munmap(0x6427d000, 262144)              = 0
+munmap(0x642bd000, 262144)              = 0
+munmap(0x642fd000, 262144)              = 0
+munmap(0x6433d000, 262144)              = 0
+munmap(0x6437d000, 262144)              = 0
+munmap(0x643bd000, 262144)              = 0
+munmap(0x643fd000, 262144)              = 0
+munmap(0x6443d000, 262144)              = 0
+munmap(0x6447d000, 262144)              = 0
+munmap(0x644bd000, 262144)              = 0
+munmap(0x644fd000, 262144)              = 0
+munmap(0x6453d000, 262144)              = 0
+munmap(0x6457d000, 262144)              = 0
+munmap(0x645bd000, 262144)              = 0
+munmap(0x645fd000, 262144)              = 0
+munmap(0x6463d000, 262144)              = 0
+munmap(0x6467d000, 262144)              = 0
+munmap(0x646bd000, 262144)              = 0
+munmap(0x646fd000, 262144)              = 0
+munmap(0x6473d000, 262144)              = 0
+munmap(0x6477d000, 262144)              = 0
+munmap(0x647bd000, 262144)              = 0
+munmap(0x647fd000, 262144)              = 0
+munmap(0x6483d000, 262144)              = 0
+munmap(0x6487d000, 262144)              = 0
+munmap(0x648bd000, 262144)              = 0
+munmap(0x648fd000, 262144)              = 0
+munmap(0x6493d000, 262144)              = 0
+munmap(0x6497d000, 262144)              = 0
+munmap(0x649bd000, 262144)              = 0
+munmap(0x649fd000, 262144)              = 0
+munmap(0x64a3d000, 262144)              = 0
+munmap(0x64a7d000, 262144)              = 0
+munmap(0x64abd000, 262144)              = 0
+munmap(0x64afd000, 262144)              = 0
+munmap(0x64b3d000, 262144)              = 0
+munmap(0x64b7d000, 262144)              = 0
+munmap(0x64bbd000, 262144)              = 0
+munmap(0x64bfd000, 262144)              = 0
+munmap(0x64c3d000, 262144)              = 0
+munmap(0x64c7d000, 262144)              = 0
+munmap(0x64cbd000, 262144)              = 0
+munmap(0x64cfd000, 262144)              = 0
+munmap(0x64d7d000, 262144)              = 0
+munmap(0x64dbd000, 262144)              = 0
+munmap(0x64dfd000, 262144)              = 0
+munmap(0x64e3d000, 262144)              = 0
+munmap(0x64e7d000, 262144)              = 0
+munmap(0x64ebd000, 262144)              = 0
+munmap(0x64efd000, 262144)              = 0
+munmap(0x64f3d000, 262144)              = 0
+munmap(0x64f7d000, 262144)              = 0
+munmap(0x64fbd000, 262144)              = 0
+munmap(0x64ffd000, 262144)              = 0
+munmap(0x6503d000, 262144)              = 0
+munmap(0x6507d000, 262144)              = 0
+munmap(0x650bd000, 262144)              = 0
+munmap(0x650fd000, 262144)              = 0
+munmap(0x6513d000, 262144)              = 0
+munmap(0x6517d000, 262144)              = 0
+munmap(0x651bd000, 262144)              = 0
+munmap(0x651fd000, 262144)              = 0
+munmap(0x6523d000, 262144)              = 0
+munmap(0x6527d000, 262144)              = 0
+munmap(0x652bd000, 262144)              = 0
+munmap(0x652fd000, 262144)              = 0
+munmap(0x6533d000, 262144)              = 0
+munmap(0x6537d000, 262144)              = 0
+munmap(0x653bd000, 262144)              = 0
+munmap(0x653fd000, 262144)              = 0
+munmap(0x6543d000, 262144)              = 0
+munmap(0x6547d000, 262144)              = 0
+munmap(0x654bd000, 262144)              = 0
+munmap(0x654fd000, 262144)              = 0
+mmap2(NULL, 659456, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x6549c000
+mmap2(NULL, 1052672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x6539b000
+mmap2(NULL, 1314816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x6525a000
+munmap(0x6549c000, 659456)              = 0
+mmap2(NULL, 1052672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x65159000
+mmap2(NULL, 905216, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x6507c000
+mmap2(NULL, 1130496, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x64f68000
+mmap2(NULL, 905216, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x64e8b000
+mmap2(NULL, 3387392, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x64a02000
+munmap(0x64a02000, 3387392)             = 0
+munmap(0x64e8b000, 905216)              = 0
+munmap(0x64f68000, 1130496)             = 0
+munmap(0x6507c000, 905216)              = 0
+brk(0x69fe000)                          = 0x69fe000
+brk(0x6a2c000)                          = 0x6a2c000
+brk(0x6a4e000)                          = 0x6a4e000
+brk(0x6aae000)                          = 0x6aae000
+brk(0x6ad0000)                          = 0x6ad0000
+brk(0x6af8000)                          = 0x6af8000
+brk(0x6b28000)                          = 0x6b28000
+brk(0x6b68000)                          = 0x6b68000
+brk(0x6ba8000)                          = 0x6ba8000
+mmap2(NULL, 905216, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x6507c000
+mmap2(NULL, 1130496, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x64f68000
+brk(0x6bdf000)                          = 0x6bdf000
+mmap2(NULL, 905216, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x64e8b000
+munmap(0x64e8b000, 905216)              = 0
+munmap(0x64f68000, 1130496)             = 0
+munmap(0x6507c000, 905216)              = 0
+brk(0x6b15000)                          = 0x6b15000
+brk(0x69e5000)                          = 0x69e5000
+mmap2(NULL, 8388608, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x6453d000
+mprotect(0x6453d000, 4096, PROT_NONE)   = 0
+clone(child_stack=0x64d3bfa8, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x64d3c4d8, tls=0x64d3c930, child_tidptr=0x64d3c4d8) = 11656
+futex(0x43b8c84, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x43b8c80, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1}) = 1
+futex(0x7ebdf5a4, FUTEX_WAIT_PRIVATE, 1, NULL) = 0
+futex(0x7ebdf588, FUTEX_WAKE_PRIVATE, 1) = 0
+futex(0x1937e44, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x1937e40, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1}) = 1
+futex(0x7ebdfcec, FUTEX_WAIT_PRIVATE, 1, NULL <unfinished ...>
++++ killed by SIGKILL +++
+Killed
+
+real    4m44.873s
+user    3m49.080s
+sys 0m8.510s
+hjoon0510@hjoon0510-desktop:~/chatbot/tensorflow-on-x86_64-r0.11/tensorflow/models/rnn/translate$ time strace python ./translate.py  --en_vocab_size=40000 --fr_vocab_size=40000 --data_dir=/home/hjoon0510/chatbot/train/  --train_dir=/home/hjoon0510/chatbot/train --decode
+
+
+hjoon0510@hjoon0510-desktop:~/chatbot$ free
+              total        used        free      shared  buff/cache   available
+Mem:         947732       47580       30160       11872      869992      819060
+Swap:       8859624      198912     8660712
+hjoon0510@hjoon0510-desktop:~/chatbot$ ls
+armv7l-rpi3  swapfile8g  tensorflow-on-raspberry-pi  tensorflow-on-x86_64-r0.11  test-tf-setup  train
+hjoon0510@hjoon0510-desktop:~/chatbot$ free -m
+              total        used        free      shared  buff/cache   available
+Mem:            925          46          29          11         849         799
+Swap:          8651         194        8457
+hjoon0510@hjoon0510-desktop:~/chatbot$ free
+              total        used        free      shared  buff/cache   available
+Mem:         947732       74368       26272       11872      847092      792700
+Swap:       8859624      198912     8660712
+hjoon0510@hjoon0510-desktop:~/chatbot$ free -m
+              total        used        free      shared  buff/cache   available
+Mem:            925          80          28          11         816         766
+Swap:          8651         194        8457
+
+hjoon0510@hjoon0510-desktop:~/chatbot$ 
+hjoon0510@hjoon0510-desktop:~/chatbot$ 
+hjoon0510@hjoon0510-desktop:~/chatbot$ free -m
+              total        used        free      shared  buff/cache   available
+Mem:            925         232          25          11         667         615
+Swap:          8651         194        8457
+hjoon0510@hjoon0510-desktop:~/chatbot$ free -m
+              total        used        free      shared  buff/cache   available
+Mem:            925         236          30          11         659         611
+Swap:          8651         194        8457
+hjoon0510@hjoon0510-desktop:~/chatbot$ free -m
+              total        used        free      shared  buff/cache   available
+Mem:            925         237          29          11         659         610
+Swap:          8651         194        8457
+hjoon0510@hjoon0510-desktop:~/chatbot$ free -m
+              total        used        free      shared  buff/cache   available
+Mem:            925         238          28          11         659         609
+Swap:          8651         194        8457
+hjoon0510@hjoon0510-desktop:~/chatbot$ free -m
+              total        used        free      shared  buff/cache   available
+Mem:            925         720         139           1          64         144
+Swap:          8381         497        7883
+hjoon0510@hjoon0510-desktop:~/chatbot$ free -m
+              total        used        free      shared  buff/cache   available
+Mem:            925         720         139           1          65         144
+Swap:          8381         497        7883
+hjoon0510@hjoon0510-desktop:~/chatbot$ free -m
+              total        used        free      shared  buff/cache   available
+Mem:            925         721         139           1          65         144
+Swap:          8381         497        7883
+hjoon0510@hjoon0510-desktop:~/chatbot$ free
+              total        used        free      shared  buff/cache   available
+Mem:         947732      738776      142128        1264       66828      147340
+Swap:       8582388      509232     8073156
+hjoon0510@hjoon0510-desktop:~/chatbot$ 
+
+-------------
+ 1995  sudo dd if=/dev/zero of=./swapfile8g bs=1M count=8192
+ 1996  free
+ 1997  ls
+ 1998  ls -al
+ 1999  df
+ 2000  time mkswap ./swapfile8g 
+ 2001  sudo time mkswap ./swapfile8g 
+ 2002  ls
+ 2003  swapon ./swapfile8g
+ 2004  sudo swapon ./swapfile8g
+ 2005  df
+ 2006  free
+ 2007  ls
+ 2008  free -m
+
+
+----------------
+
+
+* On Raspberry Pi3 board (with swap 8GB)
+hjoon0510@hjoon0510-desktop:~/chatbot/tensorflow-on-x86_64-r0.11/tensorflow/models/rnn/translate$ time python ./translate.py  --en_vocab_size=40000 --fr_vocab_size=40000 --data_dir=/home/hjoon0510/chatbot/train/  --train_dir=/home/hjoon0510/chatbot/train --decode
+Created model with fresh parameters.
+> hello
+taken</u> mopped mopped mopped taken</u> taken</u> taken</u> taken</u> taken</u> taken</u>
+> what is your name?
+Lompoc Lompoc Lompoc Lompoc defendants defendants defendants Votypka Votypka Votypka Votypka Votypka Votypka Votypka Votypka
+> are you fool?
+taken</u> taken</u> Votypka Votypka Votypka Votypka Votypka Votypka Votypka Votypka
+> Can I give you some questions?
+rock-hard rock-hard rock-hard fine--but Votypka Votypka Votypka Votypka Votypka Votypka Votypka Votypka Votypka Armitage Armitage
+> 
+
+
+
+lrwxrwxrwx  1 root      root              28 May 21 11:36 train -> train-i5-3570-cpu-1600-008h/
+
+hjoon0510@hjoon0510-desktop:~/chatbot/tensorflow-on-x86_64-r0.11/tensorflow/models/rnn/translate$ time  python ./translate.py  --en_vocab_size=40000 --fr_vocab_size=40000 --data_dir=/home/hjoon0510/chatbot/train/  --train_dir=/home/hjoon0510/chatbot/train --decode
+Created model with fresh parameters.
+> hello
+Mogadishu Mogadishu nakedness nakedness nakedness nakedness nakedness nakedness nakedness Mogadishu
+> are you robot?
+<U>sense</U> <U>sense</U> Kleenex Kleenex Kleenex Kleenex Kleenex Kleenex Kleenex Kleenex
+> Are you fool?
+Kleenex <U>sense</U> <U>sense</U> <u>The</u> <u>The</u> <u>The</u> <u>The</u> <u>The</u> <u>The</u> <u>The</u>
+> 
+
+
+---------------
+
+hjoon0510@hjoon0510-desktop:~/chatbot/tensorflow-on-x86_64-r0.11/tensorflow/models/rnn/translate$ time  python ./translate.py  --en_vocab_size=40000 --fr_vocab_size=40000 --data_dir=/home/hjoon0510/chatbot/train/  --train_dir=/home/hjoon0510/chatbot/train         
+Preparing WMT data in /home/hjoon0510/chatbot/train/
+Creating vocabulary /home/hjoon0510/chatbot/train/vocab40000.fr from data /home/hjoon0510/chatbot/train/train.fr
+  processing line 100000
+Traceback (most recent call last):
+  File "./translate.py", line 290, in <module>
+    tf.app.run()
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/platform/app.py", line 30, in run
+    sys.exit(main(sys.argv[:1] + flags_passthrough))
+  File "./translate.py", line 287, in main
+    train()
+  File "./translate.py", line 147, in train
+    FLAGS.data_dir, FLAGS.en_vocab_size, FLAGS.fr_vocab_size)
+  File "/home/hjoon0510/chatbot/tensorflow-on-x86_64-r0.11/tensorflow/models/rnn/translate/data_utils.py", line 273, in prepare_wmt_data
+    create_vocabulary(fr_vocab_path, train_path + ".fr", fr_vocabulary_size, tokenizer)
+  File "/home/hjoon0510/chatbot/tensorflow-on-x86_64-r0.11/tensorflow/models/rnn/translate/data_utils.py", line 154, in create_vocabulary
+    vocab_file.write(w + b"\n")
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/lib/io/file_io.py", line 89, in write
+    self._prewrite_check()
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/lib/io/file_io.py", line 81, in _prewrite_check
+    compat.as_bytes(self.__name), status)
+  File "/usr/lib/python2.7/contextlib.py", line 24, in __exit__
+    self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/errors.py", line 463, in raise_exception_on_not_ok_status
+    pywrap_tensorflow.TF_GetCode(status))
+tensorflow.python.framework.errors.PermissionDeniedError: /home/hjoon0510/chatbot/train/vocab40000.fr
+
+real    0m32.848s
+user    0m30.430s
+sys 0m0.310s
+hjoon0510@hjoon0510-desktop:~/chatbot/tensorflow-on-x86_64-r0.11/tensorflow/models/rnn/translate$ sudo time  python ./translate.py  --en_vocab_size=40000 --fr_vocab_size=40000 --data_dir=/home/hjoon0510/chatbot/train/  --train_dir=/home/hjoon0510/chatbot/train
+[sudo] password for hjoon0510: 
+Preparing WMT data in /home/hjoon0510/chatbot/train/
+Creating vocabulary /home/hjoon0510/chatbot/train/vocab40000.fr from data /home/hjoon0510/chatbot/train/train.fr
+  processing line 100000
+Creating vocabulary /home/hjoon0510/chatbot/train/vocab40000.en from data /home/hjoon0510/chatbot/train/train.en
+  processing line 100000
+Tokenizing data in /home/hjoon0510/chatbot/train/train.fr
+  tokenizing line 100000
+Tokenizing data in /home/hjoon0510/chatbot/train/train.en
+  tokenizing line 100000
+Creating 3 layers of 1024 units.
+Created model with fresh parameters.
+W tensorflow/core/framework/op_kernel.cc:968] Resource exhausted: OOM when allocating tensor with shape[40000,1024]
+Traceback (most recent call last):
+  File "./translate.py", line 290, in <module>
+    tf.app.run()
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/platform/app.py", line 30, in run
+    sys.exit(main(sys.argv[:1] + flags_passthrough))
+  File "./translate.py", line 287, in main
+    train()
+  File "./translate.py", line 152, in train
+    model = create_model(sess, False)
+  File "./translate.py", line 138, in create_model
+    session.run(tf.initialize_all_variables())
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 717, in run
+    run_metadata_ptr)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 915, in _run
+    feed_dict_string, options, run_metadata)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 965, in _do_run
+    target_list, options, run_metadata)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 985, in _do_call
+    raise type(e)(node_def, op, message)
+tensorflow.python.framework.errors.ResourceExhaustedError: OOM when allocating tensor with shape[40000,1024]
+     [[Node: embedding_attention_seq2seq/embedding_attention_decoder/embedding/Initializer/random_uniform/mul = Mul[T=DT_FLOAT, _class=["loc:@embedding_attention_seq2seq/embedding_attention_decoder/embedding"], _device="/job:localhost/replica:0/task:0/cpu:0"](embedding_attention_seq2seq/embedding_attention_decoder/embedding/Initializer/random_uniform/RandomUniform, embedding_attention_seq2seq/embedding_attention_decoder/embedding/Initializer/random_uniform/sub)]]
+
+Caused by op u'embedding_attention_seq2seq/embedding_attention_decoder/embedding/Initializer/random_uniform/mul', defined at:
+  File "./translate.py", line 290, in <module>
+    tf.app.run()
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/platform/app.py", line 30, in run
+    sys.exit(main(sys.argv[:1] + flags_passthrough))
+  File "./translate.py", line 287, in main
+    train()
+  File "./translate.py", line 152, in train
+    model = create_model(sess, False)
+  File "./translate.py", line 131, in create_model
+    dtype=dtype)
+  File "/home/hjoon0510/chatbot/tensorflow-on-x86_64-r0.11/tensorflow/models/rnn/translate/seq2seq_model.py", line 172, in __init__
+    softmax_loss_function=softmax_loss_function)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/seq2seq.py", line 1118, in model_with_buckets
+    decoder_inputs[:bucket[1]])
+  File "/home/hjoon0510/chatbot/tensorflow-on-x86_64-r0.11/tensorflow/models/rnn/translate/seq2seq_model.py", line 171, in <lambda>
+    lambda x, y: seq2seq_f(x, y, False),
+  File "/home/hjoon0510/chatbot/tensorflow-on-x86_64-r0.11/tensorflow/models/rnn/translate/seq2seq_model.py", line 135, in seq2seq_f
+    dtype=dtype)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/seq2seq.py", line 839, in embedding_attention_seq2seq
+    initial_state_attention=initial_state_attention)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/seq2seq.py", line 736, in embedding_attention_decoder
+    [num_symbols, embedding_size])
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/variable_scope.py", line 1022, in get_variable
+    custom_getter=custom_getter)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/variable_scope.py", line 849, in get_variable
+    custom_getter=custom_getter)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/variable_scope.py", line 345, in get_variable
+    validate_shape=validate_shape)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/variable_scope.py", line 330, in _true_getter
+    caching_device=caching_device, validate_shape=validate_shape)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/variable_scope.py", line 676, in _get_single_variable
+    validate_shape=validate_shape)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/variables.py", line 215, in __init__
+    dtype=dtype)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/variables.py", line 288, in _init_from_args
+    initial_value(), name="initial_value", dtype=dtype)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/variable_scope.py", line 666, in <lambda>
+    shape.as_list(), dtype=dtype, partition_info=partition_info)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/init_ops.py", line 280, in _initializer
+    dtype, seed=seed)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/random_ops.py", line 247, in random_uniform
+    return math_ops.add(rnd * (maxval - minval), minval, name=name)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_ops.py", line 751, in binary_op_wrapper
+    return func(x, y, name=name)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_ops.py", line 910, in _mul_dispatch
+    return gen_math_ops.mul(x, y, name=name)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/gen_math_ops.py", line 1519, in mul
+    result = _op_def_lib.apply_op("Mul", x=x, y=y, name=name)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py", line 749, in apply_op
+    op_def=op_def)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/ops.py", line 2380, in create_op
+    original_op=self._default_original_op, op_def=op_def)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/ops.py", line 1298, in __init__
+    self._traceback = _extract_stack()
+
+ResourceExhaustedError (see above for traceback): OOM when allocating tensor with shape[40000,1024]
+     [[Node: embedding_attention_seq2seq/embedding_attention_decoder/embedding/Initializer/random_uniform/mul = Mul[T=DT_FLOAT, _class=["loc:@embedding_attention_seq2seq/embedding_attention_decoder/embedding"], _device="/job:localhost/replica:0/task:0/cpu:0"](embedding_attention_seq2seq/embedding_attention_decoder/embedding/Initializer/random_uniform/RandomUniform, embedding_attention_seq2seq/embedding_attention_decoder/embedding/Initializer/random_uniform/sub)]]
+
+Command exited with non-zero status 1
+870.47user 11.91system 18:21.71elapsed 80%CPU (0avgtext+0avgdata 859932maxresident)k
+1971040inputs+25080outputs (79812major+1484766minor)pagefaults 0swaps
+hjoon0510@hjoon0510-desktop:~/chatbot/tensorflow-on-x86_64-r0.11/tensorflow/models/rnn/translate$ sudo time  python ./translate.py  --en_vocab_size=40000 --fr_vocab_size=40000 --data_dir=/home/hjoon0510/chatbot/train/  --train_dir=/home/hjoon0510/chatbot/train
+
+
+----------------
+
+End of Line. 
+

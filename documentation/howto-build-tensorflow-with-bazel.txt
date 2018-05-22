@@ -1,0 +1,25 @@
+
+
+HOWTO BUILD TENSORFLOW
+==========================
+
+hjoon0510@hjoon0510-desktop:/var/www$ javac
+The program 'javac' can be found in the following packages:
+ * default-jdk
+ * ecj
+ * gcj-5-jdk
+ * openjdk-8-jdk-headless
+ * gcj-4.8-jdk
+ * gcj-4.9-jdk
+Try: sudo apt install <selected package>
+hjoon0510@hjoon0510-desktop:/var/www$
+hjoon0510@hjoon0510-desktop:/var/www$
+hjoon0510@hjoon0510-desktop:/var/www$
+hjoon0510@hjoon0510-desktop:/var/www$ dpkg -l | grep jdk
+ii  openjdk-8-jre-headless:armhf 8u171-b11-0ubuntu0.16.04.1  armhf  OpenJDK Java runtime, using Hotspot JIT (headless)
+hjoon0510@hjoon0510-desktop:/var/www$
+
+
+
+
+End of line. 

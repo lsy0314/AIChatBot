@@ -1,0 +1,35 @@
+
+  HOW TO set-up development environment
+  ====================================
+
+1. train RNN network model
+
+$ pushd ./tensorflow-on-x86_64-r0.11/tensorflow/models/rnn/translate/
+$ time python ./translate.py  --en_vocab_size=40000 --fr_vocab_size=40000 --data_dir=/work/olympiad/chatbot/train/  --train_dir=/work/olympiad/chatbot/train
+
+2. run trained network model
+$ time python ./translate.py  --en_vocab_size=40000 --fr_vocab_size=40000 --data_dir=/work/olympiad/chatbot/train/  --train_dir=/work/olympiad/chatbot/train --decode
+
+
+
+3. source code (with git repository)
+
+git clone https://github.com/samjabrahams/tensorflow-on-raspberry-pi.git
+git tag
+git checkout v0.11
+git branch
+invain@u1604:/work/olympiad/chatbot$ du -sh ./tensorflow-on-raspberry-pi/
+281M    ./tensorflow-on-raspberry-pi/
+
+git clone https://github.com/b0noI/tensorflow.git
+git tag
+git checkout r0.11
+git branch
+
+invain@u1604:/work/olympiad/chatbot$ du -sh ./tensorflow-on-x86_64-r0.11/
+139M    ./tensorflow-on-x86_64-r0.11/
+
+
+End of line
+
+
