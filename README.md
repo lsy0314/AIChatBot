@@ -14,6 +14,10 @@ Opertion structure to develop artificial intelligence chat bot
 # Video
 <img src=https://github.com/Limsuyoun/DeepLearningChatBot/blob/master/image/demo..JPG border=0 width=600 height=400> </img>
 
+# Installation
+(in progress)
+
+
 # Reference
 * https://danbee.ai/landing.html <br>
 * https://calyfactory.github.io/api.ai-chatbot<br>
@@ -26,4 +30,4 @@ Opertion structure to develop artificial intelligence chat bot
 * https://guides.github.com/features/mastering-markdown/
 
 # Contact
-I am a student in [Maehyun mid-school](http://www.maehyeon.ms.kr/). My homepage is http://Limsuyoun.github.io. If you have any questions, Please contact me lsy0314@gmail.com. I make an effort to write english statement by utilizing https://translate.google.com to talk about my project with foreigners all over the world.
+I am a student in [Maehyun mid-school](http://www.maehyeon.ms.kr/). My homepage is http://Limsuyoun.github.io. If you have any questions, Please contact me lsy0314@gmail.com. I have used  https://translate.google.com to talk about my project with foreigners all over the world.
