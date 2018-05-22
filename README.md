@@ -12,7 +12,7 @@ The following figure is the operation structure of artificial intelligence chatb
 Opertion structure to develop artificial intelligence chat bot
 
 # Video
-<img src=https://github.com/Limsuyoun/DeepLearningChatBot/blob/master/image/demo..JPG border=0 width=350 height=250> </img>
+<img src=https://github.com/Limsuyoun/DeepLearningChatBot/blob/master/image/demo..JPG border=0 width=600 height=400> </img>
 
 # Reference
 * https://danbee.ai/landing.html <br>
