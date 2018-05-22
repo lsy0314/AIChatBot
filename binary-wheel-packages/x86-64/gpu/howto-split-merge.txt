@@ -1,0 +1,21 @@
+
+How to split and merge big files (>100MB)
+==========================================
+
+0. Memo
+
+remote: warning: GH001: Large files detected.
+                 You may want to try Git Large File Storage - https://git-lfs.github.com.
+remote: warning: See http://git.io/iEPt8g for more information.
+remote: warning: File binary-wheel-packages/x86-64/gpu/tensorflowaa is 90.00 MB;
+                 this is larger than GitHub's recommended maximum file size of 50.00 MB
+
+1. how to split
+$ split -b 40m tensorflow-0.11.0-cp27-none-linux_x86_64.whl  tensorflow
+
+
+2. how to merge again
+$ cat tensorflow* >  tensorflow-0.11.0-cp27-none-linux_x86_64.whl
+
+
+
