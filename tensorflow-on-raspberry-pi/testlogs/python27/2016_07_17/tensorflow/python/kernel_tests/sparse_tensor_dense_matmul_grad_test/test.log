@@ -1,0 +1,23 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+..
+----------------------------------------------------------------------
+Ran 2 tests in 14.453s
+
+OK
+sparse_tensor_dense_matmul_True_True_float32 gradient err = 0.000177145
+sparse_tensor_dense_matmul_True_False_float32 gradient err = 0.00011301
+sparse_tensor_dense_matmul_False_True_float32 gradient err = 4.93526e-05
+sparse_tensor_dense_matmul_False_False_float32 gradient err = 0.0001055
+sparse_tensor_dense_matmul_True_True_float64 gradient err = 6.61692922677e-14
+sparse_tensor_dense_matmul_True_False_float64 gradient err = 4.04787314778e-13
+sparse_tensor_dense_matmul_False_True_float64 gradient err = 1.09245945623e-13
+sparse_tensor_dense_matmul_False_False_float64 gradient err = 9.10382880193e-14
+sparse_tensor_dense_matmul_True_True_float32 gradient err = 1.29938e-05
+sparse_tensor_dense_matmul_True_False_float32 gradient err = 9.41753e-05
+sparse_tensor_dense_matmul_False_True_float32 gradient err = 0.000130296
+sparse_tensor_dense_matmul_False_False_float32 gradient err = 6.47306e-05
+sparse_tensor_dense_matmul_True_True_float64 gradient err = 2.86770607261e-13
+sparse_tensor_dense_matmul_True_False_float64 gradient err = 1.92290627865e-13
+sparse_tensor_dense_matmul_False_True_float64 gradient err = 3.95239396767e-14
+sparse_tensor_dense_matmul_False_False_float64 gradient err = 2.24265050974e-14

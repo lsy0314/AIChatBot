@@ -1,0 +1,9 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/bin/tensorflow/python/kernel_tests/embedding_ops_test.runfiles/tensorflow/python/ops/embedding_ops.py:76: DeprecationWarning: elementwise == comparison failed; this will raise an error in the future.
+  if params is None or params == []:  # pylint: disable=g-explicit-bool-comparison
+.
+----------------------------------------------------------------------
+Ran 1 test in 4.971s
+
+OK

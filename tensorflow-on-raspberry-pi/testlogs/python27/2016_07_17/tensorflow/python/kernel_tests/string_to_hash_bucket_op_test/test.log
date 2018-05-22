@@ -1,0 +1,11 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+...E tensorflow/core/common_runtime/executor.cc:334] Executor failed to create kernel. Invalid argument: Key must have 2 elements
+	 [[Node: StringToHashBucketStrong = StringToHashBucketStrong[key=[98765], num_buckets=10, _device="/job:localhost/replica:0/task:0/cpu:0"](Const)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Key must have 2 elements
+	 [[Node: StringToHashBucketStrong = StringToHashBucketStrong[key=[98765], num_buckets=10, _device="/job:localhost/replica:0/task:0/cpu:0"](Const)]]
+.....
+----------------------------------------------------------------------
+Ran 8 tests in 0.143s
+
+OK

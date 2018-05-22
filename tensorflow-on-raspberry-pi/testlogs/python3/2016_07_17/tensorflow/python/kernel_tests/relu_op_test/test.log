@@ -1,0 +1,15 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+..................
+----------------------------------------------------------------------
+Ran 18 tests in 2.171s
+
+OK
+elu (float32) gradient err =  2.19345e-05
+elu (float64) gradient err =  1.50806227728e-07
+relu6 (float32) gradient err =  0
+relu6 (float64) gradient err =  0
+relu (float32) gradient of gradient err =  0
+relu (float64) gradient of gradient err =  0
+relu (float32) gradient err =  1.29342e-05
+relu (float64) gradient err =  8.881784197e-16

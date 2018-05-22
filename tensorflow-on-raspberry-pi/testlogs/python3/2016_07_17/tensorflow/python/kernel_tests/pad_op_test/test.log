@@ -1,0 +1,11 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+.........E tensorflow/core/client/tensor_c_api.cc:485] paddings must be less thanthan the dimension size: 2, 0 not less than 2
+	 [[Node: MirrorPad = MirrorPad[T=DT_INT32, mode="REFLECT", _device="/job:localhost/replica:0/task:0/cpu:0"](Const, Const_1)]]
+E tensorflow/core/client/tensor_c_api.cc:485] paddings must be no greater than the dimension size: 0, 3 greater than 2
+	 [[Node: MirrorPad_1 = MirrorPad[T=DT_INT32, mode="SYMMETRIC", _device="/job:localhost/replica:0/task:0/cpu:0"](Const_2, Const_3)]]
+......
+----------------------------------------------------------------------
+Ran 15 tests in 2.968s
+
+OK

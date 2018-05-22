@@ -1,0 +1,9 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+..E tensorflow/core/client/tensor_c_api.cc:485] Shapes of all inputs must match: values[0].shape = [] != values[1].shape = [1]
+	 [[Node: packed_1/1 = Pack[N=3, T=DT_INT32, axis=0, _device="/job:localhost/replica:0/task:0/cpu:0"](packed_1/1/0, _recv_Placeholder_1_0, packed_1/1/2)]]
+...............
+----------------------------------------------------------------------
+Ran 17 tests in 10.093s
+
+OK

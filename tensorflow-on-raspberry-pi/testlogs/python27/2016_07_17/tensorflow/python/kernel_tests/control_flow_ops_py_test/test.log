@@ -1,0 +1,38 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+.E tensorflow/core/client/tensor_c_api.cc:485] assertion failed: [More than one condition evaluated as True but exclusive=True.  Conditions: (Less_3:0, Less_4:0), Values:] [1 1]
+	 [[Node: case_3/Assert = Assert[T=[DT_STRING, DT_BOOL], summarize=2, _device="/job:localhost/replica:0/task:0/cpu:0"](case_3/Less, case_3/Assert/data_0, case_3/preds_c)]]
+WARNING:tensorflow:case: Provided dictionary of predicate/fn pairs, but exclusive=False.  Order of conditional tests is not guaranteed.
+......................E tensorflow/core/client/tensor_c_api.cc:485] Attempting to use uninitialized value Variable
+	 [[Node: _send_Variable_0 = _Send[T=DT_FLOAT, client_terminated=true, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/cpu:0", send_device_incarnation=8448340679364119266, tensor_name="Variable:0", _device="/job:localhost/replica:0/task:0/cpu:0"](Variable)]]
+..................E tensorflow/core/client/tensor_c_api.cc:485] The tensor returned for Identity:0 was not valid.
+.............WARNING:tensorflow:Tried to colocate gradients/while/Square_grad/mul/f_acc with an op while/Identity that had a different device: /device:GPU:0 vs /device:CPU:0. Ignoring colocation property.
+...........................................E tensorflow/core/client/tensor_c_api.cc:485] Attempting to use uninitialized value Variable
+	 [[Node: Variable/read = Identity[T=DT_FLOAT, _class=["loc:@Variable"], _device="/job:localhost/replica:0/task:0/cpu:0"](Variable)]]
+.W tensorflow/core/framework/op_kernel.cc:936] Failed precondition: Attempting to use uninitialized value Variable
+	 [[Node: _send_Variable_0 = _Send[T=DT_FLOAT, client_terminated=true, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/cpu:0", send_device_incarnation=8228077631115786400, tensor_name="Variable:0", _device="/job:localhost/replica:0/task:0/cpu:0"](Variable)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Attempting to use uninitialized value Variable
+	 [[Node: _send_Variable_0 = _Send[T=DT_FLOAT, client_terminated=true, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/cpu:0", send_device_incarnation=8228077631115786400, tensor_name="Variable:0", _device="/job:localhost/replica:0/task:0/cpu:0"](Variable)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] Attempting to use uninitialized value Variable
+	 [[Node: _send_Variable_0 = _Send[T=DT_FLOAT, client_terminated=true, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/cpu:0", send_device_incarnation=80954877802673214, tensor_name="Variable:0", _device="/job:localhost/replica:0/task:0/cpu:0"](Variable)]]
+...E tensorflow/core/client/tensor_c_api.cc:485] Attempting to use uninitialized value Variable
+	 [[Node: _send_Variable_0 = _Send[T=DT_FLOAT, client_terminated=true, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/cpu:0", send_device_incarnation=1720160156823402135, tensor_name="Variable:0", _device="/job:localhost/replica:0/task:0/cpu:0"](Variable)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Attempting to use uninitialized value Variable_1
+	 [[Node: _send_Variable_1_0 = _Send[T=DT_FLOAT, client_terminated=true, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/cpu:0", send_device_incarnation=1720160156823402135, tensor_name="Variable_1:0", _device="/job:localhost/replica:0/task:0/cpu:0"](Variable_1)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Attempting to use uninitialized value Variable_2
+	 [[Node: _send_Variable_2_0 = _Send[T=DT_FLOAT, client_terminated=true, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/cpu:0", send_device_incarnation=1720160156823402135, tensor_name="Variable_2:0", _device="/job:localhost/replica:0/task:0/cpu:0"](Variable_2)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Attempting to use uninitialized value Variable_3
+	 [[Node: _send_Variable_3_0 = _Send[T=DT_FLOAT, client_terminated=true, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/cpu:0", send_device_incarnation=1720160156823402135, tensor_name="Variable_3:0", _device="/job:localhost/replica:0/task:0/cpu:0"](Variable_3)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] Attempting to use uninitialized value Variable
+	 [[Node: _send_Variable_0 = _Send[T=DT_FLOAT, client_terminated=true, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/cpu:0", send_device_incarnation=-2821117717816974861, tensor_name="Variable:0", _device="/job:localhost/replica:0/task:0/cpu:0"](Variable)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Attempting to use uninitialized value Variable_1
+	 [[Node: _send_Variable_1_0 = _Send[T=DT_FLOAT, client_terminated=true, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/cpu:0", send_device_incarnation=-2821117717816974861, tensor_name="Variable_1:0", _device="/job:localhost/replica:0/task:0/cpu:0"](Variable_1)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Attempting to use uninitialized value Variable_2
+	 [[Node: _send_Variable_2_0 = _Send[T=DT_FLOAT, client_terminated=true, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/cpu:0", send_device_incarnation=-2821117717816974861, tensor_name="Variable_2:0", _device="/job:localhost/replica:0/task:0/cpu:0"](Variable_2)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Attempting to use uninitialized value Variable_3
+	 [[Node: _send_Variable_3_0 = _Send[T=DT_FLOAT, client_terminated=true, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/cpu:0", send_device_incarnation=-2821117717816974861, tensor_name="Variable_3:0", _device="/job:localhost/replica:0/task:0/cpu:0"](Variable_3)]]
+....
+----------------------------------------------------------------------
+Ran 107 tests in 40.748s
+
+OK

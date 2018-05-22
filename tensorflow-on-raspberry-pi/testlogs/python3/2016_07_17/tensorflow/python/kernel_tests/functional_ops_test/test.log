@@ -1,0 +1,7 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+............E tensorflow/core/client/tensor_c_api.cc:485] TensorArray dtype is int64 but Op is trying to write dtype int32.
+	 [[Node: map/while/TensorArrayWrite = TensorArrayWrite[T=DT_INT32, _class=["loc:@map/TensorArray_6"], _device="/job:localhost/replica:0/task:0/cpu:0"](map/while/TensorArrayWrite/RefEnter, map/while/Identity, map/while/add, map/while/Identity_1)]]
+E....E tensorflow/core/client/tensor_c_api.cc:485] TensorArray dtype is int64 but Op is trying to write dtype int32.
+	 [[Node: map/while/TensorArrayWrite_1 = TensorArrayWrite[T=DT_INT32, _class=["loc:@map/TensorArray_3"], _device="/job:localhost/replica:0/task:0/cpu:0"](map/while/TensorArrayWrite_1/RefEnter, map/while/Identity, map/while/mul_1, map/while/Identity_2)]]
+E......

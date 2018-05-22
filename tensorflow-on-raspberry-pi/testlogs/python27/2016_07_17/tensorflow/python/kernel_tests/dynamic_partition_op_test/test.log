@@ -1,0 +1,23 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+E tensorflow/core/client/tensor_c_api.cc:485] partitions[2] = 99 is not in [0, 4)
+	 [[Node: DynamicPartition = DynamicPartition[T=DT_INT32, num_partitions=4, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, Const_1)]]
+...E tensorflow/core/client/tensor_c_api.cc:485] partitions[0,0] = 17 is not in [0, 7)
+	 [[Node: DynamicPartition = DynamicPartition[T=DT_DOUBLE, num_partitions=7, _device="/job:localhost/replica:0/task:0/cpu:0"](DynamicPartition/data, _recv_Placeholder_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] partitions[0,1] = 17 is not in [0, 7)
+	 [[Node: DynamicPartition = DynamicPartition[T=DT_DOUBLE, num_partitions=7, _device="/job:localhost/replica:0/task:0/cpu:0"](DynamicPartition/data, _recv_Placeholder_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] partitions[0,2] = 17 is not in [0, 7)
+	 [[Node: DynamicPartition = DynamicPartition[T=DT_DOUBLE, num_partitions=7, _device="/job:localhost/replica:0/task:0/cpu:0"](DynamicPartition/data, _recv_Placeholder_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] partitions[1,0] = 17 is not in [0, 7)
+	 [[Node: DynamicPartition = DynamicPartition[T=DT_DOUBLE, num_partitions=7, _device="/job:localhost/replica:0/task:0/cpu:0"](DynamicPartition/data, _recv_Placeholder_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] partitions[1,1] = 17 is not in [0, 7)
+	 [[Node: DynamicPartition = DynamicPartition[T=DT_DOUBLE, num_partitions=7, _device="/job:localhost/replica:0/task:0/cpu:0"](DynamicPartition/data, _recv_Placeholder_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] partitions[1,2] = 17 is not in [0, 7)
+	 [[Node: DynamicPartition = DynamicPartition[T=DT_DOUBLE, num_partitions=7, _device="/job:localhost/replica:0/task:0/cpu:0"](DynamicPartition/data, _recv_Placeholder_0)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] partitions = 17 is not in [0, 7)
+	 [[Node: DynamicPartition = DynamicPartition[T=DT_DOUBLE, num_partitions=7, _device="/job:localhost/replica:0/task:0/cpu:0"](DynamicPartition/data, DynamicPartition/partitions)]]
+....
+----------------------------------------------------------------------
+Ran 8 tests in 3.789s
+
+OK

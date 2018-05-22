@@ -1,0 +1,31 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+E tensorflow/core/client/tensor_c_api.cc:485] Integer division by zero
+	 [[Node: floordiv = Div[T=DT_UINT8, _device="/job:localhost/replica:0/task:0/cpu:0"](Const_1, Const)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Integer division by zero
+	 [[Node: floordiv_1 = Div[T=DT_INT16, _device="/job:localhost/replica:0/task:0/cpu:0"](Const_3, Const_2)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Integer division by zero
+	 [[Node: floordiv_2 = Div[T=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](Const_5, Const_4)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Integer division by zero
+	 [[Node: mod = Mod[T=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](Const_5, Const_4)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Integer division by zero
+	 [[Node: floordiv_3 = Div[T=DT_INT64, _device="/job:localhost/replica:0/task:0/cpu:0"](Const_7, Const_6)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Integer division by zero
+	 [[Node: mod_1 = Mod[T=DT_INT64, _device="/job:localhost/replica:0/task:0/cpu:0"](Const_7, Const_6)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Integer division by zero
+	 [[Node: floordiv_4 = Div[T=DT_UINT8, _device="/job:localhost/replica:0/task:0/cpu:0"](Const_9, Const_8)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Integer division by zero
+	 [[Node: floordiv_5 = Div[T=DT_INT16, _device="/job:localhost/replica:0/task:0/cpu:0"](Const_11, Const_10)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Integer division by zero
+	 [[Node: floordiv_6 = Div[T=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](Const_13, Const_12)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Integer division by zero
+	 [[Node: mod_2 = Mod[T=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](Const_13, Const_12)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Integer division by zero
+	 [[Node: floordiv_7 = Div[T=DT_INT64, _device="/job:localhost/replica:0/task:0/cpu:0"](Const_15, Const_14)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Integer division by zero
+	 [[Node: mod_3 = Mod[T=DT_INT64, _device="/job:localhost/replica:0/task:0/cpu:0"](Const_15, Const_14)]]
+..
+----------------------------------------------------------------------
+Ran 2 tests in 0.293s
+
+OK

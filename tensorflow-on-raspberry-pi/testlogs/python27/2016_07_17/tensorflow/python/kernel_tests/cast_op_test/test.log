@@ -1,0 +1,86 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+....F.W tensorflow/core/framework/op_kernel.cc:926] Unimplemented: Cast int32 to string is not supported
+E tensorflow/core/common_runtime/executor.cc:334] Executor failed to create kernel. Unimplemented: Cast int32 to string is not supported
+	 [[Node: Cast = Cast[DstT=DT_STRING, SrcT=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](Cast/x)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Cast int32 to string is not supported
+	 [[Node: Cast = Cast[DstT=DT_STRING, SrcT=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](Cast/x)]]
+F.......
+======================================================================
+FAIL: testInfNan (__main__.CastOpTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/cast_op_test.runfiles/tensorflow/python/kernel_tests/cast_op_test.py", line 124, in testInfNan
+    self._compare(np.inf, np.int32, i4.min, False)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/cast_op_test.runfiles/tensorflow/python/kernel_tests/cast_op_test.py", line 102, in _compare
+    dst_dtype(expected))
+  File "/usr/lib/python2.7/dist-packages/numpy/testing/utils.py", line 317, in assert_equal
+    raise AssertionError(msg)
+AssertionError: 
+Items are not equal:
+ ACTUAL: 2147483647
+ DESIRED: -2147483648
+
+======================================================================
+FAIL: testNotImplemented (__main__.CastOpTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/cast_op_test.runfiles/tensorflow/python/kernel_tests/cast_op_test.py", line 149, in testNotImplemented
+    "Cast.*int64.*string.*")
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/cast_op_test.runfiles/tensorflow/python/kernel_tests/cast_op_test.py", line 145, in _OpError
+    tf.cast(x, dtype).eval()
+  File "/usr/lib/python2.7/contextlib.py", line 35, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/cast_op_test.runfiles/tensorflow/python/framework/test_util.py", line 528, in assertRaisesWithPredicateMatch
+    raise AssertionError(e)
+AssertionError: Cast int32 to string is not supported
+	 [[Node: Cast = Cast[DstT=DT_STRING, SrcT=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](Cast/x)]]
+Caused by op u'Cast', defined at:
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/cast_op_test.runfiles/tensorflow/python/kernel_tests/cast_op_test.py", line 205, in <module>
+    tf.test.main()
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/cast_op_test.runfiles/tensorflow/python/platform/test.py", line 87, in main
+    return googletest.main()
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/cast_op_test.runfiles/tensorflow/python/platform/googletest.py", line 84, in main
+    benchmark.benchmarks_main(true_main=g_main)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/cast_op_test.runfiles/tensorflow/python/platform/benchmark.py", line 301, in benchmarks_main
+    true_main()
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/cast_op_test.runfiles/tensorflow/python/platform/googletest.py", line 58, in g_main
+    return unittest_main(*args, **kwargs)
+  File "/usr/lib/python2.7/unittest/main.py", line 95, in __init__
+    self.runTests()
+  File "/usr/lib/python2.7/unittest/main.py", line 232, in runTests
+    self.result = testRunner.run(self.test)
+  File "/usr/lib/python2.7/unittest/runner.py", line 151, in run
+    test(result)
+  File "/usr/lib/python2.7/unittest/suite.py", line 70, in __call__
+    return self.run(*args, **kwds)
+  File "/usr/lib/python2.7/unittest/suite.py", line 108, in run
+    test(result)
+  File "/usr/lib/python2.7/unittest/suite.py", line 70, in __call__
+    return self.run(*args, **kwds)
+  File "/usr/lib/python2.7/unittest/suite.py", line 108, in run
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 393, in __call__
+    return self.run(*args, **kwds)
+  File "/usr/lib/python2.7/unittest/case.py", line 329, in run
+    testMethod()
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/cast_op_test.runfiles/tensorflow/python/kernel_tests/cast_op_test.py", line 149, in testNotImplemented
+    "Cast.*int64.*string.*")
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/cast_op_test.runfiles/tensorflow/python/kernel_tests/cast_op_test.py", line 145, in _OpError
+    tf.cast(x, dtype).eval()
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/cast_op_test.runfiles/tensorflow/python/ops/math_ops.py", line 619, in cast
+    return gen_math_ops.cast(x, base_type, name=name)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/cast_op_test.runfiles/tensorflow/python/ops/gen_math_ops.py", line 407, in cast
+    result = _op_def_lib.apply_op("Cast", x=x, DstT=DstT, name=name)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/cast_op_test.runfiles/tensorflow/python/framework/op_def_library.py", line 703, in apply_op
+    op_def=op_def)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/cast_op_test.runfiles/tensorflow/python/framework/ops.py", line 2298, in create_op
+    original_op=self._default_original_op, op_def=op_def)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/cast_op_test.runfiles/tensorflow/python/framework/ops.py", line 1232, in __init__
+    self._traceback = _extract_stack()
+
+
+----------------------------------------------------------------------
+Ran 14 tests in 4.557s
+
+FAILED (failures=2)

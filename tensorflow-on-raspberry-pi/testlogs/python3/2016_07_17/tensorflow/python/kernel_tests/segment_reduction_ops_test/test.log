@@ -1,0 +1,87 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+..E tensorflow/core/client/tensor_c_api.cc:485] segment ids do not start at 0
+	 [[Node: SegmentSum = SegmentSum[T=DT_INT32, Tindices=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, SegmentSum/segment_ids)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] segment ids do not start at 0
+	 [[Node: SegmentSum = SegmentSum[T=DT_INT32, Tindices=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, SegmentSum/segment_ids)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] segment ids are not increasing by 1
+	 [[Node: SegmentSum = SegmentSum[T=DT_INT32, Tindices=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, SegmentSum/segment_ids)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] segment ids are not increasing by 1
+	 [[Node: SegmentSum = SegmentSum[T=DT_INT32, Tindices=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, SegmentSum/segment_ids)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] Segment id 1 out of range [0, 1), probably because 'segment_ids' input is not sorted.
+	 [[Node: SegmentSum = SegmentSum[T=DT_INT32, Tindices=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, SegmentSum/segment_ids)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] segment ids must be >= 0
+	 [[Node: SegmentSum = SegmentSum[T=DT_INT32, Tindices=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, SegmentSum/segment_ids)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] segment ids must be >= 0
+	 [[Node: SegmentSum = SegmentSum[T=DT_INT32, Tindices=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, SegmentSum/segment_ids)]]
+..E tensorflow/core/client/tensor_c_api.cc:485] segment_ids should be the same size as dimension 0 of input.
+	 [[Node: SegmentSum = SegmentSum[T=DT_INT32, Tindices=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, SegmentSum/segment_ids)]]
+......E tensorflow/core/client/tensor_c_api.cc:485] Index 10 out of range [0, 10).
+	 [[Node: SparseSegmentMeanGrad = SparseSegmentMeanGrad[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, SparseSegmentMeanGrad/indices, SparseSegmentMeanGrad/segment_ids, SparseSegmentMeanGrad/output_dim0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Index 10 out of range [0, 10).
+	 [[Node: SparseSegmentSqrtNGrad = SparseSegmentSqrtNGrad[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, SparseSegmentSqrtNGrad/indices, SparseSegmentSqrtNGrad/segment_ids, SparseSegmentSqrtNGrad/output_dim0)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] Index -1 out of range [0, 10).
+	 [[Node: SparseSegmentMeanGrad = SparseSegmentMeanGrad[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, SparseSegmentMeanGrad/indices, SparseSegmentMeanGrad/segment_ids, SparseSegmentMeanGrad/output_dim0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Index -1 out of range [0, 10).
+	 [[Node: SparseSegmentSqrtNGrad = SparseSegmentSqrtNGrad[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, SparseSegmentSqrtNGrad/indices, SparseSegmentSqrtNGrad/segment_ids, SparseSegmentSqrtNGrad/output_dim0)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] Invalid number of segments
+	 [[Node: SparseSegmentMeanGrad = SparseSegmentMeanGrad[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, SparseSegmentMeanGrad/indices, SparseSegmentMeanGrad/segment_ids, SparseSegmentMeanGrad/output_dim0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Invalid number of segments
+	 [[Node: SparseSegmentSqrtNGrad = SparseSegmentSqrtNGrad[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, SparseSegmentSqrtNGrad/indices, SparseSegmentSqrtNGrad/segment_ids, SparseSegmentSqrtNGrad/output_dim0)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] Segment id 1 out of range [0, 1).
+	 [[Node: SparseSegmentMeanGrad = SparseSegmentMeanGrad[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, SparseSegmentMeanGrad/indices, SparseSegmentMeanGrad/segment_ids, SparseSegmentMeanGrad/output_dim0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Segment id 1 out of range [0, 1).
+	 [[Node: SparseSegmentSqrtNGrad = SparseSegmentSqrtNGrad[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, SparseSegmentSqrtNGrad/indices, SparseSegmentSqrtNGrad/segment_ids, SparseSegmentSqrtNGrad/output_dim0)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] Segment id -1 out of range [0, 2).
+	 [[Node: SparseSegmentMeanGrad = SparseSegmentMeanGrad[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, SparseSegmentMeanGrad/indices, SparseSegmentMeanGrad/segment_ids, SparseSegmentMeanGrad/output_dim0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Segment id -1 out of range [0, 2).
+	 [[Node: SparseSegmentSqrtNGrad = SparseSegmentSqrtNGrad[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, SparseSegmentSqrtNGrad/indices, SparseSegmentSqrtNGrad/segment_ids, SparseSegmentSqrtNGrad/output_dim0)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] Segment id 0 out of range [0, 0).
+	 [[Node: SparseSegmentMeanGrad = SparseSegmentMeanGrad[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, SparseSegmentMeanGrad/indices, SparseSegmentMeanGrad/segment_ids, SparseSegmentMeanGrad/output_dim0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Segment id 0 out of range [0, 0).
+	 [[Node: SparseSegmentSqrtNGrad = SparseSegmentSqrtNGrad[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, SparseSegmentSqrtNGrad/indices, SparseSegmentSqrtNGrad/segment_ids, SparseSegmentSqrtNGrad/output_dim0)]]
+..E tensorflow/core/client/tensor_c_api.cc:485] Bad: indices[1] == -1 out of range [0, 10)
+	 [[Node: SparseSegmentSum = SparseSegmentSum[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, SparseSegmentSum/indices, SparseSegmentSum/segment_ids)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Bad: indices[1] == -1 out of range [0, 10)
+	 [[Node: SparseSegmentMean = SparseSegmentMean[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, SparseSegmentMean/indices, SparseSegmentMean/segment_ids)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] Bad: indices[3] == 10 out of range [0, 10)
+	 [[Node: SparseSegmentSum = SparseSegmentSum[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, SparseSegmentSum/indices, SparseSegmentSum/segment_ids)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Bad: indices[3] == 10 out of range [0, 10)
+	 [[Node: SparseSegmentMean = SparseSegmentMean[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, SparseSegmentMean/indices, SparseSegmentMean/segment_ids)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] segment ids are not increasing by 1
+	 [[Node: SparseSegmentSum = SparseSegmentSum[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, SparseSegmentSum/indices, SparseSegmentSum/segment_ids)]]
+E tensorflow/core/client/tensor_c_api.cc:485] segment ids are not increasing by 1
+	 [[Node: SparseSegmentMean = SparseSegmentMean[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, SparseSegmentMean/indices, SparseSegmentMean/segment_ids)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] segment ids are not increasing by 1
+	 [[Node: SparseSegmentSum = SparseSegmentSum[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, SparseSegmentSum/indices, SparseSegmentSum/segment_ids)]]
+E tensorflow/core/client/tensor_c_api.cc:485] segment ids are not increasing by 1
+	 [[Node: SparseSegmentMean = SparseSegmentMean[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, SparseSegmentMean/indices, SparseSegmentMean/segment_ids)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] Segment id 1 out of range [0, 1), probably because 'segment_ids' input is not sorted.
+	 [[Node: SparseSegmentSum = SparseSegmentSum[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, SparseSegmentSum/indices, SparseSegmentSum/segment_ids)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Segment id 1 out of range [0, 1), probably because 'segment_ids' input is not sorted.
+	 [[Node: SparseSegmentMean = SparseSegmentMean[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, SparseSegmentMean/indices, SparseSegmentMean/segment_ids)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] segment ids do not start at 0
+	 [[Node: SparseSegmentSum = SparseSegmentSum[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, SparseSegmentSum/indices, SparseSegmentSum/segment_ids)]]
+E tensorflow/core/client/tensor_c_api.cc:485] segment ids do not start at 0
+	 [[Node: SparseSegmentMean = SparseSegmentMean[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, SparseSegmentMean/indices, SparseSegmentMean/segment_ids)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] segment ids do not start at 0
+	 [[Node: SparseSegmentSum = SparseSegmentSum[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, SparseSegmentSum/indices, SparseSegmentSum/segment_ids)]]
+E tensorflow/core/client/tensor_c_api.cc:485] segment ids do not start at 0
+	 [[Node: SparseSegmentMean = SparseSegmentMean[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, SparseSegmentMean/indices, SparseSegmentMean/segment_ids)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] segment ids must be >= 0
+	 [[Node: SparseSegmentSum = SparseSegmentSum[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, SparseSegmentSum/indices, SparseSegmentSum/segment_ids)]]
+E tensorflow/core/client/tensor_c_api.cc:485] segment ids must be >= 0
+	 [[Node: SparseSegmentMean = SparseSegmentMean[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, SparseSegmentMean/indices, SparseSegmentMean/segment_ids)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] segment ids must be >= 0
+	 [[Node: SparseSegmentSum = SparseSegmentSum[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, SparseSegmentSum/indices, SparseSegmentSum/segment_ids)]]
+E tensorflow/core/client/tensor_c_api.cc:485] segment ids must be >= 0
+	 [[Node: SparseSegmentMean = SparseSegmentMean[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, SparseSegmentMean/indices, SparseSegmentMean/segment_ids)]]
+....E tensorflow/core/client/tensor_c_api.cc:485] segment_ids[0,0] = -1 is out of range [0, 2)
+	 [[Node: UnsortedSegmentSum = UnsortedSegmentSum[T=DT_INT32, Tindices=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](UnsortedSegmentSum/data, UnsortedSegmentSum/segment_ids, UnsortedSegmentSum/num_segments)]]
+E tensorflow/core/client/tensor_c_api.cc:485] segment_ids[0,0] = 7 is out of range [0, 2)
+	 [[Node: UnsortedSegmentSum_1 = UnsortedSegmentSum[T=DT_INT32, Tindices=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](UnsortedSegmentSum_1/data, UnsortedSegmentSum_1/segment_ids, UnsortedSegmentSum_1/num_segments)]]
+.....
+----------------------------------------------------------------------
+Ran 40 tests in 8.241s
+
+OK

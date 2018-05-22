@@ -1,0 +1,19 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+....
+----------------------------------------------------------------------
+Ran 4 tests in 7.243s
+
+OK
+LRN error for bias  1.97117341377 alpha  0.855310870546  beta  0.0842407585135  is  5.96046e-08
+LRN error for bias  1.01262789136 alpha  1.20407944241  beta  1.29672023385  is  8.9407e-08
+LRN error for bias  1.39280012332 alpha  0.912204220232  beta  0.822683637616  is  5.96046e-08
+LRN error for bias  1.97842913563 alpha  1.41948324845  beta  0.103696853897  is  0.000661731
+LRN error for bias  1.20528770352 alpha  0.160302401435  beta  0.714848616809  is  5.96046e-08
+LRN error for bias  1.2310314514 alpha  0.105884778859  beta  0.0201912760762  is  0.00064528
+LRN Gradient error for bias  1.58042537733 alpha  0.503187482177  beta  0.917545954651  is  3.95849e-05
+LRN Gradient error for bias  1.99095586577 alpha  0.138276697751  beta  0.567323610065  is  4.4167e-05
+LRN Gradient error for bias  1.97777035966 alpha  0.576471009713  beta  0.894604168247  is  3.66271e-05
+LRN Gradient error for bias  1.61591719507 alpha  0.991428487418  beta  0.212033236422  is  0.23926
+LRN Gradient error for bias  1.69167076253 alpha  0.0135583093415  beta  0.850261633598  is  2.95809e-05
+LRN Gradient error for bias  1.74724234668 alpha  0.573985510185  beta  0.773235947333  is  0.22668

@@ -1,0 +1,11 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+./home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/bin/tensorflow/python/kernel_tests/ctc_decoder_ops_test.runfiles/tensorflow/python/kernel_tests/ctc_decoder_ops_test.py:102: RuntimeWarning: divide by zero encountered in log
+  input_log_prob_matrix_0 = np.log(input_prob_matrix_0)
+/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/bin/tensorflow/python/kernel_tests/ctc_decoder_ops_test.runfiles/tensorflow/python/kernel_tests/ctc_decoder_ops_test.py:115: RuntimeWarning: divide by zero encountered in log
+  input_log_prob_matrix_1 = np.log(input_prob_matrix_1)
+..
+----------------------------------------------------------------------
+Ran 3 tests in 0.267s
+
+OK

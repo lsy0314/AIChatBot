@@ -1,0 +1,637 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+.E tensorflow/core/client/tensor_c_api.cc:485] Barrier _1_B is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 1.  Number of incomplete keys: 0.
+	 [[Node: B_BarrierInsertMany_3 = BarrierInsertMany[T=DT_FLOAT, _class=["loc:@B"], component_index=0, _device="/job:localhost/replica:0/task:0/cpu:0"](B, B_BarrierInsertMany_3/keys, B_BarrierInsertMany_3/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _1_B is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 1.  Number of incomplete keys: 0.
+	 [[Node: B_BarrierInsertMany_2 = BarrierInsertMany[T=DT_FLOAT, _class=["loc:@B"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](B, B_BarrierInsertMany_2/keys, B_BarrierInsertMany_2/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_1_B' is closed and has insufficient elements (requested 3, total size 2)
+	 [[Node: B_BarrierTakeMany_1 = BarrierTakeMany[_class=["loc:@B"], allow_small_batch=false, component_types=[DT_FLOAT, DT_FLOAT], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](B, B_BarrierTakeMany_1/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_1_B' is closed and has insufficient elements (requested 2, total size 0)
+	 [[Node: B_BarrierTakeMany = BarrierTakeMany[_class=["loc:@B"], allow_small_batch=false, component_types=[DT_FLOAT, DT_FLOAT], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](B, B_BarrierTakeMany/num_elements)]]
+.W tensorflow/core/framework/op_kernel.cc:936] Aborted: Barrier _2_B is closed, but attempted to insert a brand new key: f.  Pending enqueues cancelled: 0.  Insertion index: 0.  Number of incomplete keys: 3.
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _2_B is closed, but attempted to insert a brand new key: f.  Pending enqueues cancelled: 0.  Insertion index: 0.  Number of incomplete keys: 3.
+	 [[Node: B_BarrierInsertMany_2 = BarrierInsertMany[T=DT_FLOAT, _class=["loc:@B"], component_index=0, _device="/job:localhost/replica:0/task:0/cpu:0"](B, B_BarrierInsertMany_2/keys, B_BarrierInsertMany_2/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _2_B is closed.  Pending enqueues cancelled: 0.  Number of new insertions: 1.  Number of incomplete keys: 0.
+	 [[Node: B_BarrierInsertMany_2 = BarrierInsertMany[T=DT_FLOAT, _class=["loc:@B"], component_index=0, _device="/job:localhost/replica:0/task:0/cpu:0"](B, B_BarrierInsertMany_2/keys, B_BarrierInsertMany_2/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_2_B' is closed and has insufficient elements (requested 4, total size 3)
+	 [[Node: B_BarrierTakeMany_1 = BarrierTakeMany[_class=["loc:@B"], allow_small_batch=false, component_types=[DT_FLOAT, DT_FLOAT], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](B, B_BarrierTakeMany_1/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_2_B' is closed and has insufficient elements (requested 3, total size 0)
+	 [[Node: B_BarrierTakeMany = BarrierTakeMany[_class=["loc:@B"], allow_small_batch=false, component_types=[DT_FLOAT, DT_FLOAT], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](B, B_BarrierTakeMany/num_elements)]]
+..W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Shared barrier 'b_a' has component types float but requested component types were int32
+E tensorflow/core/client/tensor_c_api.cc:485] Shared barrier 'b_a' has component types float but requested component types were int32
+	 [[Node: barrier_1 = Barrier[capacity=-1, component_types=[DT_INT32], container="", shapes=[[]], shared_name="b_a", _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Shared barrier 'b_b' has component types float but requested component types were float, int32
+E tensorflow/core/client/tensor_c_api.cc:485] Shared barrier 'b_b' has component types float but requested component types were float, int32
+	 [[Node: barrier_3 = Barrier[capacity=-1, component_types=[DT_FLOAT, DT_INT32], container="", shapes=[[], []], shared_name="b_b", _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Shared barrier 'b_c' has component shapes [[2,2], [8]] but requested component shapes were [[], []]
+E tensorflow/core/client/tensor_c_api.cc:485] Shared barrier 'b_c' has component shapes [[2,2], [8]] but requested component shapes were [[], []]
+	 [[Node: barrier_5 = Barrier[capacity=-1, component_types=[DT_FLOAT, DT_FLOAT], container="", shapes=[[], []], shared_name="b_c", _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Shared barrier 'b_d' has component shapes [[], []] but requested component shapes were [[2,2], [8]]
+E tensorflow/core/client/tensor_c_api.cc:485] Shared barrier 'b_d' has component shapes [[], []] but requested component shapes were [[2,2], [8]]
+	 [[Node: barrier_7 = Barrier[capacity=-1, component_types=[DT_FLOAT, DT_FLOAT], container="", shapes=[[2,2], [8]], shared_name="b_d", _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Shared barrier 'b_e' has component shapes [[2,2], [8]] but requested component shapes were [[2,5], [8]]
+E tensorflow/core/client/tensor_c_api.cc:485] Shared barrier 'b_e' has component shapes [[2,2], [8]] but requested component shapes were [[2,5], [8]]
+	 [[Node: barrier_9 = Barrier[capacity=-1, component_types=[DT_FLOAT, DT_FLOAT], container="", shapes=[[2,5], [8]], shared_name="b_e", _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+...E tensorflow/core/client/tensor_c_api.cc:485] Tensors with no elements are not supported _4_B: received shape [3,0]
+	 [[Node: B_BarrierInsertMany = BarrierInsertMany[T=DT_FLOAT, _class=["loc:@B"], component_index=0, _device="/job:localhost/replica:0/task:0/cpu:0"](B, B_BarrierInsertMany/keys, B_BarrierInsertMany/values)]]
+...E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_7_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_19 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_19/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_7_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_31 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_31/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_7_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_13 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_13/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_7_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_28 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_28/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_7_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_17 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_17/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_7_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_39 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_39/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_7_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_46 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_46/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_7_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_45 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_45/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_7_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_30 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_30/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_7_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_25 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_25/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_7_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_32 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_32/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_7_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_37 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_37/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_7_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_47 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_47/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_7_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_49 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_49/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_7_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_36 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_36/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_7_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_21 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_21/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_7_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_40 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_40/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_7_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_43 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_43/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_7_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_41 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_41/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_7_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_34 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_34/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_7_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_7 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_7/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_7_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_38 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_38/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_7_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_42 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_42/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_7_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_44 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_44/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_7_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_48 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_48/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _7_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_75 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_75/keys, barrier_BarrierInsertMany_75/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _7_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_76 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_76/keys, barrier_BarrierInsertMany_76/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _7_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_79 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_79/keys, barrier_BarrierInsertMany_79/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _7_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_77 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_77/keys, barrier_BarrierInsertMany_77/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _7_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_81 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_81/keys, barrier_BarrierInsertMany_81/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _7_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_85 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_85/keys, barrier_BarrierInsertMany_85/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _7_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_84 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_84/keys, barrier_BarrierInsertMany_84/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _7_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_78 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_78/keys, barrier_BarrierInsertMany_78/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _7_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_92 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_92/keys, barrier_BarrierInsertMany_92/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _7_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_80 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_80/keys, barrier_BarrierInsertMany_80/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _7_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_33 = BarrierInsertMany[T=DT_FLOAT, _class=["loc:@barrier"], component_index=0, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_33/keys, barrier_BarrierInsertMany_33/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _7_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_82 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_82/keys, barrier_BarrierInsertMany_82/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _7_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_86 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_86/keys, barrier_BarrierInsertMany_86/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _7_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_91 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_91/keys, barrier_BarrierInsertMany_91/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _7_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_98 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_98/keys, barrier_BarrierInsertMany_98/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _7_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_99 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_99/keys, barrier_BarrierInsertMany_99/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _7_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_93 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_93/keys, barrier_BarrierInsertMany_93/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _7_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_95 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_95/keys, barrier_BarrierInsertMany_95/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _7_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_89 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_89/keys, barrier_BarrierInsertMany_89/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _7_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_40 = BarrierInsertMany[T=DT_FLOAT, _class=["loc:@barrier"], component_index=0, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_40/keys, barrier_BarrierInsertMany_40/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _7_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_94 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_94/keys, barrier_BarrierInsertMany_94/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _7_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_97 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_97/keys, barrier_BarrierInsertMany_97/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _7_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_87 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_87/keys, barrier_BarrierInsertMany_87/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _7_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_96 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_96/keys, barrier_BarrierInsertMany_96/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _7_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_38 = BarrierInsertMany[T=DT_FLOAT, _class=["loc:@barrier"], component_index=0, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_38/keys, barrier_BarrierInsertMany_38/values)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_8_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_23 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_23/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_8_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_19 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_19/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_8_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_4 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_4/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_8_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_21 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_21/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_8_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_29 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_29/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_8_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_36 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_36/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_8_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_40 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_40/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_8_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_44 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_44/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_8_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_8 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_8/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_8_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_45 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_45/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_8_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_11 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_11/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_8_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_15 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_15/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_8_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_16 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_16/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_8_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_26 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_26/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_8_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_13 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_13/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_8_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_33 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_33/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_8_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_32 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_32/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_8_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_35 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_35/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_8_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_49 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_49/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_8_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_7 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_7/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_8_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_20 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_20/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_8_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_42 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_42/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_8_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_38 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_38/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_8_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_12 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_12/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_8_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: barrier_BarrierTakeMany_46 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierTakeMany_46/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _8_barrier is closed.  Pending enqueues cancelled: 0.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_25 = BarrierInsertMany[T=DT_FLOAT, _class=["loc:@barrier"], component_index=0, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_25/keys, barrier_BarrierInsertMany_25/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _8_barrier is closed.  Pending enqueues cancelled: 0.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_76 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_76/keys, barrier_BarrierInsertMany_76/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _8_barrier is closed.  Pending enqueues cancelled: 0.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_77 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_77/keys, barrier_BarrierInsertMany_77/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _8_barrier is closed.  Pending enqueues cancelled: 0.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_81 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_81/keys, barrier_BarrierInsertMany_81/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _8_barrier is closed.  Pending enqueues cancelled: 0.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_80 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_80/keys, barrier_BarrierInsertMany_80/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _8_barrier is closed.  Pending enqueues cancelled: 0.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_82 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_82/keys, barrier_BarrierInsertMany_82/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _8_barrier is closed.  Pending enqueues cancelled: 0.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_87 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_87/keys, barrier_BarrierInsertMany_87/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _8_barrier is closed.  Pending enqueues cancelled: 0.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_85 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_85/keys, barrier_BarrierInsertMany_85/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _8_barrier is closed.  Pending enqueues cancelled: 0.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_94 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_94/keys, barrier_BarrierInsertMany_94/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _8_barrier is closed.  Pending enqueues cancelled: 0.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_28 = BarrierInsertMany[T=DT_FLOAT, _class=["loc:@barrier"], component_index=0, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_28/keys, barrier_BarrierInsertMany_28/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _8_barrier is closed.  Pending enqueues cancelled: 0.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_47 = BarrierInsertMany[T=DT_FLOAT, _class=["loc:@barrier"], component_index=0, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_47/keys, barrier_BarrierInsertMany_47/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _8_barrier is closed.  Pending enqueues cancelled: 0.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_49 = BarrierInsertMany[T=DT_FLOAT, _class=["loc:@barrier"], component_index=0, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_49/keys, barrier_BarrierInsertMany_49/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _8_barrier is closed.  Pending enqueues cancelled: 0.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_93 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_93/keys, barrier_BarrierInsertMany_93/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _8_barrier is closed.  Pending enqueues cancelled: 0.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_98 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_98/keys, barrier_BarrierInsertMany_98/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _8_barrier is closed.  Pending enqueues cancelled: 0.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_89 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_89/keys, barrier_BarrierInsertMany_89/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _8_barrier is closed.  Pending enqueues cancelled: 0.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_36 = BarrierInsertMany[T=DT_FLOAT, _class=["loc:@barrier"], component_index=0, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_36/keys, barrier_BarrierInsertMany_36/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _8_barrier is closed.  Pending enqueues cancelled: 0.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_90 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_90/keys, barrier_BarrierInsertMany_90/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _8_barrier is closed.  Pending enqueues cancelled: 0.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_95 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_95/keys, barrier_BarrierInsertMany_95/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _8_barrier is closed.  Pending enqueues cancelled: 0.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_88 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_88/keys, barrier_BarrierInsertMany_88/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _8_barrier is closed.  Pending enqueues cancelled: 0.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_34 = BarrierInsertMany[T=DT_FLOAT, _class=["loc:@barrier"], component_index=0, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_34/keys, barrier_BarrierInsertMany_34/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _8_barrier is closed.  Pending enqueues cancelled: 0.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_42 = BarrierInsertMany[T=DT_FLOAT, _class=["loc:@barrier"], component_index=0, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_42/keys, barrier_BarrierInsertMany_42/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _8_barrier is closed.  Pending enqueues cancelled: 0.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_29 = BarrierInsertMany[T=DT_FLOAT, _class=["loc:@barrier"], component_index=0, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_29/keys, barrier_BarrierInsertMany_29/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _8_barrier is closed.  Pending enqueues cancelled: 0.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_91 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_91/keys, barrier_BarrierInsertMany_91/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _8_barrier is closed.  Pending enqueues cancelled: 0.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_46 = BarrierInsertMany[T=DT_FLOAT, _class=["loc:@barrier"], component_index=0, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_46/keys, barrier_BarrierInsertMany_46/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _8_barrier is closed.  Pending enqueues cancelled: 0.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: barrier_BarrierInsertMany_33 = BarrierInsertMany[T=DT_FLOAT, _class=["loc:@barrier"], component_index=0, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, barrier_BarrierInsertMany_33/keys, barrier_BarrierInsertMany_33/values)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_9_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: take_0 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_0/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_9_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: take_1 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_1/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_9_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: take_2 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_2/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_9_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: take_3 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_3/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_9_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: take_4 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_4/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_9_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: take_6 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_6/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_9_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: take_5 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_5/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_9_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: take_7 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_7/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_9_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: take_8 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_8/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_9_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: take_11 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_11/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_9_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: take_12 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_12/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_9_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: take_9 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_9/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_9_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: take_14 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_14/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_9_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: take_30 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_30/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_9_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: take_13 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_13/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_9_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: take_24 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_24/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_9_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: take_18 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_18/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_9_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: take_21 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_21/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_9_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: take_23 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_23/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_9_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: take_26 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_26/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_9_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: take_27 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_27/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_9_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: take_43 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_43/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_9_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: take_45 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_45/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_9_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: take_47 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_47/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_9_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: take_49 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_49/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_9_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: take_51 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_51/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_9_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: take_53 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_53/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_9_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: take_55 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_55/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_9_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: take_16 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_16/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_9_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: take_57 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_57/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_9_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: take_19 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_19/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] PriorityQueue '_9_barrier_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[Node: take_22 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_22/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_10 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_10/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_31 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_31/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_32 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_32/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_33 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_33/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_34 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_34/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_35 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_35/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_36 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_36/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_38 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_38/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_39 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_39/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_40 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_40/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_41 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_41/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_42 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_42/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_37 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_37/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_15 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_15/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_29 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_29/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_46 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_46/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_50 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_50/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_54 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_54/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_58 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_58/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_20 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_20/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_99 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_99/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_62 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_62/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_61 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_61/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_63 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_63/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_64 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_64/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_65 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_65/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_67 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_67/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_66 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_66/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_68 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_68/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_69 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_69/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_70 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_70/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_71 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_71/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_72 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_72/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_73 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_73/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_74 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_74/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_75 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_75/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_76 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_76/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_77 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_77/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_78 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_78/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_79 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_79/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_80 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_80/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_25 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_25/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_81 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_81/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_82 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_82/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_83 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_83/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_84 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_84/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_85 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_85/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_86 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_86/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_87 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_87/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_88 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_88/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_89 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_89/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_90 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_90/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_91 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_91/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_92 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_92/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_93 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_93/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_94 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_94/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_95 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_95/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_96 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_96/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_98 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_98/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_97 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_97/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_60 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_60/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_28 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_28/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_0 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_0/keys, insert_1_0/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_5 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_5/keys, insert_1_5/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_7 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_7/keys, insert_1_7/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_8 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_8/keys, insert_1_8/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_10 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_10/keys, insert_1_10/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_12 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_12/keys, insert_1_12/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_14 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_14/keys, insert_1_14/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_16 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_16/keys, insert_1_16/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_18 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_18/keys, insert_1_18/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_20 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_20/keys, insert_1_20/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_22 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_22/keys, insert_1_22/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_24 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_24/keys, insert_1_24/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_26 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_26/keys, insert_1_26/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_28 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_28/keys, insert_1_28/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_30 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_30/keys, insert_1_30/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_32 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_32/keys, insert_1_32/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_34 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_34/keys, insert_1_34/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_36 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_36/keys, insert_1_36/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_44 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_44/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_38 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_38/keys, insert_1_38/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_40 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_40/keys, insert_1_40/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_42 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_42/keys, insert_1_42/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_44 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_44/keys, insert_1_44/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_48 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_48/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_52 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_52/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_48 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_48/keys, insert_1_48/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_49 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_49/keys, insert_1_49/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_51 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_51/keys, insert_1_51/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_52 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_52/keys, insert_1_52/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_54 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_54/keys, insert_1_54/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_56 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_56/keys, insert_1_56/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_58 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_58/keys, insert_1_58/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_60 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_60/keys, insert_1_60/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_62 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_62/keys, insert_1_62/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_64 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_64/keys, insert_1_64/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_66 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_66/keys, insert_1_66/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_68 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_68/keys, insert_1_68/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_72 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_72/keys, insert_1_72/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_70 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_70/keys, insert_1_70/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_74 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_74/keys, insert_1_74/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_76 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_76/keys, insert_1_76/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_78 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_78/keys, insert_1_78/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_80 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_80/keys, insert_1_80/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_82 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_82/keys, insert_1_82/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_84 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_84/keys, insert_1_84/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_86 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_86/keys, insert_1_86/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_88 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_88/keys, insert_1_88/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_90 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_90/keys, insert_1_90/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_92 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_92/keys, insert_1_92/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_94 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_94/keys, insert_1_94/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_96 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_96/keys, insert_1_96/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_98 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_98/keys, insert_1_98/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_17 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_17/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_1 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_1/keys, insert_1_1/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_4 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_4/keys, insert_1_4/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_3 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_3/keys, insert_1_3/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_2 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_2/keys, insert_1_2/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_11 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_11/keys, insert_1_11/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_15 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_15/keys, insert_1_15/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_19 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_19/keys, insert_1_19/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_23 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_23/keys, insert_1_23/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_27 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_27/keys, insert_1_27/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_31 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_31/keys, insert_1_31/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_35 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_35/keys, insert_1_35/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_39 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_39/keys, insert_1_39/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_43 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_43/keys, insert_1_43/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_46 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_46/keys, insert_1_46/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_50 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_50/keys, insert_1_50/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_53 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_53/keys, insert_1_53/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_57 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_57/keys, insert_1_57/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_61 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_61/keys, insert_1_61/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_65 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_65/keys, insert_1_65/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_73 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_73/keys, insert_1_73/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_69 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_69/keys, insert_1_69/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_77 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_77/keys, insert_1_77/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_81 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_81/keys, insert_1_81/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_85 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_85/keys, insert_1_85/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_89 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_89/keys, insert_1_89/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_97 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_97/keys, insert_1_97/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_93 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_93/keys, insert_1_93/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_6 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_6/keys, insert_1_6/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_13 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_13/keys, insert_1_13/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_21 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_21/keys, insert_1_21/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_37 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_37/keys, insert_1_37/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_29 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_29/keys, insert_1_29/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_45 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_45/keys, insert_1_45/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_47 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_47/keys, insert_1_47/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_59 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_59/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_55 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_55/keys, insert_1_55/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_63 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_63/keys, insert_1_63/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_71 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_71/keys, insert_1_71/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_79 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_79/keys, insert_1_79/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_91 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_91/keys, insert_1_91/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_99 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_99/keys, insert_1_99/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_83 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_83/keys, insert_1_83/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_87 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_87/keys, insert_1_87/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_9 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_9/keys, insert_1_9/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_33 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_33/keys, insert_1_33/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_41 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_41/keys, insert_1_41/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier '_9_barrier' is closed and has insufficient elements (requested 10, total size 0)
+	 [[Node: take_56 = BarrierTakeMany[_class=["loc:@barrier"], allow_small_batch=false, component_types=[DT_FLOAT, DT_INT64], timeout_ms=-1, wait_for_incomplete=false, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, take_56/num_elements)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_59 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_59/keys, insert_1_59/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_67 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_67/keys, insert_1_67/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_75 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_75/keys, insert_1_75/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_25 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_25/keys, insert_1_25/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_95 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_95/keys, insert_1_95/values)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Barrier _9_barrier is closed.  Pending enqueues cancelled: 1.  Number of new insertions: 10.  Number of incomplete keys: 0.
+	 [[Node: insert_1_17 = BarrierInsertMany[T=DT_INT64, _class=["loc:@barrier"], component_index=1, _device="/job:localhost/replica:0/task:0/cpu:0"](barrier, insert_1_17/keys, insert_1_17/values)]]
+.

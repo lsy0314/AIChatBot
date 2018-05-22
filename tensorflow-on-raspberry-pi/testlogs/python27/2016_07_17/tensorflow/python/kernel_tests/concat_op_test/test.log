@@ -1,0 +1,110 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+.E tensorflow/core/client/tensor_c_api.cc:485] Concat dim is out of range: 4 vs. 3
+	 [[Node: ConcatOffset = ConcatOffset[N=2, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, Const_1, Const_2)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] input 1 should contain 3 elements, but got4
+	 [[Node: ConcatOffset = ConcatOffset[N=2, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, Const_1, Const_2)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] input 1 should be a vector, but got shape [1,3]
+	 [[Node: ConcatOffset = ConcatOffset[N=2, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, Const_1, Const_2)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] input[1,2] mismatch: 5 vs. 10
+	 [[Node: ConcatOffset = ConcatOffset[N=2, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, Const_1, Const_2)]]
+...W tensorflow/core/framework/op_kernel.cc:926] Invalid argument: Cannot parse tensor from proto: dtype: DT_INT8
+tensor_shape {
+  dim {
+    size: 2147483654
+  }
+}
+int_val: 1
+
+E tensorflow/core/common_runtime/executor.cc:334] Executor failed to create kernel. Invalid argument: Cannot parse tensor from proto: dtype: DT_INT8
+tensor_shape {
+  dim {
+    size: 2147483654
+  }
+}
+int_val: 1
+
+	 [[Node: ones = Const[dtype=DT_INT8, value=<Invalid TensorProto: dtype: DT_INT8 tensor_shape { dim { size: 2147483654 } } int_val: 1>, _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+E tensorflow/core/client/tensor_c_api.cc:485] Cannot parse tensor from proto: dtype: DT_INT8
+tensor_shape {
+  dim {
+    size: 2147483654
+  }
+}
+int_val: 1
+
+	 [[Node: ones = Const[dtype=DT_INT8, value=<Invalid TensorProto: dtype: DT_INT8 tensor_shape { dim { size: 2147483654 } } int_val: 1>, _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+E.....................
+======================================================================
+ERROR: testConcatLargeTensors (__main__.ConcatOpTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/concat_op_test.runfiles/tensorflow/python/kernel_tests/concat_op_test.py", line 429, in testConcatLargeTensors
+    _ = onezeros.eval()
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/concat_op_test.runfiles/tensorflow/python/framework/ops.py", line 556, in eval
+    return _eval_using_default_session(self, feed_dict, self.graph, session)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/concat_op_test.runfiles/tensorflow/python/framework/ops.py", line 3637, in _eval_using_default_session
+    return session.run(tensors, feed_dict)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/concat_op_test.runfiles/tensorflow/python/client/session.py", line 382, in run
+    run_metadata_ptr)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/concat_op_test.runfiles/tensorflow/python/client/session.py", line 655, in _run
+    feed_dict_string, options, run_metadata)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/concat_op_test.runfiles/tensorflow/python/client/session.py", line 723, in _do_run
+    target_list, options, run_metadata)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/concat_op_test.runfiles/tensorflow/python/client/session.py", line 743, in _do_call
+    raise type(e)(node_def, op, message)
+InvalidArgumentError: Cannot parse tensor from proto: dtype: DT_INT8
+tensor_shape {
+  dim {
+    size: 2147483654
+  }
+}
+int_val: 1
+
+	 [[Node: ones = Const[dtype=DT_INT8, value=<Invalid TensorProto: dtype: DT_INT8 tensor_shape { dim { size: 2147483654 } } int_val: 1>, _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+Caused by op u'ones', defined at:
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/concat_op_test.runfiles/tensorflow/python/kernel_tests/concat_op_test.py", line 486, in <module>
+    tf.test.main()
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/concat_op_test.runfiles/tensorflow/python/platform/test.py", line 87, in main
+    return googletest.main()
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/concat_op_test.runfiles/tensorflow/python/platform/googletest.py", line 84, in main
+    benchmark.benchmarks_main(true_main=g_main)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/concat_op_test.runfiles/tensorflow/python/platform/benchmark.py", line 301, in benchmarks_main
+    true_main()
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/concat_op_test.runfiles/tensorflow/python/platform/googletest.py", line 58, in g_main
+    return unittest_main(*args, **kwargs)
+  File "/usr/lib/python2.7/unittest/main.py", line 95, in __init__
+    self.runTests()
+  File "/usr/lib/python2.7/unittest/main.py", line 232, in runTests
+    self.result = testRunner.run(self.test)
+  File "/usr/lib/python2.7/unittest/runner.py", line 151, in run
+    test(result)
+  File "/usr/lib/python2.7/unittest/suite.py", line 70, in __call__
+    return self.run(*args, **kwds)
+  File "/usr/lib/python2.7/unittest/suite.py", line 108, in run
+    test(result)
+  File "/usr/lib/python2.7/unittest/suite.py", line 70, in __call__
+    return self.run(*args, **kwds)
+  File "/usr/lib/python2.7/unittest/suite.py", line 108, in run
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 393, in __call__
+    return self.run(*args, **kwds)
+  File "/usr/lib/python2.7/unittest/case.py", line 329, in run
+    testMethod()
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/concat_op_test.runfiles/tensorflow/python/kernel_tests/concat_op_test.py", line 423, in testConcatLargeTensors
+    a = tf.ones([2**31 + 6], dtype=tf.int8)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/concat_op_test.runfiles/tensorflow/python/ops/array_ops.py", line 1219, in ones
+    output = constant(1, shape=shape, dtype=dtype, name=name)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/concat_op_test.runfiles/tensorflow/python/framework/constant_op.py", line 167, in constant
+    attrs={"value": tensor_value, "dtype": dtype_value}, name=name).outputs[0]
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/concat_op_test.runfiles/tensorflow/python/framework/ops.py", line 2298, in create_op
+    original_op=self._default_original_op, op_def=op_def)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/concat_op_test.runfiles/tensorflow/python/framework/ops.py", line 1232, in __init__
+    self._traceback = _extract_stack()
+
+
+----------------------------------------------------------------------
+Ran 29 tests in 151.040s
+
+FAILED (errors=1)
+graph =  [u'Const', u'concat/concat_dim', u'concat', u'gradients/concat_grad/ShapeN', u'gradients/concat_grad/ConcatOffset', u'gradients/concat_grad/Slice', u'gradients/concat_grad/Slice_1', u'gradients/concat_grad/Slice_2', u'gradients/concat_grad/Slice_3', u'gradients/concat_grad/Slice_4', u'gradients/concat_grad/Slice_5', u'gradients/concat_grad/Slice_6', u'gradients/concat_grad/Slice_7', u'gradients/concat_grad/Slice_8', u'gradients/concat_grad/Slice_9', u'gradients/AddN']

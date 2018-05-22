@@ -1,0 +1,19 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+...E tensorflow/core/client/tensor_c_api.cc:485] input must be at least 1-dim, received shape: []
+	 [[Node: BatchMatrixDiag = BatchMatrixDiag[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0)]]
+......E tensorflow/core/client/tensor_c_api.cc:485] input must be at least 2-dim, received shape: []
+	 [[Node: BatchMatrixDiagPart = BatchMatrixDiagPart[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] input's last two dimensions must be equal, received shape: [3,2]
+	 [[Node: BatchMatrixDiagPart_1 = BatchMatrixDiagPart[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0)]]
+......E tensorflow/core/client/tensor_c_api.cc:485] input must be at least 2-dim, received shape: []
+	 [[Node: BatchMatrixDiagPart = BatchMatrixDiagPart[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] input's last two dimensions must be equal, received shape: [3,2]
+	 [[Node: BatchMatrixDiagPart_1 = BatchMatrixDiagPart[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0)]]
+......E tensorflow/core/client/tensor_c_api.cc:485] input must be at least 1-dim, received shape: []
+	 [[Node: BatchMatrixDiag = BatchMatrixDiag[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0)]]
+.......E tensorflow/core/client/tensor_c_api.cc:485] input must be at least 2-dim, received shape: []
+	 [[Node: BatchMatrixSetDiag = BatchMatrixSetDiag[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, BatchMatrixSetDiag/diagonal)]]
+E tensorflow/core/client/tensor_c_api.cc:485] must have diagonal.shape == input.shape[:-1], but received input shape: [1,1] and diagonal shape: []
+	 [[Node: BatchMatrixSetDiag_1 = BatchMatrixSetDiag[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](BatchMatrixSetDiag_1/input, _recv_Placeholder_0)]]
+....

@@ -1,0 +1,13 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+./home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/bin/tensorflow/python/kernel_tests/io_ops_test.runfiles/tensorflow/python/kernel_tests/io_ops_test.py:35: ResourceWarning: unclosed file <_io.BufferedWriter name='/tmp/ReadFileTestc22qetbs'>
+  open(temp.name, 'wb').write(contents)
+/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/bin/tensorflow/python/kernel_tests/io_ops_test.runfiles/tensorflow/python/kernel_tests/io_ops_test.py:35: ResourceWarning: unclosed file <_io.BufferedWriter name='/tmp/ReadFileTestwva_umre'>
+  open(temp.name, 'wb').write(contents)
+/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/bin/tensorflow/python/kernel_tests/io_ops_test.runfiles/tensorflow/python/kernel_tests/io_ops_test.py:35: ResourceWarning: unclosed file <_io.BufferedWriter name='/tmp/ReadFileTestjnfcg7zx'>
+  open(temp.name, 'wb').write(contents)
+..
+----------------------------------------------------------------------
+Ran 3 tests in 0.937s
+
+OK

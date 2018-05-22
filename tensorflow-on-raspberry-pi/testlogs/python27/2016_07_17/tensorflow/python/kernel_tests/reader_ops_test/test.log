@@ -1,0 +1,44 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+..E tensorflow/core/client/tensor_c_api.cc:485] FIFOQueue '_6_fifo_queue' is closed and has insufficient elements (requested 1, current size 0)
+	 [[Node: ReaderRead = ReaderRead[_class=["loc:@fifo_queue", "loc:@test_reader"], _device="/job:localhost/replica:0/task:0/cpu:0"](test_reader, fifo_queue)]]
+..E tensorflow/core/client/tensor_c_api.cc:485] FIFOQueue '_8_fifo_queue' is closed and has insufficient elements (requested 1, current size 0)
+	 [[Node: ReaderRead = ReaderRead[_class=["loc:@fifo_queue", "loc:@test_reader"], _device="/job:localhost/replica:0/task:0/cpu:0"](test_reader, fifo_queue)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] FIFOQueue '_11_fifo_queue' is closed and has insufficient elements (requested 1, current size 0)
+	 [[Node: ReaderRead = ReaderRead[_class=["loc:@fifo_queue", "loc:@test_reader"], _device="/job:localhost/replica:0/task:0/cpu:0"](test_reader, fifo_queue)]]
+..E tensorflow/core/client/tensor_c_api.cc:485] FIFOQueue '_14_fifo_queue' is closed and has insufficient elements (requested 1, current size 0)
+	 [[Node: ReaderRead = ReaderRead[_class=["loc:@fifo_queue", "loc:@test_reader"], _device="/job:localhost/replica:0/task:0/cpu:0"](test_reader, fifo_queue)]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Could not parse state for IdentityReader 'test_reader': \001\020\001\030\001\"\001X
+E tensorflow/core/client/tensor_c_api.cc:485] Could not parse state for IdentityReader 'test_reader': \001\020\001\030\001\"\001X
+	 [[Node: ReaderRestoreState_3 = ReaderRestoreState[_class=["loc:@test_reader"], _device="/job:localhost/replica:0/task:0/cpu:0"](test_reader, ReaderRestoreState_3/state)]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Could not parse state for IdentityReader 'test_reader': \010\001\020\001\030\001\"\001
+E tensorflow/core/client/tensor_c_api.cc:485] Could not parse state for IdentityReader 'test_reader': \010\001\020\001\030\001\"\001
+	 [[Node: ReaderRestoreState_4 = ReaderRestoreState[_class=["loc:@test_reader"], _device="/job:localhost/replica:0/task:0/cpu:0"](test_reader, ReaderRestoreState_4/state)]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Could not parse state for IdentityReader 'test_reader': \010\001\020\001\030\001\"\001XExtraJunk
+E tensorflow/core/client/tensor_c_api.cc:485] Could not parse state for IdentityReader 'test_reader': \010\001\020\001\030\001\"\001XExtraJunk
+	 [[Node: ReaderRestoreState_5 = ReaderRestoreState[_class=["loc:@test_reader"], _device="/job:localhost/replica:0/task:0/cpu:0"](test_reader, ReaderRestoreState_5/state)]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Could not parse state for IdentityReader 'test_reader': PREFIX\010\001\020\001\030\001\"\001X
+E tensorflow/core/client/tensor_c_api.cc:485] Could not parse state for IdentityReader 'test_reader': PREFIX\010\001\020\001\030\001\"\001X
+	 [[Node: ReaderRestoreState_6 = ReaderRestoreState[_class=["loc:@test_reader"], _device="/job:localhost/replica:0/task:0/cpu:0"](test_reader, ReaderRestoreState_6/state)]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Could not parse state for IdentityReader 'test_reader': BOGUS\001\"\001X
+E tensorflow/core/client/tensor_c_api.cc:485] Could not parse state for IdentityReader 'test_reader': BOGUS\001\"\001X
+	 [[Node: ReaderRestoreState_7 = ReaderRestoreState[_class=["loc:@test_reader"], _device="/job:localhost/replica:0/task:0/cpu:0"](test_reader, ReaderRestoreState_7/state)]]
+....E tensorflow/core/client/tensor_c_api.cc:485] FIFOQueue '_16_fifo_queue' is closed and has insufficient elements (requested 1, current size 0)
+	 [[Node: ReaderRead = ReaderRead[_class=["loc:@fifo_queue", "loc:@test_reader"], _device="/job:localhost/replica:0/task:0/cpu:0"](test_reader, fifo_queue)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] FIFOQueue '_18_fifo_queue' is closed and has insufficient elements (requested 1, current size 0)
+	 [[Node: ReaderReadUpTo = ReaderReadUpTo[_class=["loc:@fifo_queue", "loc:@test_reader"], _device="/job:localhost/replica:0/task:0/cpu:0"](test_reader, fifo_queue, ReaderReadUpTo/num_records)]]
+..E tensorflow/core/client/tensor_c_api.cc:485] FIFOQueue '_20_fifo_queue' is closed and has insufficient elements (requested 1, current size 0)
+	 [[Node: ReaderRead = ReaderRead[_class=["loc:@fifo_queue", "loc:@test_reader"], _device="/job:localhost/replica:0/task:0/cpu:0"](test_reader, fifo_queue)]]
+..E tensorflow/core/client/tensor_c_api.cc:485] FIFOQueue '_22_fifo_queue' is closed and has insufficient elements (requested 1, current size 0)
+	 [[Node: ReaderRead = ReaderRead[_class=["loc:@fifo_queue", "loc:@test_reader"], _device="/job:localhost/replica:0/task:0/cpu:0"](test_reader, fifo_queue)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] FIFOQueue '_24_fifo_queue' is closed and has insufficient elements (requested 1, current size 0)
+	 [[Node: ReaderRead = ReaderRead[_class=["loc:@fifo_queue", "loc:@test_reader"], _device="/job:localhost/replica:0/task:0/cpu:0"](test_reader, fifo_queue)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] FIFOQueue '_26_fifo_queue' is closed and has insufficient elements (requested 1, current size 0)
+	 [[Node: ReaderRead = ReaderRead[_class=["loc:@fifo_queue", "loc:@test_reader"], _device="/job:localhost/replica:0/task:0/cpu:0"](test_reader, fifo_queue)]]
+...E tensorflow/core/client/tensor_c_api.cc:485] FIFOQueue '_30_fifo_queue' is closed and has insufficient elements (requested 1, current size 0)
+	 [[Node: ReaderRead = ReaderRead[_class=["loc:@fifo_queue", "loc:@test_reader"], _device="/job:localhost/replica:0/task:0/cpu:0"](test_reader, fifo_queue)]]
+..
+----------------------------------------------------------------------
+Ran 23 tests in 3.118s
+
+OK

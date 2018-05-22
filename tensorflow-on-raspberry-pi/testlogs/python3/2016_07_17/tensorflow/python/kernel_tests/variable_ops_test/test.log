@@ -1,0 +1,17 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+..............W tensorflow/core/framework/op_kernel.cc:936] Not found: Resource tmp_var/bad/N10tensorflow19TemporaryVariableOp6TmpVarE does not exist.
+E tensorflow/core/client/tensor_c_api.cc:485] Resource tmp_var/bad/N10tensorflow19TemporaryVariableOp6TmpVarE does not exist.
+	 [[Node: DestroyTemporaryVariable = DestroyTemporaryVariable[T=DT_FLOAT, _class=["loc:@TemporaryVariable"], var_name="bad", _device="/job:localhost/replica:0/task:0/cpu:0"](TemporaryVariable)]]
+.W tensorflow/core/framework/op_kernel.cc:936] Not found: Resource tmp_var/dup/N10tensorflow19TemporaryVariableOp6TmpVarE does not exist.
+W tensorflow/core/framework/op_kernel.cc:936] Not found: Resource tmp_var/dup/N10tensorflow19TemporaryVariableOp6TmpVarE does not exist.
+E tensorflow/core/client/tensor_c_api.cc:485] Resource tmp_var/dup/N10tensorflow19TemporaryVariableOp6TmpVarE does not exist.
+	 [[Node: DestroyTemporaryVariable_1 = DestroyTemporaryVariable[T=DT_FLOAT, _class=["loc:@TemporaryVariable"], var_name="dup", _device="/job:localhost/replica:0/task:0/cpu:0"](TemporaryVariable)]]
+.W tensorflow/core/framework/op_kernel.cc:936] Already exists: Resource tmp_var/dup/N10tensorflow19TemporaryVariableOp6TmpVarE
+E tensorflow/core/client/tensor_c_api.cc:485] Resource tmp_var/dup/N10tensorflow19TemporaryVariableOp6TmpVarE
+	 [[Node: TemporaryVariable_1 = TemporaryVariable[dtype=DT_FLOAT, shape=[1,2], var_name="dup", _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+.......
+----------------------------------------------------------------------
+Ran 23 tests in 1.232s
+
+OK

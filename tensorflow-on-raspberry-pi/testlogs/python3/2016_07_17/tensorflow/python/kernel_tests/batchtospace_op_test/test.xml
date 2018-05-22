@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="tensorflow/python/kernel_tests/batchtospace_op_test" tests="1" failures="0" errors="0">
+    <testcase name="tensorflow/python/kernel_tests/batchtospace_op_test" status="run"></testcase>
+  </testsuite>
+</testsuites>

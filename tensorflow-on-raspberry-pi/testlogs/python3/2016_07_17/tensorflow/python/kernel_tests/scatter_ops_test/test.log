@@ -1,0 +1,19 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+.E tensorflow/core/client/tensor_c_api.cc:485] indices[0] = -1 is not in [0, 6)
+	 [[Node: ScatterAdd_1 = ScatterAdd[T=DT_FLOAT, Tindices=DT_INT32, _class=["loc:@Variable"], use_locking=false, _device="/job:localhost/replica:0/task:0/cpu:0"](Variable, ScatterAdd_1/indices, ScatterAdd_1/updates)]]
+E tensorflow/core/client/tensor_c_api.cc:485] indices[2] = 6 is not in [0, 6)
+	 [[Node: ScatterAdd_2 = ScatterAdd[T=DT_FLOAT, Tindices=DT_INT32, _class=["loc:@Variable"], use_locking=false, _device="/job:localhost/replica:0/task:0/cpu:0"](Variable, ScatterAdd_2/indices, ScatterAdd_2/updates)]]
+E tensorflow/core/client/tensor_c_api.cc:485] indices[0] = -1 is not in [0, 6)
+	 [[Node: ScatterSub_1 = ScatterSub[T=DT_FLOAT, Tindices=DT_INT32, _class=["loc:@Variable_1"], use_locking=false, _device="/job:localhost/replica:0/task:0/cpu:0"](Variable_1, ScatterSub_1/indices, ScatterSub_1/updates)]]
+E tensorflow/core/client/tensor_c_api.cc:485] indices[2] = 6 is not in [0, 6)
+	 [[Node: ScatterSub_2 = ScatterSub[T=DT_FLOAT, Tindices=DT_INT32, _class=["loc:@Variable_1"], use_locking=false, _device="/job:localhost/replica:0/task:0/cpu:0"](Variable_1, ScatterSub_2/indices, ScatterSub_2/updates)]]
+E tensorflow/core/client/tensor_c_api.cc:485] indices[0] = -1 is not in [0, 6)
+	 [[Node: ScatterUpdate_1 = ScatterUpdate[T=DT_FLOAT, Tindices=DT_INT32, _class=["loc:@Variable_2"], use_locking=true, _device="/job:localhost/replica:0/task:0/cpu:0"](Variable_2, ScatterUpdate_1/indices, ScatterUpdate_1/updates)]]
+E tensorflow/core/client/tensor_c_api.cc:485] indices[2] = 6 is not in [0, 6)
+	 [[Node: ScatterUpdate_2 = ScatterUpdate[T=DT_FLOAT, Tindices=DT_INT32, _class=["loc:@Variable_2"], use_locking=true, _device="/job:localhost/replica:0/task:0/cpu:0"](Variable_2, ScatterUpdate_2/indices, ScatterUpdate_2/updates)]]
+......
+----------------------------------------------------------------------
+Ran 7 tests in 148.956s
+
+OK

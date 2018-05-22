@@ -1,0 +1,55 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+.F.
+======================================================================
+FAIL: testBCast_8D (__main__.BinaryOpTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/cwise_ops_test.runfiles/tensorflow/python/kernel_tests/cwise_ops_test.py", line 899, in testBCast_8D
+    self._testBCastD([2, 1, 5], [2, 3, 1])
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/cwise_ops_test.runfiles/tensorflow/python/kernel_tests/cwise_ops_test.py", line 791, in _testBCastD
+    self._testBCastByFunc(funcs, xs, ys)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/cwise_ops_test.runfiles/tensorflow/python/kernel_tests/cwise_ops_test.py", line 759, in _testBCastByFunc
+    self._compareBCast(xs, ys, dtype, np_func, tf_func)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/cwise_ops_test.runfiles/tensorflow/python/kernel_tests/cwise_ops_test.py", line 727, in _compareBCast
+    self._compareCpu(x, y, np_func, tf_func)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/cwise_ops_test.runfiles/tensorflow/python/kernel_tests/cwise_ops_test.py", line 448, in _compareCpu
+    self.assertAllClose(np_ans, tf_cpu)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/cwise_ops_test.runfiles/tensorflow/python/framework/test_util.py", line 442, in assertAllClose
+    np.testing.assert_allclose(a, b, rtol=rtol, atol=atol)
+  File "/usr/lib/python2.7/dist-packages/numpy/testing/utils.py", line 1183, in assert_allclose
+    verbose=verbose, header=header)
+  File "/usr/lib/python2.7/dist-packages/numpy/testing/utils.py", line 644, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError: 
+Not equal to tolerance rtol=1e-06, atol=1e-06
+
+(mismatch 100.0%)
+ x: array([[[ 1.        ,  1.55555558,  2.11111116,  2.66666675,  3.22222233],
+        [ 0.5       ,  0.77777779,  1.05555558,  1.33333337,  1.61111116],
+        [ 0.33333334,  0.51851851,  0.7037037 ,  0.8888889 ,  1.07407415]],...
+ y: array([[[ 0.99999619,  1.55554962,  2.11110306,  2.66665649,  3.22220993],
+        [ 0.49999809,  0.77777481,  1.05555153,  1.33332825,  1.61110497],
+        [ 0.33333302,  0.51851803,  0.70370305,  0.88888806,  1.07407308]],...
+
+----------------------------------------------------------------------
+Ran 3 tests in 49.496s
+
+FAILED (failures=1)
+not close where =  (array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1]), array([0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1]), array([0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 2, 3, 4]))
+not close lhs =  [ 1.          1.55555558  2.11111116  2.66666675  3.22222233  0.5
+  0.77777779  1.05555558  1.33333337  1.61111116  0.94444442  1.08333337
+  1.22222221  1.36111116  1.5         0.97777778  1.08888888  1.20000005]
+not close rhs =  [ 0.99999619  1.55554962  2.11110306  2.66665649  3.22220993  0.49999809
+  0.77777481  1.05555153  1.33332825  1.61110497  0.94444084  1.0833292
+  1.22221756  1.36110592  1.49999428  0.97777569  1.08888662  1.19999743]
+not close dif =  [  3.81469727e-06   5.96046448e-06   8.10623169e-06   1.02519989e-05
+   1.23977661e-05   1.90734863e-06   2.98023224e-06   4.05311584e-06
+   5.12599945e-06   6.19888306e-06   3.57627869e-06   4.17232513e-06
+   4.64916229e-06   5.24520874e-06   5.72204590e-06   2.08616257e-06
+   2.26497650e-06   2.62260437e-06]
+not close tol =  [  1.99999613e-06   2.55554960e-06   3.11110307e-06   3.66665654e-06
+   4.22221001e-06   1.49999801e-06   1.77777474e-06   2.05555148e-06
+   2.33332821e-06   2.61110495e-06   1.94444078e-06   2.08332904e-06
+   2.22221752e-06   2.36110600e-06   2.49999425e-06   1.97777581e-06
+   2.08888650e-06   2.19999743e-06]

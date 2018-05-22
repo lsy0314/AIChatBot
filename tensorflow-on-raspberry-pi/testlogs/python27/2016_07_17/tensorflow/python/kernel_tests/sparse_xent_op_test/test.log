@@ -1,0 +1,12 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+.......E tensorflow/core/client/tensor_c_api.cc:485] labels must be 1-D, but got shape []
+	 [[Node: SparseSoftmaxCrossEntropyWithLogits/SparseSoftmaxCrossEntropyWithLogits = SparseSoftmaxCrossEntropyWithLogits[T=DT_FLOAT, Tlabels=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](SparseSoftmaxCrossEntropyWithLogits/Const, _recv_Placeholder_0)]]
+...E tensorflow/core/client/tensor_c_api.cc:485] labels must be 1-D, but got shape []
+	 [[Node: SparseSoftmaxCrossEntropyWithLogits/SparseSoftmaxCrossEntropyWithLogits = SparseSoftmaxCrossEntropyWithLogits[T=DT_FLOAT, Tlabels=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_1_0, Squeeze)]]
+.....
+----------------------------------------------------------------------
+Ran 15 tests in 1.592s
+
+OK
+cross entropy gradient err =  1.603745306e-08

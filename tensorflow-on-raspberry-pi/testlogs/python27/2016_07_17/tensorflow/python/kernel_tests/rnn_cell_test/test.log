@@ -1,0 +1,11 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.BasicLSTMCell object at 0x72a09f10>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.BasicLSTMCell object at 0x743f25d0>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+..WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.BasicLSTMCell object at 0x6e14be10>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+.......WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x6df9d0d0>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+.........
+----------------------------------------------------------------------
+Ran 18 tests in 9.456s
+
+OK

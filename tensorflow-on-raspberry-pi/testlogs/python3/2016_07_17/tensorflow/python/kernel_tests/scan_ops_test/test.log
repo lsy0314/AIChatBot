@@ -1,0 +1,9 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+........E tensorflow/core/client/tensor_c_api.cc:485] ScanOp: Expected scan axis in the range [0, 2), but got -1
+	 [[Node: Cumprod = Cumprod[T=DT_FLOAT, exclusive=false, reverse=false, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, Cumprod/axis)]]
+E tensorflow/core/client/tensor_c_api.cc:485] ScanOp: Expected scan axis in the range [0, 2), but got 2
+	 [[Node: Cumprod_1 = Cumprod[T=DT_FLOAT, exclusive=false, reverse=false, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, Cumprod_1/axis)]]
+E tensorflow/core/client/tensor_c_api.cc:485] ScanOp: axis must be a scalar, not [1]
+	 [[Node: Cumprod_2 = Cumprod[T=DT_FLOAT, exclusive=false, reverse=false, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, Cumprod_2/axis)]]
+....

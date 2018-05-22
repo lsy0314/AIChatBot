@@ -1,0 +1,117 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+E tensorflow/core/client/tensor_c_api.cc:485] In[0] should be a scalar: [1]
+	 [[Node: Assert = Assert[T=[DT_INT32], summarize=3, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] In[0] should be a scalar: [1]
+	 [[Node: Assert = Assert[T=[DT_INT32], summarize=3, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] Concat dim tensor should be a scalar integer, but got shape [1]
+	 [[Node: concat = Concat[N=3, T=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0, _recv_Placeholder_2_0, _recv_Placeholder_3_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Concat dim tensor should be a scalar integer, but got shape [1]
+	 [[Node: concat = Concat[N=3, T=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0, _recv_Placeholder_2_0, _recv_Placeholder_3_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] ConcatOp : Expected concatenating dimensions in the range [0, 0), but got 0
+	 [[Node: concat = Concat[N=3, T=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0, _recv_Placeholder_2_0, _recv_Placeholder_3_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] ConcatOp : Expected concatenating dimensions in the range [0, 0), but got 0
+	 [[Node: concat = Concat[N=3, T=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0, _recv_Placeholder_2_0, _recv_Placeholder_3_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] ConcatOp : Expected concatenating dimensions in the range [0, 0), but got 0
+	 [[Node: concat = Concat[N=3, T=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0, _recv_Placeholder_2_0, _recv_Placeholder_3_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] ConcatOp : Expected concatenating dimensions in the range [0, 0), but got 0
+	 [[Node: concat = Concat[N=3, T=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0, _recv_Placeholder_2_0, _recv_Placeholder_3_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] ConcatOp : Expected concatenating dimensions in the range [0, 0), but got 0
+	 [[Node: concat = Concat[N=3, T=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0, _recv_Placeholder_2_0, _recv_Placeholder_3_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] ConcatOp : Expected concatenating dimensions in the range [0, 0), but got 0
+	 [[Node: concat = Concat[N=3, T=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0, _recv_Placeholder_2_0, _recv_Placeholder_3_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] ConcatOp : Ranks of all input tensors should match: shape[0] = [1] vs. shape[1] = []
+	 [[Node: concat = Concat[N=3, T=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0, _recv_Placeholder_2_0, _recv_Placeholder_3_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] ConcatOp : Ranks of all input tensors should match: shape[0] = [1] vs. shape[1] = []
+	 [[Node: concat = Concat[N=3, T=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0, _recv_Placeholder_2_0, _recv_Placeholder_3_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] ConcatOp : Ranks of all input tensors should match: shape[0] = [1] vs. shape[2] = []
+	 [[Node: concat = Concat[N=3, T=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0, _recv_Placeholder_2_0, _recv_Placeholder_3_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] ConcatOp : Ranks of all input tensors should match: shape[0] = [1] vs. shape[2] = []
+	 [[Node: concat = Concat[N=3, T=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0, _recv_Placeholder_2_0, _recv_Placeholder_3_0)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] dims must be a vector of int32, got shape []
+	 [[Node: Fill = Fill[T=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] dims must be a vector of int32, got shape []
+	 [[Node: Fill = Fill[T=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] value must be a scalar, got shape [1]
+	 [[Node: Fill = Fill[T=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] value must be a scalar, got shape [1]
+	 [[Node: Fill = Fill[T=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] tags must be scalar
+	 [[Node: HistogramSummary = HistogramSummary[T=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] tags must be scalar
+	 [[Node: HistogramSummary = HistogramSummary[T=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] Tags must be a scalar
+	 [[Node: ImageSummary = ImageSummary[T=DT_UINT8, bad_color=Tensor<type: uint8 shape: [4] values: 255 0 0...>, max_images=3, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Tags must be a scalar
+	 [[Node: ImageSummary = ImageSummary[T=DT_UINT8, bad_color=Tensor<type: uint8 shape: [4] values: 255 0 0...>, max_images=3, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] The first dimension of paddings must be the rank of inputs[1,2] []
+	 [[Node: Pad = Pad[T=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] The first dimension of paddings must be the rank of inputs[1,2] []
+	 [[Node: Pad = Pad[T=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0)]]
+.W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: shape must be a vector of {int32,int64}, got shape []
+E tensorflow/core/client/tensor_c_api.cc:485] shape must be a vector of {int32,int64}, got shape []
+	 [[Node: random_uniform/RandomUniform = RandomUniform[T=DT_INT32, dtype=DT_FLOAT, seed=0, seed2=0, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0)]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: shape must be a vector of {int32,int64}, got shape []
+E tensorflow/core/client/tensor_c_api.cc:485] shape must be a vector of {int32,int64}, got shape []
+	 [[Node: random_uniform/RandomUniform = RandomUniform[T=DT_INT32, dtype=DT_FLOAT, seed=0, seed2=0, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] start must be a scalar, not shape [1]
+	 [[Node: range = Range[_device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0, _recv_Placeholder_2_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] start must be a scalar, not shape [1]
+	 [[Node: range = Range[_device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0, _recv_Placeholder_2_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] limit must be a scalar, not shape [1]
+	 [[Node: range = Range[_device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0, _recv_Placeholder_2_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] limit must be a scalar, not shape [1]
+	 [[Node: range = Range[_device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0, _recv_Placeholder_2_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] delta must be a scalar, not shape [1]
+	 [[Node: range = Range[_device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0, _recv_Placeholder_2_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] delta must be a scalar, not shape [1]
+	 [[Node: range = Range[_device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0, _recv_Placeholder_2_0)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] sizes input must be 1-D, not shape []
+	 [[Node: Reshape = Reshape[T=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] sizes input must be 1-D, not shape []
+	 [[Node: Reshape = Reshape[T=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] tags and values not the same shape: [1] != [] (tag 'a')
+	 [[Node: ScalarSummary = ScalarSummary[T=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] tags and values not the same shape: [1] != [] (tag 'a')
+	 [[Node: ScalarSummary = ScalarSummary[T=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] tags and values not the same shape: [] != [1] (tag 'a')
+	 [[Node: ScalarSummary = ScalarSummary[T=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] tags and values not the same shape: [] != [1] (tag 'a')
+	 [[Node: ScalarSummary = ScalarSummary[T=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] num_shards must be a scalar, got shape [1]
+	 [[Node: ShardedFilename = ShardedFilename[_device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0, _recv_Placeholder_2_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] num_shards must be a scalar, got shape [1]
+	 [[Node: ShardedFilename = ShardedFilename[_device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0, _recv_Placeholder_2_0)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] num_shards must be a scalar, got shape [1]
+	 [[Node: ShardedFilespec = ShardedFilespec[_device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] num_shards must be a scalar, got shape [1]
+	 [[Node: ShardedFilespec = ShardedFilespec[_device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] Expected begin and size arguments to be 1-D tensors of size 1, but got shapes [] and [] instead.
+	 [[Node: Slice = Slice[Index=DT_INT32, T=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0, _recv_Placeholder_2_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Expected begin and size arguments to be 1-D tensors of size 1, but got shapes [] and [] instead.
+	 [[Node: Slice = Slice[Index=DT_INT32, T=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0, _recv_Placeholder_2_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Expected begin and size arguments to be 1-D tensors of size 1, but got shapes [1] and [] instead.
+	 [[Node: Slice = Slice[Index=DT_INT32, T=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0, _recv_Placeholder_2_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Expected begin and size arguments to be 1-D tensors of size 1, but got shapes [1] and [] instead.
+	 [[Node: Slice = Slice[Index=DT_INT32, T=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0, _recv_Placeholder_2_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Expected begin and size arguments to be 1-D tensors of size 1, but got shapes [] and [1] instead.
+	 [[Node: Slice = Slice[Index=DT_INT32, T=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0, _recv_Placeholder_2_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Expected begin and size arguments to be 1-D tensors of size 1, but got shapes [] and [1] instead.
+	 [[Node: Slice = Slice[Index=DT_INT32, T=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0, _recv_Placeholder_2_0)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] output_shape should be a vector, got shape []
+	 [[Node: SparseToDense = SparseToDense[T=DT_INT32, Tindices=DT_INT32, validate_indices=true, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0, _recv_Placeholder_2_0, SparseToDense/default_value)]]
+E tensorflow/core/client/tensor_c_api.cc:485] output_shape should be a vector, got shape []
+	 [[Node: SparseToDense = SparseToDense[T=DT_INT32, Tindices=DT_INT32, validate_indices=true, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0, _recv_Placeholder_2_0, SparseToDense/default_value)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] Expected multiples to be 1-D, but got shape []
+	 [[Node: Tile = Tile[T=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Expected multiples to be 1-D, but got shape []
+	 [[Node: Tile = Tile[T=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] num_segments should be a scalar, not shape [1]
+	 [[Node: UnsortedSegmentSum = UnsortedSegmentSum[T=DT_INT32, Tindices=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0, _recv_Placeholder_2_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] num_segments should be a scalar, not shape [1]
+	 [[Node: UnsortedSegmentSum = UnsortedSegmentSum[T=DT_INT32, Tindices=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, _recv_Placeholder_1_0, _recv_Placeholder_2_0)]]
+..
+----------------------------------------------------------------------
+Ran 17 tests in 4.283s
+
+OK

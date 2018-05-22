@@ -1,0 +1,36 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/bin/tensorflow/python/kernel_tests/ctc_loss_op_test.runfiles/tensorflow/python/kernel_tests/ctc_loss_op_test.py:52: DeprecationWarning: Please use assertEqual instead.
+  self.assertEquals(len(inputs), len(grad_truth))
+F.
+======================================================================
+FAIL: testBasic (__main__.CTCLossTest)
+Test two batch entries.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/bin/tensorflow/python/kernel_tests/ctc_loss_op_test.runfiles/tensorflow/python/kernel_tests/ctc_loss_op_test.py", line 203, in testBasic
+    self._testCTCLoss(inputs, seq_lens, labels, loss_truth, grad_truth)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/bin/tensorflow/python/kernel_tests/ctc_loss_op_test.runfiles/tensorflow/python/kernel_tests/ctc_loss_op_test.py", line 67, in _testCTCLoss
+    self.assertAllClose(tf_loss, loss_truth, atol=1e-6)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/bin/tensorflow/python/kernel_tests/ctc_loss_op_test.runfiles/tensorflow/python/framework/test_util.py", line 442, in assertAllClose
+    np.testing.assert_allclose(a, b, rtol=rtol, atol=atol)
+  File "/usr/local/lib/python3.4/dist-packages/numpy/testing/utils.py", line 1391, in assert_allclose
+    verbose=verbose, header=header)
+  File "/usr/local/lib/python3.4/dist-packages/numpy/testing/utils.py", line 733, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError: 
+Not equal to tolerance rtol=1e-06, atol=1e-06
+
+(mismatch 50.0%)
+ x: array([ 3.342118,  5.422623], dtype=float32)
+ y: array([ 3.34211,  5.42262], dtype=float32)
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.167s
+
+FAILED (failures=1)
+not close where =  (array([0], dtype=int32),)
+not close lhs =  [ 3.34211779]
+not close rhs =  [ 3.34210992]
+not close dif =  [  7.86781311e-06]
+not close tol =  [  4.34211006e-06]

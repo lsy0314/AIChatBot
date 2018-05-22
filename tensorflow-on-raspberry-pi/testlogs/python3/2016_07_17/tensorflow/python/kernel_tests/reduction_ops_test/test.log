@@ -1,0 +1,5 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+.................F.............E tensorflow/core/client/tensor_c_api.cc:485] _ProdGrad NaN test : Tensor had NaN values
+	 [[Node: CheckNumerics = CheckNumerics[T=DT_FLOAT, message="_ProdGrad NaN test", _device="/job:localhost/replica:0/task:0/cpu:0"](CheckNumerics/tensor)]]
+...................

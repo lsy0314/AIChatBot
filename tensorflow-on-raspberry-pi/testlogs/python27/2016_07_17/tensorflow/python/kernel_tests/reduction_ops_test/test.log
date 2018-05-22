@@ -1,0 +1,47 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+.................F.............E tensorflow/core/client/tensor_c_api.cc:485] _ProdGrad NaN test : Tensor had NaN values
+	 [[Node: CheckNumerics = CheckNumerics[T=DT_FLOAT, message="_ProdGrad NaN test", _device="/job:localhost/replica:0/task:0/cpu:0"](CheckNumerics/tensor)]]
+..........................
+======================================================================
+FAIL: testFloatReduce3D (__main__.MeanReductionTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/reduction_ops_test.runfiles/tensorflow/python/kernel_tests/reduction_ops_test.py", line 328, in testFloatReduce3D
+    self._compareAll(np_arr, [0])
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/reduction_ops_test.runfiles/tensorflow/python/kernel_tests/reduction_ops_test.py", line 317, in _compareAll
+    self._compare(x, reduction_axes, False, use_gpu=True)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/reduction_ops_test.runfiles/tensorflow/python/kernel_tests/reduction_ops_test.py", line 313, in _compare
+    self.assertAllClose(np_ans, out)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/reduction_ops_test.runfiles/tensorflow/python/framework/test_util.py", line 442, in assertAllClose
+    np.testing.assert_allclose(a, b, rtol=rtol, atol=atol)
+  File "/usr/lib/python2.7/dist-packages/numpy/testing/utils.py", line 1183, in assert_allclose
+    verbose=verbose, header=header)
+  File "/usr/lib/python2.7/dist-packages/numpy/testing/utils.py", line 644, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError: 
+Not equal to tolerance rtol=1e-06, atol=1e-06
+
+(mismatch 100.0%)
+ x: array([[  7.5,   8.5,   9.5,  10.5,  11.5],
+       [ 12.5,  13.5,  14.5,  15.5,  16.5],
+       [ 17.5,  18.5,  19.5,  20.5,  21.5]], dtype=float32)
+ y: array([[  7.49997139,   8.49996758,   9.49996376,  10.49995995,
+         11.49995613],
+       [ 12.49995232,  13.4999485 ,  14.49994469,  15.49994087,...
+
+----------------------------------------------------------------------
+Ran 57 tests in 41.878s
+
+FAILED (failures=1)
+not close where =  (array([0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2]), array([0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1]))
+not close lhs =  [  7.5   8.5   9.5  10.5  11.5  12.5  13.5  14.5  15.5  16.5  17.5  18.5]
+not close rhs =  [  7.49997139   8.49996758   9.49996376  10.49995995  11.49995613
+  12.49995232  13.4999485   14.49994469  15.49994087  16.49993706
+  17.49993324  18.49992943]
+not close dif =  [  2.86102295e-05   3.24249268e-05   3.62396240e-05   4.00543213e-05
+   4.38690186e-05   4.76837158e-05   5.14984131e-05   5.53131104e-05
+   5.91278076e-05   6.29425049e-05   6.67572021e-05   7.05718994e-05]
+not close tol =  [  8.49997105e-06   9.49996775e-06   1.04999644e-05   1.14999602e-05
+   1.24999560e-05   1.34999527e-05   1.44999485e-05   1.54999452e-05
+   1.64999419e-05   1.74999368e-05   1.84999335e-05   1.94999302e-05]

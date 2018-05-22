@@ -1,0 +1,73 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+FF.
+======================================================================
+FAIL: testBCast_12D (__main__.BinaryOpTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/cwise_ops_test.runfiles/tensorflow/python/kernel_tests/cwise_ops_test.py", line 947, in testBCast_12D
+    self._testBCastD([1, 1, 1, 1, 3, 2], [1, 3, 2])
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/cwise_ops_test.runfiles/tensorflow/python/kernel_tests/cwise_ops_test.py", line 791, in _testBCastD
+    self._testBCastByFunc(funcs, xs, ys)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/cwise_ops_test.runfiles/tensorflow/python/kernel_tests/cwise_ops_test.py", line 759, in _testBCastByFunc
+    self._compareBCast(xs, ys, dtype, np_func, tf_func)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/cwise_ops_test.runfiles/tensorflow/python/kernel_tests/cwise_ops_test.py", line 727, in _compareBCast
+    self._compareCpu(x, y, np_func, tf_func)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/cwise_ops_test.runfiles/tensorflow/python/kernel_tests/cwise_ops_test.py", line 448, in _compareCpu
+    self.assertAllClose(np_ans, tf_cpu)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/cwise_ops_test.runfiles/tensorflow/python/framework/test_util.py", line 442, in assertAllClose
+    np.testing.assert_allclose(a, b, rtol=rtol, atol=atol)
+  File "/usr/lib/python2.7/dist-packages/numpy/testing/utils.py", line 1183, in assert_allclose
+    verbose=verbose, header=header)
+  File "/usr/lib/python2.7/dist-packages/numpy/testing/utils.py", line 644, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError: 
+Not equal to tolerance rtol=1e-06, atol=1e-06
+
+(mismatch 100.0%)
+ x: array([[[[[[ 1.,  1.],
+           [ 1.,  1.],
+           [ 1.,  1.]]]]]], dtype=float32)
+ y: array([[[[[[ 0.99999619,  0.99999619],
+           [ 0.99999905,  0.99999619],
+           [ 1.        ,  1.        ]]]]]], dtype=float32)
+
+======================================================================
+FAIL: testComplex64Basic (__main__.BinaryOpTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/cwise_ops_test.runfiles/tensorflow/python/kernel_tests/cwise_ops_test.py", line 680, in testComplex64Basic
+    self._compareCpu(x, y + 0.1, np.true_divide, tf.truediv)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/cwise_ops_test.runfiles/tensorflow/python/kernel_tests/cwise_ops_test.py", line 448, in _compareCpu
+    self.assertAllClose(np_ans, tf_cpu)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/cwise_ops_test.runfiles/tensorflow/python/framework/test_util.py", line 442, in assertAllClose
+    np.testing.assert_allclose(a, b, rtol=rtol, atol=atol)
+  File "/usr/lib/python2.7/dist-packages/numpy/testing/utils.py", line 1183, in assert_allclose
+    verbose=verbose, header=header)
+  File "/usr/lib/python2.7/dist-packages/numpy/testing/utils.py", line 644, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError: 
+Not equal to tolerance rtol=1e-06, atol=1e-06
+
+(mismatch 100.0%)
+ x: array([[[-0.49875003-0.00124377j, -0.49791670-0.00206604j],
+        [-0.49375188-0.0060957j , -0.50624800+0.0064082j ],
+        [-0.50208324+0.00210077j, -0.50125003+0.00125627j]]], dtype=complex64)
+ y: array([[[-0.49875003-0.00124377j, -0.49791649-0.00206606j],
+        [-0.49375176-0.00609569j, -0.50624639+0.00640818j],
+        [-0.50208324+0.00210079j, -0.50124943+0.00125626j]]], dtype=complex64)
+
+----------------------------------------------------------------------
+Ran 3 tests in 6.827s
+
+FAILED (failures=2)
+not close where =  (array([0, 0, 0]), array([0, 0, 0]), array([0, 0, 0]), array([0, 0, 0]), array([0, 0, 1]), array([0, 1, 1]))
+not close lhs =  [ 1.  1.  1.]
+not close rhs =  [ 0.99999619  0.99999619  0.99999619]
+not close dif =  [  3.81469727e-06   3.81469727e-06   3.81469727e-06]
+not close tol =  [  1.99999613e-06   1.99999613e-06   1.99999613e-06]
+not close where =  (array([0]), array([1]), array([1]))
+not close lhs =  [-0.506248+0.0064082j]
+not close rhs =  [-0.50624639+0.00640818j]
+not close dif =  [  1.60946183e-06]
+not close tol =  [  1.50628694e-06]

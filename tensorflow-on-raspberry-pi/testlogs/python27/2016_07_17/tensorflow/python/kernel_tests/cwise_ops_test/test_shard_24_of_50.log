@@ -1,0 +1,8 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+.WARNING:tensorflow:Cannot test special functions: No module named scipy
+..
+----------------------------------------------------------------------
+Ran 3 tests in 30.084s
+
+OK

@@ -1,0 +1,26 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/string_to_number_op_test.runfiles/tensorflow/python/framework/test_util.py:430: RuntimeWarning: invalid value encountered in subtract
+  cond = np.abs(a - b) > atol + rtol * np.abs(b)
+/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/string_to_number_op_test.runfiles/tensorflow/python/framework/test_util.py:430: RuntimeWarning: invalid value encountered in absolute
+  cond = np.abs(a - b) > atol + rtol * np.abs(b)
+/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/string_to_number_op_test.runfiles/tensorflow/python/framework/test_util.py:430: RuntimeWarning: invalid value encountered in greater
+  cond = np.abs(a - b) > atol + rtol * np.abs(b)
+E tensorflow/core/client/tensor_c_api.cc:485] StringToNumberOp could not correctly convert string: 10foobar
+	 [[Node: StringToNumber = StringToNumber[out_type=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] StringToNumberOp could not correctly convert string: 2.9
+	 [[Node: StringToNumber = StringToNumber[out_type=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] StringToNumberOp could not correctly convert string: -2147483649
+	 [[Node: StringToNumber = StringToNumber[out_type=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] StringToNumberOp could not correctly convert string: 2147483648
+	 [[Node: StringToNumber = StringToNumber[out_type=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0)]]
+..
+----------------------------------------------------------------------
+Ran 3 tests in 0.097s
+
+OK
+not close where =  (array([], dtype=int32),)
+not close lhs =  []
+not close rhs =  []
+not close dif =  []
+not close tol =  []

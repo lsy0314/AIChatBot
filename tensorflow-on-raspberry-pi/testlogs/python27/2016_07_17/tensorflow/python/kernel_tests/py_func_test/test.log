@@ -1,0 +1,200 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+W tensorflow/core/framework/op_kernel.cc:936] Unimplemented: Unsupported numpy type 20
+E tensorflow/core/client/tensor_c_api.cc:485] Unsupported numpy type 20
+	 [[Node: PyFunc = PyFunc[Tin=[], Tout=[DT_FLOAT], token="pyfunc_0", _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+.W tensorflow/core/framework/op_kernel.cc:936] Unimplemented: Unsupported object type DType
+E tensorflow/core/client/tensor_c_api.cc:485] Unsupported object type DType
+	 [[Node: PyFunc = PyFunc[Tin=[], Tout=[DT_DOUBLE], token="pyfunc_1", _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+..E tensorflow/core/client/tensor_c_api.cc:485] 0-th value returned by pyfunc_9 is int32, but expects int64
+	 [[Node: PyFunc = PyFunc[Tin=[], Tout=[DT_INT64], token="pyfunc_9", _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+E...E tensorflow/core/client/tensor_c_api.cc:485] 0-th value returned by pyfunc_1014 is int32, but expects int64
+	 [[Node: PyFunc_1 = PyFunc[Tin=[], Tout=[DT_INT64], token="pyfunc_1014", _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+EE tensorflow/core/client/tensor_c_api.cc:485] 0-th value returned by pyfunc_1015 is int32, but expects int64
+	 [[Node: PyFunc = PyFunc[Tin=[], Tout=[DT_INT64], token="pyfunc_1015", _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+E...
+======================================================================
+ERROR: testCOrder (__main__.PyOpTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/kernel_tests/py_func_test.py", line 173, in testCOrder
+    self.assertAllEqual(val, x.eval())
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/framework/ops.py", line 556, in eval
+    return _eval_using_default_session(self, feed_dict, self.graph, session)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/framework/ops.py", line 3637, in _eval_using_default_session
+    return session.run(tensors, feed_dict)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/client/session.py", line 382, in run
+    run_metadata_ptr)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/client/session.py", line 655, in _run
+    feed_dict_string, options, run_metadata)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/client/session.py", line 723, in _do_run
+    target_list, options, run_metadata)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/client/session.py", line 743, in _do_call
+    raise type(e)(node_def, op, message)
+InvalidArgumentError: 0-th value returned by pyfunc_9 is int32, but expects int64
+	 [[Node: PyFunc = PyFunc[Tin=[], Tout=[DT_INT64], token="pyfunc_9", _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+Caused by op u'PyFunc', defined at:
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/kernel_tests/py_func_test.py", line 198, in <module>
+    tf.test.main()
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/platform/test.py", line 87, in main
+    return googletest.main()
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/platform/googletest.py", line 84, in main
+    benchmark.benchmarks_main(true_main=g_main)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/platform/benchmark.py", line 301, in benchmarks_main
+    true_main()
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/platform/googletest.py", line 58, in g_main
+    return unittest_main(*args, **kwargs)
+  File "/usr/lib/python2.7/unittest/main.py", line 95, in __init__
+    self.runTests()
+  File "/usr/lib/python2.7/unittest/main.py", line 232, in runTests
+    self.result = testRunner.run(self.test)
+  File "/usr/lib/python2.7/unittest/runner.py", line 151, in run
+    test(result)
+  File "/usr/lib/python2.7/unittest/suite.py", line 70, in __call__
+    return self.run(*args, **kwds)
+  File "/usr/lib/python2.7/unittest/suite.py", line 108, in run
+    test(result)
+  File "/usr/lib/python2.7/unittest/suite.py", line 70, in __call__
+    return self.run(*args, **kwds)
+  File "/usr/lib/python2.7/unittest/suite.py", line 108, in run
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 393, in __call__
+    return self.run(*args, **kwds)
+  File "/usr/lib/python2.7/unittest/case.py", line 329, in run
+    testMethod()
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/kernel_tests/py_func_test.py", line 172, in testCOrder
+    x, = tf.py_func(lambda: np.array(val, order="F"), [], [tf.int64])
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/ops/script_ops.py", line 160, in py_func
+    return gen_script_ops._py_func(input=inp, token=token, Tout=Tout, name=name)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/ops/gen_script_ops.py", line 36, in _py_func
+    name=name)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/framework/op_def_library.py", line 703, in apply_op
+    op_def=op_def)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/framework/ops.py", line 2298, in create_op
+    original_op=self._default_original_op, op_def=op_def)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/framework/ops.py", line 1232, in __init__
+    self._traceback = _extract_stack()
+
+
+======================================================================
+ERROR: testParallel (__main__.PyOpTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/kernel_tests/py_func_test.py", line 194, in testParallel
+    session.run([x, y])
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/client/session.py", line 382, in run
+    run_metadata_ptr)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/client/session.py", line 655, in _run
+    feed_dict_string, options, run_metadata)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/client/session.py", line 723, in _do_run
+    target_list, options, run_metadata)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/client/session.py", line 743, in _do_call
+    raise type(e)(node_def, op, message)
+InvalidArgumentError: 0-th value returned by pyfunc_1014 is int32, but expects int64
+	 [[Node: PyFunc_1 = PyFunc[Tin=[], Tout=[DT_INT64], token="pyfunc_1014", _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+Caused by op u'PyFunc_1', defined at:
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/kernel_tests/py_func_test.py", line 198, in <module>
+    tf.test.main()
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/platform/test.py", line 87, in main
+    return googletest.main()
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/platform/googletest.py", line 84, in main
+    benchmark.benchmarks_main(true_main=g_main)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/platform/benchmark.py", line 301, in benchmarks_main
+    true_main()
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/platform/googletest.py", line 58, in g_main
+    return unittest_main(*args, **kwargs)
+  File "/usr/lib/python2.7/unittest/main.py", line 95, in __init__
+    self.runTests()
+  File "/usr/lib/python2.7/unittest/main.py", line 232, in runTests
+    self.result = testRunner.run(self.test)
+  File "/usr/lib/python2.7/unittest/runner.py", line 151, in run
+    test(result)
+  File "/usr/lib/python2.7/unittest/suite.py", line 70, in __call__
+    return self.run(*args, **kwds)
+  File "/usr/lib/python2.7/unittest/suite.py", line 108, in run
+    test(result)
+  File "/usr/lib/python2.7/unittest/suite.py", line 70, in __call__
+    return self.run(*args, **kwds)
+  File "/usr/lib/python2.7/unittest/suite.py", line 108, in run
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 393, in __call__
+    return self.run(*args, **kwds)
+  File "/usr/lib/python2.7/unittest/case.py", line 329, in run
+    testMethod()
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/kernel_tests/py_func_test.py", line 191, in testParallel
+    y, = tf.py_func(blocking_get, [], [tf.int64])
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/ops/script_ops.py", line 160, in py_func
+    return gen_script_ops._py_func(input=inp, token=token, Tout=Tout, name=name)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/ops/gen_script_ops.py", line 36, in _py_func
+    name=name)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/framework/op_def_library.py", line 703, in apply_op
+    op_def=op_def)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/framework/ops.py", line 2298, in create_op
+    original_op=self._default_original_op, op_def=op_def)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/framework/ops.py", line 1232, in __init__
+    self._traceback = _extract_stack()
+
+
+======================================================================
+ERROR: testStateful (__main__.PyOpTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/kernel_tests/py_func_test.py", line 165, in testStateful
+    self.assertEqual(sess.run(x), 0)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/client/session.py", line 382, in run
+    run_metadata_ptr)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/client/session.py", line 655, in _run
+    feed_dict_string, options, run_metadata)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/client/session.py", line 723, in _do_run
+    target_list, options, run_metadata)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/client/session.py", line 743, in _do_call
+    raise type(e)(node_def, op, message)
+InvalidArgumentError: 0-th value returned by pyfunc_1015 is int32, but expects int64
+	 [[Node: PyFunc = PyFunc[Tin=[], Tout=[DT_INT64], token="pyfunc_1015", _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+Caused by op u'PyFunc', defined at:
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/kernel_tests/py_func_test.py", line 198, in <module>
+    tf.test.main()
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/platform/test.py", line 87, in main
+    return googletest.main()
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/platform/googletest.py", line 84, in main
+    benchmark.benchmarks_main(true_main=g_main)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/platform/benchmark.py", line 301, in benchmarks_main
+    true_main()
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/platform/googletest.py", line 58, in g_main
+    return unittest_main(*args, **kwargs)
+  File "/usr/lib/python2.7/unittest/main.py", line 95, in __init__
+    self.runTests()
+  File "/usr/lib/python2.7/unittest/main.py", line 232, in runTests
+    self.result = testRunner.run(self.test)
+  File "/usr/lib/python2.7/unittest/runner.py", line 151, in run
+    test(result)
+  File "/usr/lib/python2.7/unittest/suite.py", line 70, in __call__
+    return self.run(*args, **kwds)
+  File "/usr/lib/python2.7/unittest/suite.py", line 108, in run
+    test(result)
+  File "/usr/lib/python2.7/unittest/suite.py", line 70, in __call__
+    return self.run(*args, **kwds)
+  File "/usr/lib/python2.7/unittest/suite.py", line 108, in run
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 393, in __call__
+    return self.run(*args, **kwds)
+  File "/usr/lib/python2.7/unittest/case.py", line 329, in run
+    testMethod()
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/kernel_tests/py_func_test.py", line 164, in testStateful
+    x, = tf.py_func(lambda: next(producer), [], [tf.int64])
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/ops/script_ops.py", line 160, in py_func
+    return gen_script_ops._py_func(input=inp, token=token, Tout=Tout, name=name)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/ops/gen_script_ops.py", line 36, in _py_func
+    name=name)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/framework/op_def_library.py", line 703, in apply_op
+    op_def=op_def)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/framework/ops.py", line 2298, in create_op
+    original_op=self._default_original_op, op_def=op_def)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/py_func_test.runfiles/tensorflow/python/framework/ops.py", line 1232, in __init__
+    self._traceback = _extract_stack()
+
+
+----------------------------------------------------------------------
+Ran 12 tests in 15.299s
+
+FAILED (errors=3)

@@ -1,0 +1,71 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+........E tensorflow/core/client/tensor_c_api.cc:485] FIFOQueue '_4_fifo_queue' is closed and has insufficient elements (requested 1, current size 0)
+	 [[Node: fifo_queue_Dequeue = QueueDequeue[_class=["loc:@fifo_queue"], component_types=[DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](fifo_queue)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] FIFOQueue '_5_fifo_queue' is closed and has insufficient elements (requested 1, current size 0)
+	 [[Node: fifo_queue_Dequeue = QueueDequeue[_class=["loc:@fifo_queue"], component_types=[DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](fifo_queue)]]
+..E tensorflow/core/client/tensor_c_api.cc:485] FIFOQueue '_7_fifo_queue' is closed and has insufficient elements (requested 2, current size 0)
+	 [[Node: fifo_queue_DequeueMany = QueueDequeueMany[_class=["loc:@fifo_queue"], component_types=[DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](fifo_queue, fifo_queue_DequeueMany/n)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] FIFOQueue '_8_fifo_queue' is closed and has insufficient elements (requested 4, current size 0)
+	 [[Node: fifo_queue_DequeueMany = QueueDequeueMany[_class=["loc:@fifo_queue"], component_types=[DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](fifo_queue, fifo_queue_DequeueMany/n)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] FIFOQueue '_9_fifo_queue' is closed and has insufficient elements (requested 4, current size 0)
+	 [[Node: fifo_queue_DequeueMany = QueueDequeueMany[_class=["loc:@fifo_queue"], component_types=[DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](fifo_queue, fifo_queue_DequeueMany/n)]]
+..E tensorflow/core/client/tensor_c_api.cc:485] FIFOQueue '_11_fifo_queue' is closed and has insufficient elements (requested 4, current size 0)
+	 [[Node: fifo_queue_DequeueUpTo = QueueDequeueUpTo[_class=["loc:@fifo_queue"], component_types=[DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](fifo_queue, fifo_queue_DequeueUpTo/n)]]
+.....E tensorflow/core/client/tensor_c_api.cc:485] FIFOQueue '_16_fifo_queue' is closed and has insufficient elements (requested 1, current size 0)
+	 [[Node: fifo_queue_DequeueMany = QueueDequeueMany[_class=["loc:@fifo_queue"], component_types=[DT_FLOAT, DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](fifo_queue, fifo_queue_DequeueMany/n)]]
+....E tensorflow/core/client/tensor_c_api.cc:485] FIFOQueue '_18_fifo_queue' is closed and has insufficient elements (requested 1, current size 0)
+	 [[Node: fifo_queue_Dequeue = QueueDequeue[_class=["loc:@fifo_queue"], component_types=[DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](fifo_queue)]]
+..........E tensorflow/core/client/tensor_c_api.cc:485] FIFOQueue's DequeueMany and DequeueUpTo require the components to have specified shapes.
+	 [[Node: fifo_queue_DequeueMany = QueueDequeueMany[_class=["loc:@fifo_queue"], component_types=[DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](fifo_queue, fifo_queue_DequeueMany/n)]]
+.....W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Shape mismatch in tuple component 1. Expected [2,3,3], got [2,3,4]
+E tensorflow/core/client/tensor_c_api.cc:485] Shape mismatch in tuple component 1. Expected [2,3,3], got [2,3,4]
+	 [[Node: fifo_queue_EnqueueMany = QueueEnqueueMany[Tcomponents=[DT_INT32, DT_INT32], _class=["loc:@fifo_queue"], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](fifo_queue, fifo_queue_EnqueueMany/component_0, _recv_Placeholder_0)]]
+.....E tensorflow/core/client/tensor_c_api.cc:485] FIFOQueue '_36_fifo_queue' is closed and has insufficient elements (requested 2, current size 0)
+	 [[Node: fifo_queue_DequeueMany = QueueDequeueMany[_class=["loc:@fifo_queue"], component_types=[DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](fifo_queue, fifo_queue_DequeueMany/n)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] FIFOQueue '_37_fifo_queue' is closed.
+	 [[Node: fifo_queue_EnqueueMany = QueueEnqueueMany[Tcomponents=[DT_FLOAT], _class=["loc:@fifo_queue"], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](fifo_queue, fifo_queue_EnqueueMany/component_0)]]
+..E tensorflow/core/client/tensor_c_api.cc:485] FIFOQueue '_39_fifo_queue' is closed.
+	 [[Node: fifo_queue_enqueue = QueueEnqueue[Tcomponents=[DT_FLOAT], _class=["loc:@fifo_queue"], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](fifo_queue, fifo_queue_enqueue/component_0)]]
+...W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Shape mismatch in tuple component 1. Expected [3,3], got [3,4]
+E tensorflow/core/client/tensor_c_api.cc:485] Shape mismatch in tuple component 1. Expected [3,3], got [3,4]
+	 [[Node: fifo_queue_enqueue = QueueEnqueue[Tcomponents=[DT_INT32, DT_INT32], _class=["loc:@fifo_queue"], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](fifo_queue, fifo_queue_enqueue/component_0, _recv_Placeholder_0)]]
+...W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Shared queue 'q_a' has capacity 10 but requested capacity was 15
+E tensorflow/core/client/tensor_c_api.cc:485] Shared queue 'q_a' has capacity 10 but requested capacity was 15
+	 [[Node: fifo_queue_1 = FIFOQueue[capacity=15, component_types=[DT_FLOAT], container="", shapes=[], shared_name="q_a", _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Shared queue 'q_b' has component types float but requested component types were int32
+E tensorflow/core/client/tensor_c_api.cc:485] Shared queue 'q_b' has component types float but requested component types were int32
+	 [[Node: fifo_queue_3 = FIFOQueue[capacity=10, component_types=[DT_INT32], container="", shapes=[], shared_name="q_b", _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Shared queue 'q_c' has component shapes [] but requested component shapes were [[1,1,2,3]]
+E tensorflow/core/client/tensor_c_api.cc:485] Shared queue 'q_c' has component shapes [] but requested component shapes were [[1,1,2,3]]
+	 [[Node: fifo_queue_5 = FIFOQueue[capacity=10, component_types=[DT_FLOAT], container="", shapes=[[1,1,2,3]], shared_name="q_c", _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Shared queue 'q_d' has component shapes [[1,1,2,3]] but requested component shapes were []
+E tensorflow/core/client/tensor_c_api.cc:485] Shared queue 'q_d' has component shapes [[1,1,2,3]] but requested component shapes were []
+	 [[Node: fifo_queue_7 = FIFOQueue[capacity=10, component_types=[DT_FLOAT], container="", shapes=[], shared_name="q_d", _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Shared queue 'q_e' has component shapes [[1,1,2,3]] but requested component shapes were [[1,1,2,4]]
+E tensorflow/core/client/tensor_c_api.cc:485] Shared queue 'q_e' has component shapes [[1,1,2,3]] but requested component shapes were [[1,1,2,4]]
+	 [[Node: fifo_queue_9 = FIFOQueue[capacity=10, component_types=[DT_FLOAT], container="", shapes=[[1,1,2,4]], shared_name="q_e", _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Shared queue 'q_f' has component types float but requested component types were float, int32
+E tensorflow/core/client/tensor_c_api.cc:485] Shared queue 'q_f' has component types float but requested component types were float, int32
+	 [[Node: fifo_queue_11 = FIFOQueue[capacity=10, component_types=[DT_FLOAT, DT_INT32], container="", shapes=[], shared_name="q_f", _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+................W tensorflow/core/kernels/queue_base.cc:294] _57_fifo_queue_1: Skipping cancelled enqueue attempt with queue not closed
+W tensorflow/core/kernels/queue_base.cc:294] _57_fifo_queue_1: Skipping cancelled enqueue attempt with queue not closed
+W tensorflow/core/kernels/queue_base.cc:302] _58_fifo_queue: Skipping cancelled dequeue attempt with queue not closed
+W tensorflow/core/kernels/queue_base.cc:302] _58_fifo_queue: Skipping cancelled dequeue attempt with queue not closed
+E tensorflow/core/client/tensor_c_api.cc:485] Dequeue operation was cancelled
+	 [[Node: fifo_queue_DequeueMany = QueueDequeueMany[_class=["loc:@fifo_queue"], component_types=[DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](fifo_queue, fifo_queue_DequeueMany/n)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Enqueue operation was cancelled
+	 [[Node: fifo_queue_1_EnqueueMany_1 = QueueEnqueueMany[Tcomponents=[DT_FLOAT], _class=["loc:@fifo_queue_1"], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](fifo_queue_1, fifo_queue_1_EnqueueMany_1/component_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Dequeue operation was cancelled
+	 [[Node: fifo_queue_Dequeue = QueueDequeue[_class=["loc:@fifo_queue"], component_types=[DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](fifo_queue)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Enqueue operation was cancelled
+	 [[Node: fifo_queue_1_enqueue = QueueEnqueue[Tcomponents=[DT_FLOAT], _class=["loc:@fifo_queue_1"], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](fifo_queue_1, fifo_queue_1_enqueue/component_0)]]
+..E tensorflow/core/client/tensor_c_api.cc:485] Index must be in the range [0, 2) but got 3
+	 [[Node: RefSelect = RefSelect[N=2, T=DT_STRING, _class=["loc:@fifo_queue"], _device="/job:localhost/replica:0/task:0/cpu:0"](RefSelect/index, fifo_queue, fifo_queue_1)]]
+...W tensorflow/core/kernels/queue_base.cc:302] _71_fifo_queue: Skipping cancelled dequeue attempt with queue not closed
+E tensorflow/core/client/tensor_c_api.cc:485] Timed out waiting for notification
+....
+----------------------------------------------------------------------
+Ran 78 tests in 14.760s
+
+OK

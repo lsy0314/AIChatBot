@@ -1,0 +1,194 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+ERROR:tensorflow:Starting: testBigDequeueMany
+ERROR:tensorflow:Finished: testBigDequeueMany
+.ERROR:tensorflow:Starting: testBigEnqueueMany
+ERROR:tensorflow:Finished: testBigEnqueueMany
+.ERROR:tensorflow:Starting: testBlockingDequeueFromClosedEmptyQueue
+E tensorflow/core/client/tensor_c_api.cc:485] RandomShuffleQueue '_2_random_shuffle_queue' is closed and has insufficient elements (requested 1, current size 0)
+	 [[Node: random_shuffle_queue_Dequeue = QueueDequeue[_class=["loc:@random_shuffle_queue"], component_types=[DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](random_shuffle_queue)]]
+ERROR:tensorflow:Finished: testBlockingDequeueFromClosedEmptyQueue
+.ERROR:tensorflow:Starting: testBlockingDequeueFromClosedQueue
+E tensorflow/core/client/tensor_c_api.cc:485] RandomShuffleQueue '_3_random_shuffle_queue' is closed and has insufficient elements (requested 1, current size 0)
+	 [[Node: random_shuffle_queue_Dequeue = QueueDequeue[_class=["loc:@random_shuffle_queue"], component_types=[DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](random_shuffle_queue)]]
+ERROR:tensorflow:Finished: testBlockingDequeueFromClosedQueue
+.ERROR:tensorflow:Starting: testBlockingDequeueMany
+ERROR:tensorflow:Finished: testBlockingDequeueMany
+.ERROR:tensorflow:Starting: testBlockingDequeueManyFromClosedEmptyQueue
+E tensorflow/core/client/tensor_c_api.cc:485] RandomShuffleQueue '_5_random_shuffle_queue' is closed and has insufficient elements (requested 4, current size 0)
+	 [[Node: random_shuffle_queue_DequeueMany = QueueDequeueMany[_class=["loc:@random_shuffle_queue"], component_types=[DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](random_shuffle_queue, random_shuffle_queue_DequeueMany/n)]]
+ERROR:tensorflow:Finished: testBlockingDequeueManyFromClosedEmptyQueue
+.ERROR:tensorflow:Starting: testBlockingDequeueManyFromClosedQueue
+E tensorflow/core/client/tensor_c_api.cc:485] RandomShuffleQueue '_6_random_shuffle_queue' is closed and has insufficient elements (requested 4, current size 0)
+	 [[Node: random_shuffle_queue_DequeueMany = QueueDequeueMany[_class=["loc:@random_shuffle_queue"], component_types=[DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](random_shuffle_queue, random_shuffle_queue_DequeueMany/n)]]
+ERROR:tensorflow:Finished: testBlockingDequeueManyFromClosedQueue
+.ERROR:tensorflow:Starting: testBlockingDequeueManyFromClosedQueueWithElementsRemaining
+E tensorflow/core/client/tensor_c_api.cc:485] RandomShuffleQueue '_7_random_shuffle_queue' is closed and has insufficient elements (requested 2, current size 0)
+	 [[Node: random_shuffle_queue_DequeueMany = QueueDequeueMany[_class=["loc:@random_shuffle_queue"], component_types=[DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](random_shuffle_queue, random_shuffle_queue_DequeueMany/n)]]
+ERROR:tensorflow:Finished: testBlockingDequeueManyFromClosedQueueWithElementsRemaining
+.ERROR:tensorflow:Starting: testBlockingDequeueUpTo
+ERROR:tensorflow:Finished: testBlockingDequeueUpTo
+.ERROR:tensorflow:Starting: testBlockingDequeueUpToFromClosedEmptyQueue
+E tensorflow/core/client/tensor_c_api.cc:485] RandomShuffleQueue '_9_random_shuffle_queue' is closed and has insufficient elements (requested 4, current size 0)
+	 [[Node: random_shuffle_queue_DequeueUpTo = QueueDequeueUpTo[_class=["loc:@random_shuffle_queue"], component_types=[DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](random_shuffle_queue, random_shuffle_queue_DequeueUpTo/n)]]
+ERROR:tensorflow:Finished: testBlockingDequeueUpToFromClosedEmptyQueue
+.ERROR:tensorflow:Starting: testBlockingDequeueUpToFromClosedQueueReturnsRemainder
+/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/bin/tensorflow/python/kernel_tests/random_shuffle_queue_test.runfiles/tensorflow/python/kernel_tests/random_shuffle_queue_test.py:739: DeprecationWarning: Please use assertEqual instead.
+  self.assertEquals(3, len(results))
+ERROR:tensorflow:Finished: testBlockingDequeueUpToFromClosedQueueReturnsRemainder
+.ERROR:tensorflow:Starting: testBlockingDequeueUpToSmallerThanMinAfterDequeue
+ERROR:tensorflow:Finished: testBlockingDequeueUpToSmallerThanMinAfterDequeue
+.ERROR:tensorflow:Starting: testBlockingEnqueueManyToClosedQueue
+E tensorflow/core/client/tensor_c_api.cc:485] RandomShuffleQueue '_12_random_shuffle_queue' is closed.
+	 [[Node: random_shuffle_queue_EnqueueMany_1 = QueueEnqueueMany[Tcomponents=[DT_FLOAT], _class=["loc:@random_shuffle_queue"], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](random_shuffle_queue, random_shuffle_queue_EnqueueMany_1/component_0)]]
+ERROR:tensorflow:Finished: testBlockingEnqueueManyToClosedQueue
+.ERROR:tensorflow:Starting: testBlockingEnqueueManyToFullQueue
+ERROR:tensorflow:Finished: testBlockingEnqueueManyToFullQueue
+.ERROR:tensorflow:Starting: testBlockingEnqueueToClosedQueue
+E tensorflow/core/client/tensor_c_api.cc:485] RandomShuffleQueue '_14_random_shuffle_queue' is closed.
+	 [[Node: random_shuffle_queue_enqueue = QueueEnqueue[Tcomponents=[DT_FLOAT], _class=["loc:@random_shuffle_queue"], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](random_shuffle_queue, random_shuffle_queue_enqueue/component_0)]]
+ERROR:tensorflow:Finished: testBlockingEnqueueToClosedQueue
+.ERROR:tensorflow:Starting: testBlockingEnqueueToFullQueue
+ERROR:tensorflow:Finished: testBlockingEnqueueToFullQueue
+.ERROR:tensorflow:Starting: testDequeue
+ERROR:tensorflow:Finished: testDequeue
+.ERROR:tensorflow:Starting: testDequeueFromClosedQueue
+E tensorflow/core/client/tensor_c_api.cc:485] RandomShuffleQueue '_17_random_shuffle_queue' is closed and has insufficient elements (requested 1, current size 0)
+	 [[Node: random_shuffle_queue_Dequeue = QueueDequeue[_class=["loc:@random_shuffle_queue"], component_types=[DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](random_shuffle_queue)]]
+ERROR:tensorflow:Finished: testDequeueFromClosedQueue
+.ERROR:tensorflow:Starting: testDequeueInDifferentOrders
+ERROR:tensorflow:Finished: testDequeueInDifferentOrders
+.ERROR:tensorflow:Starting: testDequeueMany
+ERROR:tensorflow:Finished: testDequeueMany
+.ERROR:tensorflow:Starting: testDequeueManyInDifferentOrders
+ERROR:tensorflow:Finished: testDequeueManyInDifferentOrders
+.ERROR:tensorflow:Starting: testDequeueManyWithTensorParameter
+ERROR:tensorflow:Finished: testDequeueManyWithTensorParameter
+.ERROR:tensorflow:Starting: testDequeueUpToInDifferentOrders
+ERROR:tensorflow:Finished: testDequeueUpToInDifferentOrders
+.ERROR:tensorflow:Starting: testDequeueUpToNoBlocking
+ERROR:tensorflow:Finished: testDequeueUpToNoBlocking
+.ERROR:tensorflow:Starting: testDequeueUpToWithTensorParameter
+ERROR:tensorflow:Finished: testDequeueUpToWithTensorParameter
+.ERROR:tensorflow:Starting: testEmptyDequeueMany
+ERROR:tensorflow:Finished: testEmptyDequeueMany
+.ERROR:tensorflow:Starting: testEmptyDequeueManyWithNoShape
+E tensorflow/core/client/tensor_c_api.cc:485] RandomShuffleQueue's DequeueMany and DequeueUpTo require the components to have specified shapes.
+	 [[Node: random_shuffle_queue_DequeueMany = QueueDequeueMany[_class=["loc:@random_shuffle_queue"], component_types=[DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](random_shuffle_queue, random_shuffle_queue_DequeueMany/n)]]
+E tensorflow/core/client/tensor_c_api.cc:485] RandomShuffleQueue's DequeueMany and DequeueUpTo require the components to have specified shapes.
+	 [[Node: random_shuffle_queue_DequeueMany = QueueDequeueMany[_class=["loc:@random_shuffle_queue"], component_types=[DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](random_shuffle_queue, random_shuffle_queue_DequeueMany/n)]]
+ERROR:tensorflow:Finished: testEmptyDequeueManyWithNoShape
+.ERROR:tensorflow:Starting: testEmptyDequeueUpTo
+ERROR:tensorflow:Finished: testEmptyDequeueUpTo
+.ERROR:tensorflow:Starting: testEmptyDequeueUpToWithNoShape
+E tensorflow/core/client/tensor_c_api.cc:485] RandomShuffleQueue's DequeueMany and DequeueUpTo require the components to have specified shapes.
+	 [[Node: random_shuffle_queue_DequeueUpTo = QueueDequeueUpTo[_class=["loc:@random_shuffle_queue"], component_types=[DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](random_shuffle_queue, random_shuffle_queue_DequeueUpTo/n)]]
+E tensorflow/core/client/tensor_c_api.cc:485] RandomShuffleQueue's DequeueMany and DequeueUpTo require the components to have specified shapes.
+	 [[Node: random_shuffle_queue_DequeueUpTo = QueueDequeueUpTo[_class=["loc:@random_shuffle_queue"], component_types=[DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](random_shuffle_queue, random_shuffle_queue_DequeueUpTo/n)]]
+ERROR:tensorflow:Finished: testEmptyDequeueUpToWithNoShape
+.ERROR:tensorflow:Starting: testEmptyEnqueueMany
+ERROR:tensorflow:Finished: testEmptyEnqueueMany
+.ERROR:tensorflow:Starting: testEnqueue
+ERROR:tensorflow:Finished: testEnqueue
+.ERROR:tensorflow:Starting: testEnqueueAndBlockingDequeue
+ERROR:tensorflow:Finished: testEnqueueAndBlockingDequeue
+.ERROR:tensorflow:Starting: testEnqueueMany
+ERROR:tensorflow:Finished: testEnqueueMany
+.ERROR:tensorflow:Starting: testEnqueueManyToClosedQueue
+E tensorflow/core/client/tensor_c_api.cc:485] RandomShuffleQueue '_38_random_shuffle_queue' is closed.
+	 [[Node: random_shuffle_queue_EnqueueMany = QueueEnqueueMany[Tcomponents=[DT_FLOAT], _class=["loc:@random_shuffle_queue"], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](random_shuffle_queue, random_shuffle_queue_EnqueueMany/component_0)]]
+ERROR:tensorflow:Finished: testEnqueueManyToClosedQueue
+.ERROR:tensorflow:Starting: testEnqueueManyWithShape
+ERROR:tensorflow:Finished: testEnqueueManyWithShape
+.ERROR:tensorflow:Starting: testEnqueueToClosedQueue
+E tensorflow/core/client/tensor_c_api.cc:485] RandomShuffleQueue '_40_random_shuffle_queue' is closed.
+	 [[Node: random_shuffle_queue_enqueue = QueueEnqueue[Tcomponents=[DT_FLOAT], _class=["loc:@random_shuffle_queue"], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](random_shuffle_queue, random_shuffle_queue_enqueue/component_0)]]
+ERROR:tensorflow:Finished: testEnqueueToClosedQueue
+.ERROR:tensorflow:Starting: testEnqueueWithShape
+ERROR:tensorflow:Finished: testEnqueueWithShape
+.ERROR:tensorflow:Starting: testHighDimension
+ERROR:tensorflow:Finished: testHighDimension
+.ERROR:tensorflow:Starting: testIncompatibleSharedQueueErrors
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Shared queue 'q_a' has capacity 10 but requested capacity was 15
+E tensorflow/core/client/tensor_c_api.cc:485] Shared queue 'q_a' has capacity 10 but requested capacity was 15
+	 [[Node: random_shuffle_queue_1 = RandomShuffleQueue[capacity=15, component_types=[DT_FLOAT], container="", min_after_dequeue=5, seed=0, seed2=0, shapes=[], shared_name="q_a", _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Shared queue 'q_b' has min_after_dequeue 0 but requested min_after_dequeue was 5.
+E tensorflow/core/client/tensor_c_api.cc:485] Shared queue 'q_b' has min_after_dequeue 0 but requested min_after_dequeue was 5.
+	 [[Node: random_shuffle_queue_3 = RandomShuffleQueue[capacity=10, component_types=[DT_FLOAT], container="", min_after_dequeue=5, seed=0, seed2=0, shapes=[], shared_name="q_b", _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Shared queue 'q_c' has component types float but requested component types were int32
+E tensorflow/core/client/tensor_c_api.cc:485] Shared queue 'q_c' has component types float but requested component types were int32
+	 [[Node: random_shuffle_queue_5 = RandomShuffleQueue[capacity=10, component_types=[DT_INT32], container="", min_after_dequeue=5, seed=0, seed2=0, shapes=[], shared_name="q_c", _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Shared queue 'q_d' has component shapes [] but requested component shapes were [[1,1,2,3]]
+E tensorflow/core/client/tensor_c_api.cc:485] Shared queue 'q_d' has component shapes [] but requested component shapes were [[1,1,2,3]]
+	 [[Node: random_shuffle_queue_7 = RandomShuffleQueue[capacity=10, component_types=[DT_FLOAT], container="", min_after_dequeue=5, seed=0, seed2=0, shapes=[[1,1,2,3]], shared_name="q_d", _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Shared queue 'q_e' has component shapes [[1,1,2,3]] but requested component shapes were []
+E tensorflow/core/client/tensor_c_api.cc:485] Shared queue 'q_e' has component shapes [[1,1,2,3]] but requested component shapes were []
+	 [[Node: random_shuffle_queue_9 = RandomShuffleQueue[capacity=10, component_types=[DT_FLOAT], container="", min_after_dequeue=5, seed=0, seed2=0, shapes=[], shared_name="q_e", _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Shared queue 'q_f' has component shapes [[1,1,2,3]] but requested component shapes were [[1,1,2,4]]
+E tensorflow/core/client/tensor_c_api.cc:485] Shared queue 'q_f' has component shapes [[1,1,2,3]] but requested component shapes were [[1,1,2,4]]
+	 [[Node: random_shuffle_queue_11 = RandomShuffleQueue[capacity=10, component_types=[DT_FLOAT], container="", min_after_dequeue=5, seed=0, seed2=0, shapes=[[1,1,2,4]], shared_name="q_f", _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Shared queue 'q_g' has component types float but requested component types were float, int32
+E tensorflow/core/client/tensor_c_api.cc:485] Shared queue 'q_g' has component types float but requested component types were float, int32
+	 [[Node: random_shuffle_queue_13 = RandomShuffleQueue[capacity=10, component_types=[DT_FLOAT, DT_INT32], container="", min_after_dequeue=5, seed=0, seed2=0, shapes=[], shared_name="q_g", _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Shared queue 'q_h' has random seeds (87654321, 12) but requested seeds are (87654321, 21).
+E tensorflow/core/client/tensor_c_api.cc:485] Shared queue 'q_h' has random seeds (87654321, 12) but requested seeds are (87654321, 21).
+	 [[Node: random_shuffle_queue_15 = RandomShuffleQueue[capacity=10, component_types=[DT_FLOAT], container="", min_after_dequeue=5, seed=87654321, seed2=21, shapes=[], shared_name="q_h", _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+ERROR:tensorflow:Finished: testIncompatibleSharedQueueErrors
+.ERROR:tensorflow:Starting: testMultiDequeueMany
+ERROR:tensorflow:Finished: testMultiDequeueMany
+.ERROR:tensorflow:Starting: testMultiDequeueUpToNoBlocking
+ERROR:tensorflow:Finished: testMultiDequeueUpToNoBlocking
+.ERROR:tensorflow:Starting: testMultiEnqueueAndDequeue
+ERROR:tensorflow:Finished: testMultiEnqueueAndDequeue
+.ERROR:tensorflow:Starting: testMultiEnqueueMany
+ERROR:tensorflow:Finished: testMultiEnqueueMany
+.ERROR:tensorflow:Starting: testParallelDequeue
+ERROR:tensorflow:Finished: testParallelDequeue
+.ERROR:tensorflow:Starting: testParallelDequeueMany
+ERROR:tensorflow:Finished: testParallelDequeueMany
+.ERROR:tensorflow:Starting: testParallelDequeueUpTo
+ERROR:tensorflow:Finished: testParallelDequeueUpTo
+.ERROR:tensorflow:Starting: testParallelDequeueUpToRandomPartition
+ERROR:tensorflow:Finished: testParallelDequeueUpToRandomPartition
+.ERROR:tensorflow:Starting: testParallelEnqueue
+ERROR:tensorflow:Finished: testParallelEnqueue
+.ERROR:tensorflow:Starting: testParallelEnqueueMany
+ERROR:tensorflow:Finished: testParallelEnqueueMany
+.ERROR:tensorflow:Starting: testQueueSizeAfterEnqueueAndDequeue
+ERROR:tensorflow:Finished: testQueueSizeAfterEnqueueAndDequeue
+.ERROR:tensorflow:Starting: testQueueSizeEmpty
+ERROR:tensorflow:Finished: testQueueSizeEmpty
+.ERROR:tensorflow:Starting: testResetOfBlockingOperation
+W tensorflow/core/kernels/queue_base.cc:294] _55_random_shuffle_queue_1: Skipping cancelled enqueue attempt with queue not closed
+W tensorflow/core/kernels/queue_base.cc:294] _55_random_shuffle_queue_1: Skipping cancelled enqueue attempt with queue not closed
+W tensorflow/core/kernels/queue_base.cc:302] _56_random_shuffle_queue: Skipping cancelled dequeue attempt with queue not closed
+W tensorflow/core/kernels/queue_base.cc:302] _56_random_shuffle_queue: Skipping cancelled dequeue attempt with queue not closed
+W tensorflow/core/kernels/queue_base.cc:302] _56_random_shuffle_queue: Skipping cancelled dequeue attempt with queue not closed
+E tensorflow/core/client/tensor_c_api.cc:485] Dequeue operation was cancelled
+	 [[Node: random_shuffle_queue_DequeueUpTo = QueueDequeueUpTo[_class=["loc:@random_shuffle_queue"], component_types=[DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](random_shuffle_queue, random_shuffle_queue_DequeueUpTo/n)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Dequeue operation was cancelled
+	 [[Node: random_shuffle_queue_DequeueMany = QueueDequeueMany[_class=["loc:@random_shuffle_queue"], component_types=[DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](random_shuffle_queue, random_shuffle_queue_DequeueMany/n)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Dequeue operation was cancelled
+	 [[Node: random_shuffle_queue_Dequeue = QueueDequeue[_class=["loc:@random_shuffle_queue"], component_types=[DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](random_shuffle_queue)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Enqueue operation was cancelled
+	 [[Node: random_shuffle_queue_1_enqueue = QueueEnqueue[Tcomponents=[DT_FLOAT], _class=["loc:@random_shuffle_queue_1"], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](random_shuffle_queue_1, random_shuffle_queue_1_enqueue/component_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Enqueue operation was cancelled
+	 [[Node: random_shuffle_queue_1_EnqueueMany_1 = QueueEnqueueMany[Tcomponents=[DT_FLOAT], _class=["loc:@random_shuffle_queue_1"], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](random_shuffle_queue_1, random_shuffle_queue_1_EnqueueMany_1/component_0)]]
+ERROR:tensorflow:Finished: testResetOfBlockingOperation
+.ERROR:tensorflow:Starting: testScalarShapes
+ERROR:tensorflow:Finished: testScalarShapes
+.ERROR:tensorflow:Starting: testSelectQueue
+ERROR:tensorflow:Finished: testSelectQueue
+.ERROR:tensorflow:Starting: testSelectQueueOutOfRange
+E tensorflow/core/client/tensor_c_api.cc:485] Index must be in the range [0, 2) but got 3
+	 [[Node: RefSelect = RefSelect[N=2, T=DT_STRING, _class=["loc:@random_shuffle_queue"], _device="/job:localhost/replica:0/task:0/cpu:0"](RefSelect/index, random_shuffle_queue, random_shuffle_queue_1)]]
+ERROR:tensorflow:Finished: testSelectQueueOutOfRange
+.ERROR:tensorflow:Starting: testSharedQueueSameSession
+ERROR:tensorflow:Finished: testSharedQueueSameSession
+.ERROR:tensorflow:Starting: test_session
+ERROR:tensorflow:Finished: test_session
+.
+----------------------------------------------------------------------
+Ran 57 tests in 13.248s
+
+OK

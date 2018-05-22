@@ -1,0 +1,39 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+..F
+======================================================================
+FAIL: testFloatBasic (__main__.UnaryOpTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/bin/tensorflow/python/kernel_tests/cwise_ops_test.runfiles/tensorflow/python/kernel_tests/cwise_ops_test.py", line 190, in testFloatBasic
+    self._compareBoth(y, self._inv, tf.inv)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/bin/tensorflow/python/kernel_tests/cwise_ops_test.runfiles/tensorflow/python/kernel_tests/cwise_ops_test.py", line 153, in _compareBoth
+    self._compareCpu(x, np_func, tf_func)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/bin/tensorflow/python/kernel_tests/cwise_ops_test.runfiles/tensorflow/python/kernel_tests/cwise_ops_test.py", line 78, in _compareCpu
+    self.assertAllClose(np_ans, tf_cpu)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/bin/tensorflow/python/kernel_tests/cwise_ops_test.runfiles/tensorflow/python/framework/test_util.py", line 442, in assertAllClose
+    np.testing.assert_allclose(a, b, rtol=rtol, atol=atol)
+  File "/usr/local/lib/python3.4/dist-packages/numpy/testing/utils.py", line 1391, in assert_allclose
+    verbose=verbose, header=header)
+  File "/usr/local/lib/python3.4/dist-packages/numpy/testing/utils.py", line 733, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError: 
+Not equal to tolerance rtol=1e-06, atol=1e-06
+
+(mismatch 33.33333333333333%)
+ x: array([[[-0.44    , -0.733333],
+        [-2.2     ,  2.2     ],
+        [ 0.733333,  0.44    ]]], dtype=float32)
+ y: array([[[-0.439999, -0.733333],
+        [-2.199992,  2.199992],
+        [ 0.733333,  0.44    ]]], dtype=float32)
+
+----------------------------------------------------------------------
+Ran 3 tests in 56.819s
+
+FAILED (failures=1)
+not close where =  (array([0, 0], dtype=int32), array([1, 1], dtype=int32), array([0, 1], dtype=int32))
+not close lhs =  [-2.20000005  2.20000005]
+not close rhs =  [-2.1999917  2.1999917]
+not close dif =  [  8.34465027e-06   8.34465027e-06]
+not close tol =  [  3.19999162e-06   3.19999162e-06]

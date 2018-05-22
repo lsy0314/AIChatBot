@@ -1,0 +1,40 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+......................EE.......W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Dimension -1 must be >= 0
+E tensorflow/core/client/tensor_c_api.cc:485] Dimension -1 must be >= 0
+	 [[Node: Fill_3 = Fill[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, Fill_3/value)]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Dimension -1 must be >= 0
+E tensorflow/core/client/tensor_c_api.cc:485] Dimension -1 must be >= 0
+	 [[Node: Fill_3 = Fill[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, Fill_3/value)]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Dimension -1 must be >= 0
+E tensorflow/core/client/tensor_c_api.cc:485] Dimension -1 must be >= 0
+	 [[Node: Fill_3 = Fill[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0, Fill_3/value)]]
+..................E tensorflow/core/client/tensor_c_api.cc:485] You must feed a value for placeholder tensor 'p' with dtype float
+	 [[Node: p = Placeholder[dtype=DT_FLOAT, shape=[], _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+..E tensorflow/core/client/tensor_c_api.cc:485] You must feed a value for placeholder tensor 'p' with dtype float and shape [10,10]
+	 [[Node: p = Placeholder[dtype=DT_FLOAT, shape=[10,10], _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+.................
+======================================================================
+ERROR: testTooLargeConstant (__main__.ConstantTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/bin/tensorflow/python/kernel_tests/constant_op_test.runfiles/tensorflow/python/kernel_tests/constant_op_test.py", line 164, in testTooLargeConstant
+    large_array = np.zeros((512, 1024, 1024), dtype=np.float32)
+MemoryError
+
+======================================================================
+ERROR: testTooLargeGraph (__main__.ConstantTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/bin/tensorflow/python/kernel_tests/constant_op_test.runfiles/tensorflow/python/kernel_tests/constant_op_test.py", line 173, in testTooLargeGraph
+    c = tf.constant(large_array)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/bin/tensorflow/python/kernel_tests/constant_op_test.runfiles/tensorflow/python/framework/constant_op.py", line 163, in constant
+    tensor_util.make_tensor_proto(value, dtype=dtype, shape=shape))
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/bin/tensorflow/python/kernel_tests/constant_op_test.runfiles/tensorflow/python/framework/tensor_util.py", line 411, in make_tensor_proto
+    tensor_proto.tensor_content = nparray.tostring()
+MemoryError
+
+----------------------------------------------------------------------
+Ran 68 tests in 4.185s
+
+FAILED (errors=2)

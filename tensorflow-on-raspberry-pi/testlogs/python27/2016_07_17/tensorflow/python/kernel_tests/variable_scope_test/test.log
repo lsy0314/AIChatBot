@@ -1,0 +1,17 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+E tensorflow/core/client/tensor_c_api.cc:485] Attempting to use uninitialized value v0
+	 [[Node: _send_v0_0 = _Send[T=DT_FLOAT, client_terminated=true, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/cpu:0", send_device_incarnation=-7786894135276671019, tensor_name="v0:0", _device="/job:localhost/replica:0/task:0/cpu:0"](v0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Attempting to use uninitialized value v0
+	 [[Node: _send_v0_0 = _Send[T=DT_FLOAT, client_terminated=true, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/cpu:0", send_device_incarnation=-7786894135276671019, tensor_name="v0:0", _device="/job:localhost/replica:0/task:0/cpu:0"](v0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Attempting to use uninitialized value v0
+	 [[Node: v0/read = Identity[T=DT_FLOAT, _class=["loc:@v0"], _device="/job:localhost/replica:0/task:0/cpu:0"](v0)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] Attempting to use uninitialized value v0
+	 [[Node: _send_v0_0 = _Send[T=DT_FLOAT, client_terminated=true, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/cpu:0", send_device_incarnation=-613720019679748764, tensor_name="v0:0", _device="/job:localhost/replica:0/task:0/cpu:0"](v0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Attempting to use uninitialized value v0
+	 [[Node: v0/read = Identity[T=DT_FLOAT, _class=["loc:@v0"], _device="/job:localhost/replica:0/task:0/cpu:0"](v0)]]
+..............................
+----------------------------------------------------------------------
+Ran 31 tests in 3.549s
+
+OK

@@ -1,0 +1,15 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+WARNING:tensorflow:Cannot test truncated normal op: No module named scipy.stats
+.WARNING:tensorflow:Cannot test truncated normal op: No module named scipy.stats
+.WARNING:tensorflow:Cannot test truncated normal op: No module named scipy.stats
+.WARNING:tensorflow:Cannot test truncated normal op: No module named scipy.stats
+.WARNING:tensorflow:Cannot test truncated normal op: No module named scipy.stats
+.WARNING:tensorflow:Cannot test truncated normal op: No module named scipy.stats
+.WARNING:tensorflow:Cannot test truncated normal op: No module named scipy.stats
+.WARNING:tensorflow:Cannot test truncated normal op: No module named scipy.stats
+..
+----------------------------------------------------------------------
+Ran 9 tests in 0.017s
+
+OK

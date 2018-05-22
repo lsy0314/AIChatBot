@@ -1,0 +1,43 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+....E tensorflow/core/client/tensor_c_api.cc:485] assertion failed: [Condition x == y did not hold element-wise: x = ] [big:0] [3 4] [y = ] [small:0] [1 2]
+	 [[Node: assert_equal/Assert = Assert[T=[DT_STRING, DT_STRING, DT_INT32, DT_STRING, DT_STRING, DT_INT32], summarize=3, _device="/job:localhost/replica:0/task:0/cpu:0"](assert_equal/All, assert_equal/Assert/data_0, assert_equal/Assert/data_1, big, assert_equal/Assert/data_3, assert_equal/Assert/data_4, small)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] assertion failed: [Condition x == y did not hold element-wise: x = ] [small:0] [3 1] [y = ] [big:0] [4 2]
+	 [[Node: assert_equal/Assert = Assert[T=[DT_STRING, DT_STRING, DT_INT32, DT_STRING, DT_STRING, DT_INT32], summarize=3, _device="/job:localhost/replica:0/task:0/cpu:0"](assert_equal/All, assert_equal/Assert/data_0, assert_equal/Assert/data_1, small, assert_equal/Assert/data_3, assert_equal/Assert/data_4, big)]]
+...E tensorflow/core/client/tensor_c_api.cc:485] assertion failed: [x is not of integer dtype: x = ] [floats:0] [1 2]
+	 [[Node: assert_integer/Assert = Assert[T=[DT_STRING, DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/cpu:0"](assert_integer/Assert/condition, assert_integer/Assert/data_0, assert_integer/Assert/data_1, floats)]]
+......E tensorflow/core/client/tensor_c_api.cc:485] assertion failed: [Condition x <= y did not hold element-wise: x = ] [big:0] [3 4] [y = ] [small:0] [1 2]
+	 [[Node: assert_less_equal/Assert = Assert[T=[DT_STRING, DT_STRING, DT_INT32, DT_STRING, DT_STRING, DT_INT32], summarize=3, _device="/job:localhost/replica:0/task:0/cpu:0"](assert_less_equal/All, assert_less_equal/Assert/data_0, assert_less_equal/Assert/data_1, big, assert_less_equal/Assert/data_3, assert_less_equal/Assert/data_4, small)]]
+......E tensorflow/core/client/tensor_c_api.cc:485] assertion failed: [Condition x < y did not hold element-wise: x = ] [small:0] [1 2] [y = ] [small:0] [1 2]
+	 [[Node: assert_less/Assert = Assert[T=[DT_STRING, DT_STRING, DT_INT32, DT_STRING, DT_STRING, DT_INT32], summarize=3, _device="/job:localhost/replica:0/task:0/cpu:0"](assert_less/All, assert_less/Assert/data_0, assert_less/Assert/data_1, small, assert_less/Assert/data_3, assert_less/Assert/data_4, small)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] assertion failed: [Condition x < y did not hold element-wise: x = ] [big:0] [3 4] [y = ] [small:0] [1 2]
+	 [[Node: assert_less/Assert = Assert[T=[DT_STRING, DT_STRING, DT_INT32, DT_STRING, DT_STRING, DT_INT32], summarize=3, _device="/job:localhost/replica:0/task:0/cpu:0"](assert_less/All, assert_less/Assert/data_0, assert_less/Assert/data_1, big, assert_less/Assert/data_3, assert_less/Assert/data_4, small)]]
+.....E tensorflow/core/client/tensor_c_api.cc:485] assertion failed: [Condition x < 0 did not hold element-wise: x = ] [doug:0] [1 2]
+	 [[Node: assert_negative/assert_less/Assert = Assert[T=[DT_STRING, DT_STRING, DT_INT32], summarize=3, _device="/job:localhost/replica:0/task:0/cpu:0"](assert_negative/assert_less/All, assert_negative/assert_less/Assert/data_0, assert_negative/assert_less/Assert/data_1, doug)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] assertion failed: [Condition x < 0 did not hold element-wise: x = ] [claire:0] [0]
+	 [[Node: assert_negative/assert_less/Assert = Assert[T=[DT_STRING, DT_STRING, DT_INT32], summarize=3, _device="/job:localhost/replica:0/task:0/cpu:0"](assert_negative/assert_less/All, assert_negative/assert_less/Assert/data_0, assert_negative/assert_less/Assert/data_1, claire)]]
+....E tensorflow/core/client/tensor_c_api.cc:485] assertion failed: [Condition x >= 0 did not hold element-wise: x = ] [zoe:0] [-1 -2]
+	 [[Node: assert_non_negative/assert_less_equal/Assert = Assert[T=[DT_STRING, DT_STRING, DT_INT32], summarize=3, _device="/job:localhost/replica:0/task:0/cpu:0"](assert_non_negative/assert_less_equal/All, assert_non_negative/assert_less_equal/Assert/data_0, assert_non_negative/assert_less_equal/Assert/data_1, zoe)]]
+....E tensorflow/core/client/tensor_c_api.cc:485] assertion failed: [Condition x <= 0 did not hold element-wise: x = ] [rachel:0] [0 2]
+	 [[Node: assert_non_positive/assert_less_equal/Assert = Assert[T=[DT_STRING, DT_STRING, DT_INT32], summarize=3, _device="/job:localhost/replica:0/task:0/cpu:0"](assert_non_positive/assert_less_equal/All, assert_non_positive/assert_less_equal/Assert/data_0, assert_non_positive/assert_less_equal/Assert/data_1, rachel)]]
+....E tensorflow/core/client/tensor_c_api.cc:485] assertion failed: [Condition x > 0 did not hold element-wise: x = ] [freddie:0] [-1 -2]
+	 [[Node: assert_positive/assert_less/Assert = Assert[T=[DT_STRING, DT_STRING, DT_INT32], summarize=3, _device="/job:localhost/replica:0/task:0/cpu:0"](assert_positive/assert_less/All, assert_positive/assert_less/Assert/data_0, assert_positive/assert_less/Assert/data_1, freddie)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] assertion failed: [Condition x > 0 did not hold element-wise: x = ] [meechum:0] [0]
+	 [[Node: assert_positive/assert_less/Assert = Assert[T=[DT_STRING, DT_STRING, DT_INT32], summarize=3, _device="/job:localhost/replica:0/task:0/cpu:0"](assert_positive/assert_less/All, assert_positive/assert_less/Assert/data_0, assert_positive/assert_less/Assert/data_1, meechum)]]
+..............E tensorflow/core/client/tensor_c_api.cc:485] assertion failed: [Tensor my_tensor:0 must have rank at least] [2] [Received shape: ] [2]
+	 [[Node: Assert = Assert[T=[DT_STRING, DT_INT32, DT_STRING, DT_INT32], summarize=3, _device="/job:localhost/replica:0/task:0/cpu:0"](assert_rank/GreaterEqual, Assert/data_0, Assert/data_1, Assert/data_2, Shape)]]
+....E tensorflow/core/client/tensor_c_api.cc:485] assertion failed: [Tensor my_tensor:0 must have rank at least] [1] [Received shape: ] []
+	 [[Node: Assert = Assert[T=[DT_STRING, DT_INT32, DT_STRING, DT_INT32], summarize=3, _device="/job:localhost/replica:0/task:0/cpu:0"](assert_rank/GreaterEqual, Assert/data_0, Assert/data_1, Assert/data_2, Shape)]]
+.....E tensorflow/core/client/tensor_c_api.cc:485] assertion failed: [Rank must be a scalar.Received rank:] [1 2]
+	 [[Node: assert_rank/Assert = Assert[T=[DT_STRING, DT_INT32], summarize=3, _device="/job:localhost/replica:0/task:0/cpu:0"](assert_rank/assert_rank/Equal, assert_rank/Assert/data_0, _recv_rank_tensor_0)]]
+....E tensorflow/core/client/tensor_c_api.cc:485] assertion failed: [Tensor my_tensor:0 must have rank] [0] [Received shape: ] [2]
+	 [[Node: Assert = Assert[T=[DT_STRING, DT_INT32, DT_STRING, DT_INT32], summarize=3, _device="/job:localhost/replica:0/task:0/cpu:0"](assert_rank/Equal, Assert/data_0, Assert/data_1, Assert/data_2, Shape)]]
+..E tensorflow/core/client/tensor_c_api.cc:485] assertion failed: [Tensor my_tensor:0 must have rank] [2] [Received shape: ] [2]
+	 [[Node: Assert = Assert[T=[DT_STRING, DT_INT32, DT_STRING, DT_INT32], summarize=3, _device="/job:localhost/replica:0/task:0/cpu:0"](assert_rank/Equal, Assert/data_0, Assert/data_1, Assert/data_2, Shape)]]
+....E tensorflow/core/client/tensor_c_api.cc:485] assertion failed: [Tensor my_tensor:0 must have rank] [1] [Received shape: ] []
+	 [[Node: Assert = Assert[T=[DT_STRING, DT_INT32, DT_STRING, DT_INT32], summarize=3, _device="/job:localhost/replica:0/task:0/cpu:0"](assert_rank/Equal, Assert/data_0, Assert/data_1, Assert/data_2, Shape)]]
+...................
+----------------------------------------------------------------------
+Ran 92 tests in 9.063s
+
+OK

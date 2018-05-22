@@ -1,0 +1,16 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+................/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/bin/tensorflow/python/kernel_tests/clip_ops_test.runfiles/tensorflow/python/framework/test_util.py:430: RuntimeWarning: invalid value encountered in absolute
+  cond = np.abs(a - b) > atol + rtol * np.abs(b)
+/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/bin/tensorflow/python/kernel_tests/clip_ops_test.runfiles/tensorflow/python/framework/test_util.py:430: RuntimeWarning: invalid value encountered in greater
+  cond = np.abs(a - b) > atol + rtol * np.abs(b)
+..
+----------------------------------------------------------------------
+Ran 18 tests in 2.342s
+
+OK
+not close where =  (array([], dtype=int32),)
+not close lhs =  []
+not close rhs =  []
+not close dif =  []
+not close tol =  []

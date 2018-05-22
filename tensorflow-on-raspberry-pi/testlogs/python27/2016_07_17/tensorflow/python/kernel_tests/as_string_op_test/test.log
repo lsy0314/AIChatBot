@@ -1,0 +1,31 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+.E tensorflow/core/common_runtime/executor.cc:334] Executor failed to create kernel. Invalid argument: Cannot select both scientific and shortest notation
+	 [[Node: AsString_7 = AsString[T=DT_COMPLEX64, fill="", precision=-1, scientific=true, shortest=true, width=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Cannot select both scientific and shortest notation
+	 [[Node: AsString_7 = AsString[T=DT_COMPLEX64, fill="", precision=-1, scientific=true, shortest=true, width=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0)]]
+.E tensorflow/core/common_runtime/executor.cc:334] Executor failed to create kernel. Invalid argument: Cannot select both scientific and shortest notation
+	 [[Node: AsString_16 = AsString[T=DT_DOUBLE, fill="", precision=-1, scientific=true, shortest=true, width=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_1_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Cannot select both scientific and shortest notation
+	 [[Node: AsString_16 = AsString[T=DT_DOUBLE, fill="", precision=-1, scientific=true, shortest=true, width=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_1_0)]]
+E tensorflow/core/common_runtime/executor.cc:334] Executor failed to create kernel. Invalid argument: Fill string must be one or fewer characters
+	 [[Node: AsString_17 = AsString[T=DT_DOUBLE, fill="ab", precision=-1, scientific=false, shortest=false, width=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_1_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Fill string must be one or fewer characters
+	 [[Node: AsString_17 = AsString[T=DT_DOUBLE, fill="ab", precision=-1, scientific=false, shortest=false, width=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_1_0)]]
+.E tensorflow/core/common_runtime/executor.cc:334] Executor failed to create kernel. Invalid argument: scientific and shortest format not supported for datatype int8
+	 [[Node: AsString_9 = AsString[T=DT_INT8, fill="", precision=-1, scientific=true, shortest=false, width=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_2_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] scientific and shortest format not supported for datatype int8
+	 [[Node: AsString_9 = AsString[T=DT_INT8, fill="", precision=-1, scientific=true, shortest=false, width=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_2_0)]]
+E tensorflow/core/common_runtime/executor.cc:334] Executor failed to create kernel. Invalid argument: scientific and shortest format not supported for datatype int8
+	 [[Node: AsString_10 = AsString[T=DT_INT8, fill="", precision=-1, scientific=false, shortest=true, width=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_2_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] scientific and shortest format not supported for datatype int8
+	 [[Node: AsString_10 = AsString[T=DT_INT8, fill="", precision=-1, scientific=false, shortest=true, width=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_2_0)]]
+E tensorflow/core/common_runtime/executor.cc:334] Executor failed to create kernel. Invalid argument: precision not supported for datatype int8
+	 [[Node: AsString_11 = AsString[T=DT_INT8, fill="", precision=0, scientific=false, shortest=false, width=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_2_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] precision not supported for datatype int8
+	 [[Node: AsString_11 = AsString[T=DT_INT8, fill="", precision=0, scientific=false, shortest=false, width=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_2_0)]]
+...
+----------------------------------------------------------------------
+Ran 6 tests in 0.707s
+
+OK

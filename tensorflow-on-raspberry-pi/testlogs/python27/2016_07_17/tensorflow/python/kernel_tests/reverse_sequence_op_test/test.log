@@ -1,0 +1,10 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+.......E tensorflow/core/client/tensor_c_api.cc:485] batch_dim == seq_dim == 0
+	 [[Node: ReverseSequence_4 = ReverseSequence[T=DT_FLOAT, batch_dim=0, seq_dim=0, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_8_0, _recv_Placeholder_9_0)]]
+..
+----------------------------------------------------------------------
+Ran 9 tests in 0.856s
+
+OK
+ReverseSequence gradient error = 1.22213e-12

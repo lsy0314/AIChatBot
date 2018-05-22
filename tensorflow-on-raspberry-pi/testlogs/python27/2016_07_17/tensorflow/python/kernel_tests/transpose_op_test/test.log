@@ -1,0 +1,11 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+....E tensorflow/core/client/tensor_c_api.cc:485] Transposing a tensor of rank 11 is not implemented.
+	 [[Node: transpose_1 = Transpose[T=DT_DOUBLE, _device="/job:localhost/replica:0/task:0/cpu:0"](transpose_1/x, transpose_1/perm)]]
+E tensorflow/core/client/tensor_c_api.cc:485] 2 is missing from {0,1,1}.
+	 [[Node: transpose_3 = Transpose[T=DT_DOUBLE, _device="/job:localhost/replica:0/task:0/cpu:0"](transpose_3/x, transpose_3/perm)]]
+.............
+----------------------------------------------------------------------
+Ran 17 tests in 26.943s
+
+OK

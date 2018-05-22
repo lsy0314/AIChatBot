@@ -1,0 +1,27 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+E tensorflow/core/client/tensor_c_api.cc:485] Div:0 : Tensor had Inf and NaN values
+	 [[Node: CheckNumerics_2 = CheckNumerics[T=DT_FLOAT, message="Div:0", _device="/job:localhost/replica:0/task:0/cpu:0"](Div, ^CheckNumerics_1)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Div:0 : Tensor had Inf and NaN values
+	 [[Node: CheckNumerics_2 = CheckNumerics[T=DT_FLOAT, message="Div:0", _device="/job:localhost/replica:0/task:0/cpu:0"](Div, ^CheckNumerics_1)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] Div:0 : Tensor had Inf values
+	 [[Node: CheckNumerics_2 = CheckNumerics[T=DT_FLOAT, message="Div:0", _device="/job:localhost/replica:0/task:0/cpu:0"](Div, ^CheckNumerics_1)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Div:0 : Tensor had Inf values
+	 [[Node: CheckNumerics_2 = CheckNumerics[T=DT_FLOAT, message="Div:0", _device="/job:localhost/replica:0/task:0/cpu:0"](Div, ^CheckNumerics_1)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] Div:0 : Tensor had NaN values
+	 [[Node: CheckNumerics_2 = CheckNumerics[T=DT_FLOAT, message="Div:0", _device="/job:localhost/replica:0/task:0/cpu:0"](Div, ^CheckNumerics_1)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Div:0 : Tensor had NaN values
+	 [[Node: CheckNumerics_2 = CheckNumerics[T=DT_FLOAT, message="Div:0", _device="/job:localhost/replica:0/task:0/cpu:0"](Div, ^CheckNumerics_1)]]
+...E tensorflow/core/client/tensor_c_api.cc:485] Input is not a number. : Tensor had NaN values
+	 [[Node: VerifyFinite/CheckNumerics = CheckNumerics[T=DT_FLOAT, _class=["loc:@Const"], message="Input is not a number.", _device="/job:localhost/replica:0/task:0/cpu:0"](Const)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Input is not a number. : Tensor had NaN values
+	 [[Node: VerifyFinite_1/CheckNumerics = CheckNumerics[T=DT_FLOAT, _class=["loc:@Const_1"], message="Input is not a number.", _device="/job:localhost/replica:0/task:0/cpu:0"](Const_1)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Input is not a number. : Tensor had Inf values
+	 [[Node: VerifyFinite_2/CheckNumerics = CheckNumerics[T=DT_FLOAT, _class=["loc:@Const_2"], message="Input is not a number.", _device="/job:localhost/replica:0/task:0/cpu:0"](Const_2)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Input is not a number. : Tensor had Inf values
+	 [[Node: VerifyFinite_3/CheckNumerics = CheckNumerics[T=DT_FLOAT, _class=["loc:@Const_3"], message="Input is not a number.", _device="/job:localhost/replica:0/task:0/cpu:0"](Const_3)]]
+...
+----------------------------------------------------------------------
+Ran 8 tests in 1.012s
+
+OK

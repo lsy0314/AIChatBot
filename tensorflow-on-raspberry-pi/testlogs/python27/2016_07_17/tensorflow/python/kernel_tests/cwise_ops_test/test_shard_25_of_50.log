@@ -1,0 +1,41 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+.F.
+======================================================================
+FAIL: testFloatBasic (__main__.BinaryOpTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/cwise_ops_test.runfiles/tensorflow/python/kernel_tests/cwise_ops_test.py", line 557, in testFloatBasic
+    self._compareBoth(x, y + 0.1, np.true_divide, tf.truediv)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/cwise_ops_test.runfiles/tensorflow/python/kernel_tests/cwise_ops_test.py", line 541, in _compareBoth
+    self._compareCpu(x, y, np_func, tf_func, also_compare_variables)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/cwise_ops_test.runfiles/tensorflow/python/kernel_tests/cwise_ops_test.py", line 448, in _compareCpu
+    self.assertAllClose(np_ans, tf_cpu)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/cwise_ops_test.runfiles/tensorflow/python/framework/test_util.py", line 442, in assertAllClose
+    np.testing.assert_allclose(a, b, rtol=rtol, atol=atol)
+  File "/usr/lib/python2.7/dist-packages/numpy/testing/utils.py", line 1183, in assert_allclose
+    verbose=verbose, header=header)
+  File "/usr/lib/python2.7/dist-packages/numpy/testing/utils.py", line 644, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError: 
+Not equal to tolerance rtol=1e-06, atol=1e-06
+
+(mismatch 100.0%)
+ x: array([[[ -2.48756215e-01,  -1.75507024e-01,  -8.64304230e-02,
+           2.42248047e-02,   1.65380374e-01],
+        [  3.51662397e-01,   6.08828008e-01,   9.86842096e-01,...
+ y: array([[[ -2.48755947e-01,  -1.75506935e-01,  -8.64303708e-02,
+           2.42247935e-02,   1.65380359e-01],
+        [  3.51662070e-01,   6.08827412e-01,   9.86839116e-01,...
+
+----------------------------------------------------------------------
+Ran 3 tests in 42.829s
+
+FAILED (failures=1)
+<type 'numpy.ndarray'> <type 'numpy.ndarray'> <class 'tensorflow.python.ops.variables.Variable'> <class 'tensorflow.python.ops.variables.Variable'>
+<class 'tensorflow.python.framework.ops.Tensor'> <class 'tensorflow.python.framework.ops.Tensor'>
+not close where =  (array([0, 0, 0]), array([1, 1, 2]), array([2, 4, 0]))
+not close lhs =  [ 0.9868421   2.74822688  5.73248434]
+not close rhs =  [ 0.98683912  2.74822259  5.73247576]
+not close dif =  [  2.98023224e-06   4.29153442e-06   8.58306885e-06]
+not close tol =  [  1.98683915e-06   3.74822275e-06   6.73247541e-06]

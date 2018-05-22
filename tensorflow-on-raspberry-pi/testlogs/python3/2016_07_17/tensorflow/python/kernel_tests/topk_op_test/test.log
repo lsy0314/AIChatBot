@@ -1,0 +1,9 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+E tensorflow/core/client/tensor_c_api.cc:485] Need k >= 0, got -7
+	 [[Node: TopKV2 = TopKV2[T=DT_FLOAT, sorted=true, _device="/job:localhost/replica:0/task:0/cpu:0"](TopKV2/input, _recv_Placeholder_0)]]
+..........
+----------------------------------------------------------------------
+Ran 10 tests in 0.755s
+
+OK

@@ -1,0 +1,196 @@
+INFO: Elapsed time: 3076.570s, Critical Path: 2235.00s
+//tensorflow/python/kernel_tests:argmax_op_test                          PASSED in 32.3s
+//tensorflow/python/kernel_tests:attention_ops_test                      PASSED in 21.5s
+//tensorflow/python/kernel_tests:batch_matrix_band_part_op_test          PASSED in 75.3s
+  Stats over 50 runs: max = 75.3s, min = 12.0s, avg = 23.5s, dev = 15.7s
+//tensorflow/python/kernel_tests:batchtospace_op_test                    PASSED in 25.2s
+//tensorflow/python/kernel_tests:bcast_ops_test                          PASSED in 19.4s
+//tensorflow/python/kernel_tests:benchmark_test                          PASSED in 49.2s
+//tensorflow/python/kernel_tests:bias_op_test                            PASSED in 29.9s
+//tensorflow/python/kernel_tests:bitcast_op_test                         PASSED in 19.0s
+//tensorflow/python/kernel_tests:candidate_sampler_ops_test              PASSED in 20.5s
+//tensorflow/python/kernel_tests:check_ops_test                          PASSED in 49.4s
+//tensorflow/python/kernel_tests:cholesky_op_test                        PASSED in 38.4s
+//tensorflow/python/kernel_tests:clip_ops_test                           PASSED in 18.7s
+//tensorflow/python/kernel_tests:conv_ops_3d_test                        PASSED in 47.7s
+  Stats over 50 runs: max = 47.7s, min = 11.0s, avg = 14.7s, dev = 7.1s
+//tensorflow/python/kernel_tests:conv_ops_test                           PASSED in 92.4s
+//tensorflow/python/kernel_tests:cross_grad_test                         PASSED in 18.6s
+//tensorflow/python/kernel_tests:ctc_decoder_ops_test                    PASSED in 18.0s
+//tensorflow/python/kernel_tests:decode_csv_op_test                      PASSED in 15.4s
+//tensorflow/python/kernel_tests:decode_png_op_test                      PASSED in 16.0s
+//tensorflow/python/kernel_tests:decode_raw_op_test                      PASSED in 14.5s
+//tensorflow/python/kernel_tests:denormal_test                           PASSED in 17.2s
+//tensorflow/python/kernel_tests:dense_update_ops_no_tsan_test           PASSED in 20.8s
+//tensorflow/python/kernel_tests:dense_update_ops_test                   PASSED in 26.0s
+//tensorflow/python/kernel_tests:depthtospace_op_test                    PASSED in 23.6s
+//tensorflow/python/kernel_tests:division_future_test                    PASSED in 75.0s
+//tensorflow/python/kernel_tests:dynamic_partition_op_test               PASSED in 22.8s
+//tensorflow/python/kernel_tests:dynamic_stitch_op_test                  PASSED in 24.3s
+//tensorflow/python/kernel_tests:edit_distance_op_test                   PASSED in 20.7s
+//tensorflow/python/kernel_tests:extract_image_patches_op_test           PASSED in 18.7s
+//tensorflow/python/kernel_tests:fft_ops_test                            PASSED in 17.5s
+//tensorflow/python/kernel_tests:fifo_queue_test                         PASSED in 34.7s
+//tensorflow/python/kernel_tests:gather_nd_op_test                       PASSED in 28.0s
+//tensorflow/python/kernel_tests:gather_op_test                          PASSED in 17.9s
+//tensorflow/python/kernel_tests:gradient_correctness_test               PASSED in 17.2s
+//tensorflow/python/kernel_tests:identity_op_py_test                     PASSED in 16.5s
+//tensorflow/python/kernel_tests:in_topk_op_test                         PASSED in 17.9s
+//tensorflow/python/kernel_tests:init_ops_test                           PASSED in 30.9s
+//tensorflow/python/kernel_tests:io_ops_test                             PASSED in 17.4s
+//tensorflow/python/kernel_tests:linalg_grad_test                        PASSED in 25.5s
+  Stats over 50 runs: max = 25.5s, min = 12.3s, avg = 17.1s, dev = 3.3s
+//tensorflow/python/kernel_tests:linalg_ops_test                         PASSED in 32.4s
+//tensorflow/python/kernel_tests:listdiff_op_test                        PASSED in 29.0s
+//tensorflow/python/kernel_tests:logging_ops_test                        PASSED in 22.0s
+//tensorflow/python/kernel_tests:lrn_op_test                             PASSED in 26.8s
+//tensorflow/python/kernel_tests:matmul_op_test                          PASSED in 32.3s
+//tensorflow/python/kernel_tests:matrix_inverse_op_test                  PASSED in 36.6s
+//tensorflow/python/kernel_tests:matrix_solve_ls_op_test                 PASSED in 25.4s
+//tensorflow/python/kernel_tests:matrix_solve_op_test                    PASSED in 18.9s
+//tensorflow/python/kernel_tests:matrix_triangular_solve_op_test         PASSED in 23.0s
+//tensorflow/python/kernel_tests:numerics_test                           PASSED in 19.0s
+//tensorflow/python/kernel_tests:one_hot_op_test                         PASSED in 24.8s
+//tensorflow/python/kernel_tests:pack_op_test                            PASSED in 27.5s
+//tensorflow/python/kernel_tests:pad_op_test                             PASSED in 25.3s
+//tensorflow/python/kernel_tests:padding_fifo_queue_test                 PASSED in 39.5s
+//tensorflow/python/kernel_tests:parameterized_truncated_normal_op_test  PASSED in 55.7s
+//tensorflow/python/kernel_tests:parsing_ops_test                        PASSED in 26.7s
+//tensorflow/python/kernel_tests:partitioned_variables_test              PASSED in 44.8s
+//tensorflow/python/kernel_tests:pooling_ops_test                        PASSED in 46.4s
+//tensorflow/python/kernel_tests:priority_queue_test                     PASSED in 43.0s
+//tensorflow/python/kernel_tests:random_crop_test                        PASSED in 20.2s
+//tensorflow/python/kernel_tests:random_gamma_test                       PASSED in 19.4s
+//tensorflow/python/kernel_tests:random_shuffle_queue_test               PASSED in 33.1s
+//tensorflow/python/kernel_tests:reader_ops_test                         PASSED in 22.2s
+//tensorflow/python/kernel_tests:reduce_join_op_test                     PASSED in 22.0s
+//tensorflow/python/kernel_tests:relu_op_test                            PASSED in 21.8s
+//tensorflow/python/kernel_tests:reshape_op_test                         PASSED in 17.9s
+//tensorflow/python/kernel_tests:rnn_cell_test                           PASSED in 27.2s
+//tensorflow/python/kernel_tests:save_restore_ops_test                   PASSED in 19.2s
+//tensorflow/python/kernel_tests:scalar_strict_test                      PASSED in 28.9s
+//tensorflow/python/kernel_tests:scatter_ops_test                        PASSED in 169.1s
+//tensorflow/python/kernel_tests:segment_reduction_ops_test              PASSED in 25.8s
+//tensorflow/python/kernel_tests:self_adjoint_eig_op_test                PASSED in 16.3s
+//tensorflow/python/kernel_tests:session_ops_test                        PASSED in 21.1s
+//tensorflow/python/kernel_tests:shape_ops_test                          PASSED in 41.1s
+//tensorflow/python/kernel_tests:softmax_op_test                         PASSED in 20.4s
+//tensorflow/python/kernel_tests:softplus_op_test                        PASSED in 18.7s
+//tensorflow/python/kernel_tests:spacetobatch_op_test                    PASSED in 24.9s
+//tensorflow/python/kernel_tests:spacetodepth_op_test                    PASSED in 22.2s
+//tensorflow/python/kernel_tests:sparse_add_op_test                      PASSED in 28.8s
+//tensorflow/python/kernel_tests:sparse_reorder_op_test                  PASSED in 28.9s
+//tensorflow/python/kernel_tests:sparse_reshape_op_test                  PASSED in 21.1s
+//tensorflow/python/kernel_tests:sparse_serialization_ops_test           PASSED in 20.0s
+//tensorflow/python/kernel_tests:sparse_split_op_test                    PASSED in 20.3s
+//tensorflow/python/kernel_tests:sparse_tensor_dense_matmul_op_test      PASSED in 104.2s
+//tensorflow/python/kernel_tests:sparse_to_dense_op_py_test              PASSED in 17.5s
+//tensorflow/python/kernel_tests:sparsemask_op_test                      PASSED in 22.0s
+//tensorflow/python/kernel_tests:split_op_test                           PASSED in 18.1s
+//tensorflow/python/kernel_tests:stack_ops_test                          PASSED in 21.6s
+//tensorflow/python/kernel_tests:string_join_op_test                     PASSED in 19.7s
+//tensorflow/python/kernel_tests:string_to_hash_bucket_op_test           PASSED in 16.4s
+//tensorflow/python/kernel_tests:string_to_number_op_test                PASSED in 13.8s
+//tensorflow/python/kernel_tests:summary_audio_op_test                   PASSED in 20.8s
+//tensorflow/python/kernel_tests:summary_image_op_test                   PASSED in 21.1s
+//tensorflow/python/kernel_tests:summary_ops_test                        PASSED in 20.1s
+//tensorflow/python/kernel_tests:template_test                           PASSED in 23.4s
+//tensorflow/python/kernel_tests:topk_op_test                            PASSED in 21.6s
+//tensorflow/python/kernel_tests:trace_op_test                           PASSED in 19.6s
+//tensorflow/python/kernel_tests:transpose_op_test                       PASSED in 53.9s
+//tensorflow/python/kernel_tests:unique_op_test                          PASSED in 23.4s
+//tensorflow/python/kernel_tests:unpack_op_test                          PASSED in 26.5s
+//tensorflow/python/kernel_tests:variable_ops_test                       PASSED in 22.1s
+//tensorflow/python/kernel_tests:variable_scope_test                     PASSED in 21.5s
+//tensorflow/python/kernel_tests:variables_test                          PASSED in 23.4s
+//tensorflow/python/kernel_tests:where_op_test                           PASSED in 17.6s
+//tensorflow/python/kernel_tests:xent_op_test                            PASSED in 28.7s
+//tensorflow/python/kernel_tests:zero_division_test                      PASSED in 33.2s
+//tensorflow/python/kernel_tests:array_ops_test                         TIMEOUT in 65.0s
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/array_ops_test/test.log
+//tensorflow/python/kernel_tests:as_string_op_test                      TIMEOUT in 65.2s
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/as_string_op_test/test.log
+//tensorflow/python/kernel_tests:barrier_ops_test                       TIMEOUT in 65.0s
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/barrier_ops_test/test.log
+//tensorflow/python/kernel_tests:batch_matmul_op_test                   TIMEOUT in 65.0s
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/batch_matmul_op_test/test.log
+//tensorflow/python/kernel_tests:control_flow_ops_py_test               TIMEOUT in 72.2s
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/control_flow_ops_py_test/test.log
+//tensorflow/python/kernel_tests:depthwise_conv_op_test                 TIMEOUT in 65.0s
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/depthwise_conv_op_test/test.log
+//tensorflow/python/kernel_tests:diag_op_test                           TIMEOUT in 65.0s
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/diag_op_test/test.log
+//tensorflow/python/kernel_tests:division_past_test                     TIMEOUT in 65.0s
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/division_past_test/test.log
+//tensorflow/python/kernel_tests:functional_ops_test                    TIMEOUT in 65.2s
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/functional_ops_test/test.log
+//tensorflow/python/kernel_tests:morphological_ops_test                 TIMEOUT in 65.1s
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/morphological_ops_test/test.log
+//tensorflow/python/kernel_tests:multinomial_op_test                    TIMEOUT in 65.0s
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/multinomial_op_test/test.log
+//tensorflow/python/kernel_tests:pooling_ops_3d_test                    TIMEOUT in 65.0s
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/pooling_ops_3d_test/test.log
+//tensorflow/python/kernel_tests:random_ops_test                        TIMEOUT in 83.9s
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/random_ops_test/test.log
+//tensorflow/python/kernel_tests:reduction_ops_test                     TIMEOUT in 65.5s
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/reduction_ops_test/test.log
+//tensorflow/python/kernel_tests:reverse_sequence_op_test               TIMEOUT in 66.9s
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/reverse_sequence_op_test/test.log
+//tensorflow/python/kernel_tests:rnn_test                               TIMEOUT in 305.0s
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/rnn_test/test.log
+//tensorflow/python/kernel_tests:scan_ops_test                          TIMEOUT in 65.0s
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/scan_ops_test/test.log
+//tensorflow/python/kernel_tests:seq2seq_test                           TIMEOUT in 305.1s
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/seq2seq_test/test.log
+//tensorflow/python/kernel_tests:slice_op_test                          TIMEOUT in 305.0s
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/slice_op_test/test.log
+//tensorflow/python/kernel_tests:sparse_concat_op_test                  TIMEOUT in 65.0s
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/sparse_concat_op_test/test.log
+//tensorflow/python/kernel_tests:sparse_tensor_dense_matmul_grad_test   TIMEOUT in 65.0s
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/sparse_tensor_dense_matmul_grad_test/test.log
+//tensorflow/python/kernel_tests:sparse_xent_op_test                    TIMEOUT in 65.3s
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/sparse_xent_op_test/test.log
+//tensorflow/python/kernel_tests:tensor_array_ops_test                  TIMEOUT in 65.0s
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/tensor_array_ops_test/test.log
+//tensorflow/python/kernel_tests:cast_op_test                            FAILED in 23.7s
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/cast_op_test/test.log
+//tensorflow/python/kernel_tests:concat_op_test                          FAILED in 86.8s
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/concat_op_test/test.log
+//tensorflow/python/kernel_tests:constant_op_test                        FAILED in 19.2s
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/constant_op_test/test.log
+//tensorflow/python/kernel_tests:ctc_loss_op_test                        FAILED in 17.3s
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/ctc_loss_op_test/test.log
+//tensorflow/python/kernel_tests:cwise_ops_test                          FAILED in 16 out of 50 in 103.2s
+  Stats over 50 runs: max = 103.2s, min = 17.1s, avg = 46.2s, dev = 18.9s
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/cwise_ops_test/test_shard_9_of_50.log
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/cwise_ops_test/test_shard_1_of_50.log
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/cwise_ops_test/test_shard_19_of_50.log
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/cwise_ops_test/test_shard_17_of_50.log
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/cwise_ops_test/test_shard_23_of_50.log
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/cwise_ops_test/test_shard_5_of_50.log
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/cwise_ops_test/test_shard_11_of_50.log
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/cwise_ops_test/test_shard_31_of_50.log
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/cwise_ops_test/test_shard_13_of_50.log
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/cwise_ops_test/test_shard_35_of_50.log
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/cwise_ops_test/test_shard_27_of_50.log
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/cwise_ops_test/test_shard_39_of_50.log
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/cwise_ops_test/test_shard_43_of_50.log
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/cwise_ops_test/test_shard_25_of_50.log
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/cwise_ops_test/test_shard_47_of_50.log
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/cwise_ops_test/test_shard_33_of_50.log
+//tensorflow/python/kernel_tests:determinant_op_test                     FAILED in 18.3s
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/determinant_op_test/test.log
+//tensorflow/python/kernel_tests:embedding_ops_test                      FAILED in 1 out of 50 in 51.2s
+  Stats over 50 runs: max = 51.2s, min = 8.3s, avg = 13.1s, dev = 6.6s
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/embedding_ops_test/test_shard_8_of_50.log
+//tensorflow/python/kernel_tests:py_func_test                            FAILED in 38.6s
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/py_func_test/test.log
+//tensorflow/python/kernel_tests:softsign_op_test                        FAILED in 46.5s
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/softsign_op_test/test.log
+//tensorflow/python/kernel_tests:sparse_matmul_op_test                   FAILED in 22.3s
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/sparse_matmul_op_test/test.log
+//tensorflow/python/kernel_tests:sparse_ops_test                         FAILED in 66.0s
+  /home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/testlogs/tensorflow/python/kernel_tests/sparse_ops_test/test.log
+
+Executed 138 out of 138 tests: 104 tests pass and 34 fail locally.
+There were tests whose specified size is too big. Use the --test_verbose_timeout_warnings command line option to see which ones these are.

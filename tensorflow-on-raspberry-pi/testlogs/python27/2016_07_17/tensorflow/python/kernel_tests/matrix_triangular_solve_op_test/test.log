@@ -1,0 +1,11 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+..E tensorflow/core/client/tensor_c_api.cc:485] Input matrix is not invertible.
+	 [[Node: BatchMatrixTriangularSolve = BatchMatrixTriangularSolve[T=DT_FLOAT, adjoint=false, lower=true, _device="/job:localhost/replica:0/task:0/cpu:0"](BatchMatrixTriangularSolve/matrix, BatchMatrixTriangularSolve/rhs)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Input matrix is not invertible.
+	 [[Node: BatchMatrixTriangularSolve_1 = BatchMatrixTriangularSolve[T=DT_FLOAT, adjoint=false, lower=true, _device="/job:localhost/replica:0/task:0/cpu:0"](BatchMatrixTriangularSolve_1/matrix, BatchMatrixTriangularSolve_1/rhs)]]
+.....
+----------------------------------------------------------------------
+Ran 7 tests in 2.151s
+
+OK

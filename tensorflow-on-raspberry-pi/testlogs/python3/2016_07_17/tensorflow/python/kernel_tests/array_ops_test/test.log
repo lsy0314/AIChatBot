@@ -1,0 +1,7 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+.............E tensorflow/core/client/tensor_c_api.cc:485] assertion failed: [Input 1 needs to have rank 1: ] [2]
+	 [[Node: meshgrid_28/Assert_1 = Assert[T=[DT_STRING, DT_INT32], summarize=3, _device="/job:localhost/replica:0/task:0/cpu:0"](meshgrid_28/Equal_1, meshgrid_28/Assert_1/data_0, meshgrid_28/Rank_3)]]
+../home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/bin/tensorflow/python/kernel_tests/array_ops_test.runfiles/tensorflow/python/ops/array_ops.py:1792: VisibleDeprecationWarning: converting an array with ndim > 0 to an index will result in an error in the future
+  result_shape.insert(dim, 1)
+.......

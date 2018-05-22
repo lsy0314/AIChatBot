@@ -1,0 +1,21 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+....E tensorflow/core/client/tensor_c_api.cc:485] Field 0 in record 1 is not a valid int32: 9999999999999999999999999
+	 [[Node: DecodeCSV = DecodeCSV[OUT_TYPE=[DT_INT32], field_delim=",", _device="/job:localhost/replica:0/task:0/cpu:0"](DecodeCSV/records, DecodeCSV/record_defaults_0)]]
+..E tensorflow/core/client/tensor_c_api.cc:485] Quoted field has to end with quote followed by delim or end
+	 [[Node: DecodeCSV = DecodeCSV[OUT_TYPE=[DT_STRING], field_delim=",", _device="/job:localhost/replica:0/task:0/cpu:0"](DecodeCSV/records, DecodeCSV/record_defaults_0)]]
+....E tensorflow/core/client/tensor_c_api.cc:485] Field 1 is required but missing in record 2!
+	 [[Node: DecodeCSV = DecodeCSV[OUT_TYPE=[DT_FLOAT, DT_INT32], field_delim=",", _device="/job:localhost/replica:0/task:0/cpu:0"](DecodeCSV/records, DecodeCSV/record_defaults_0, DecodeCSV/record_defaults_1)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] Expect 1 fields but have 2 in record 0
+	 [[Node: DecodeCSV = DecodeCSV[OUT_TYPE=[DT_FLOAT], field_delim=",", _device="/job:localhost/replica:0/task:0/cpu:0"](DecodeCSV/records, DecodeCSV/record_defaults_0)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] Field 0 in record 2 is not a valid float: 3.0adf
+	 [[Node: DecodeCSV = DecodeCSV[OUT_TYPE=[DT_FLOAT, DT_INT32], field_delim=",", _device="/job:localhost/replica:0/task:0/cpu:0"](DecodeCSV/records, DecodeCSV/record_defaults_0, DecodeCSV/record_defaults_1)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] Field 1 in record 1 is not a valid int32: 234a
+	 [[Node: DecodeCSV = DecodeCSV[OUT_TYPE=[DT_FLOAT, DT_INT32], field_delim=",", _device="/job:localhost/replica:0/task:0/cpu:0"](DecodeCSV/records, DecodeCSV/record_defaults_0, DecodeCSV/record_defaults_1)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] Unquoted fields cannot have quotes/CRLFs inside
+	 [[Node: DecodeCSV = DecodeCSV[OUT_TYPE=[DT_STRING], field_delim=",", _device="/job:localhost/replica:0/task:0/cpu:0"](DecodeCSV/records, DecodeCSV/record_defaults_0)]]
+..
+----------------------------------------------------------------------
+Ran 16 tests in 0.764s
+
+OK

@@ -1,0 +1,53 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/bin/tensorflow/python/kernel_tests/rnn_test.runfiles/tensorflow/python/ops/rnn_cell.py:408: DeprecationWarning: The 'warn' method is deprecated, use 'warning' instead
+  "deprecated.  Use state_is_tuple=True." % self)
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x75d35ef0>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x7135ec50>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x71d5e210>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x71d5e2d0>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+EWARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x6e3a2270>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/bin/tensorflow/python/kernel_tests/rnn_test.runfiles/tensorflow/python/ops/rnn_cell.py:410: DeprecationWarning: The 'warn' method is deprecated, use 'warning' instead
+  logging.warn("%s: The input_size parameter is deprecated." % self)
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x6e3a2270>: The input_size parameter is deprecated.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x6e3a2630>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x6e3a2630>: The input_size parameter is deprecated.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x71db7cf0>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x71db7cf0>: The input_size parameter is deprecated.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x71db7f70>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x71db7f70>: The input_size parameter is deprecated.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x71bc6ab0>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x71bc6ab0>: The input_size parameter is deprecated.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x71bc6a10>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x71bc6a10>: The input_size parameter is deprecated.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x71d5e7d0>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x71d5e7d0>: The input_size parameter is deprecated.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x71d5e310>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x71d5e310>: The input_size parameter is deprecated.
+.WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x6e532c50>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x6e532c50>: The input_size parameter is deprecated.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x6e532e10>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x6e532e10>: The input_size parameter is deprecated.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x6e01bbb0>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x6e01bbb0>: The input_size parameter is deprecated.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x6e01b930>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x6e01b930>: The input_size parameter is deprecated.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x71d47550>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x71d47550>: The input_size parameter is deprecated.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x71d474d0>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x71d474d0>: The input_size parameter is deprecated.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x6e5f52d0>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x6e5f52d0>: The input_size parameter is deprecated.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x6e5f5270>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x6e5f5270>: The input_size parameter is deprecated.
+....WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x6e3f5410>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x6e3ad8b0>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+.WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x72dbf330>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x713716b0>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+.WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x6e3ad3b0>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x6e3ad8f0>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+.WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x72e078b0>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x72e91db0>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x6c876af0>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x72e31630>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x6d929fd0>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.

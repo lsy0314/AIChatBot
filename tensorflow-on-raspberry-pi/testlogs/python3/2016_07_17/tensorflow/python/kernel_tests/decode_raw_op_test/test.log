@@ -1,0 +1,11 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+E tensorflow/core/client/tensor_c_api.cc:485] Input to DecodeRaw has length 3 that is not a multiple of 2, the size of int16
+	 [[Node: DecodeRaw = DecodeRaw[little_endian=true, out_type=DT_INT16, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] DecodeRaw requires input strings to all be the same size, but element 1 has size 5 != 6
+	 [[Node: DecodeRaw = DecodeRaw[little_endian=true, out_type=DT_UINT8, _device="/job:localhost/replica:0/task:0/cpu:0"](_recv_Placeholder_0)]]
+..
+----------------------------------------------------------------------
+Ran 3 tests in 0.083s
+
+OK

@@ -1,0 +1,33 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+.......E tensorflow/core/client/tensor_c_api.cc:485] Attempting to use uninitialized value Variable
+	 [[Node: Variable/read = Identity[T=DT_INT32, _class=["loc:@Variable"], _device="/job:localhost/replica:0/task:0/cpu:0"](Variable)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Attempting to use uninitialized value Variable
+	 [[Node: Variable/read = Identity[T=DT_INT32, _class=["loc:@Variable"], _device="/job:localhost/replica:0/task:0/cpu:0"](Variable)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] Attempting to use uninitialized value Variable_1
+	 [[Node: Variable_1/read = Identity[T=DT_INT32, _class=["loc:@Variable_1"], _device="/job:localhost/replica:0/task:0/cpu:0"](Variable_1)]]
+.........E tensorflow/core/client/tensor_c_api.cc:485] Attempting to use uninitialized value v0
+	 [[Node: _send_v0_0 = _Send[T=DT_INT32, client_terminated=true, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/cpu:0", send_device_incarnation=472245622735185582, tensor_name="v0:0", _device="/job:localhost/replica:0/task:0/cpu:0"](v0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Attempting to use uninitialized value v0
+	 [[Node: v0/read = Identity[T=DT_INT32, _class=["loc:@v0"], _device="/job:localhost/replica:0/task:0/cpu:0"](v0)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] Reached limit of 3
+	 [[Node: CountUpTo = CountUpTo[T=DT_INT32, _class=["loc:@Variable"], limit=3, _device="/job:localhost/replica:0/task:0/cpu:0"](Variable)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Reached limit of 3
+	 [[Node: CountUpTo = CountUpTo[T=DT_INT32, _class=["loc:@Variable"], limit=3, _device="/job:localhost/replica:0/task:0/cpu:0"](Variable)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] Reached limit of 3
+	 [[Node: CountUpTo = CountUpTo[T=DT_INT64, _class=["loc:@Variable"], limit=3, _device="/job:localhost/replica:0/task:0/cpu:0"](Variable)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Reached limit of 3
+	 [[Node: CountUpTo = CountUpTo[T=DT_INT64, _class=["loc:@Variable"], limit=3, _device="/job:localhost/replica:0/task:0/cpu:0"](Variable)]]
+..E tensorflow/core/client/tensor_c_api.cc:485] Attempting to use uninitialized value Variable
+	 [[Node: _send_Variable_0 = _Send[T=DT_FLOAT, client_terminated=true, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/cpu:0", send_device_incarnation=-9153219479801910119, tensor_name="Variable:0", _device="/job:localhost/replica:0/task:0/cpu:0"](Variable)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Attempting to use uninitialized value Variable_1
+	 [[Node: _send_Variable_1_0 = _Send[T=DT_FLOAT, client_terminated=true, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/cpu:0", send_device_incarnation=-9153219479801910119, tensor_name="Variable_1:0", _device="/job:localhost/replica:0/task:0/cpu:0"](Variable_1)]]
+..E tensorflow/core/client/tensor_c_api.cc:485] Attempting to use uninitialized value Variable
+	 [[Node: _send_Variable_0 = _Send[T=DT_FLOAT, client_terminated=true, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/cpu:0", send_device_incarnation=8583011966251540135, tensor_name="Variable:0", _device="/job:localhost/replica:0/task:0/cpu:0"](Variable)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Attempting to use uninitialized value Variable_1
+	 [[Node: _send_Variable_1_0 = _Send[T=DT_FLOAT, client_terminated=true, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/cpu:0", send_device_incarnation=8583011966251540135, tensor_name="Variable_1:0", _device="/job:localhost/replica:0/task:0/cpu:0"](Variable_1)]]
+........
+----------------------------------------------------------------------
+Ran 31 tests in 3.720s
+
+OK

@@ -1,0 +1,13 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+E tensorflow/core/client/tensor_c_api.cc:485] Inconsistent rank across SparseTensors: rank prior to SparseTensor[1] was: 3 but rank of SparseTensor[1] is: 4
+	 [[Node: DeserializeManySparse = DeserializeManySparse[dtype=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](pack)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] Could not parse serialized_sparse[1, 0]
+	 [[Node: DeserializeManySparse = DeserializeManySparse[dtype=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](pack)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] Requested SparseTensor of type int64 but SparseTensor[0].values.dtype() == int32
+	 [[Node: DeserializeManySparse = DeserializeManySparse[dtype=DT_INT64, _device="/job:localhost/replica:0/task:0/cpu:0"](pack)]]
+....
+----------------------------------------------------------------------
+Ran 6 tests in 0.333s
+
+OK

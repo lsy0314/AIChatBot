@@ -1,0 +1,136 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+...........E tensorflow/core/client/tensor_c_api.cc:485] Concat saw a scalar shape at index 0 but requires at least vectors.  Did you mean to call pack?
+	 [[Node: TensorArrayConcat = TensorArrayConcat[_class=["loc:@TensorArray"], dtype=DT_FLOAT, element_shape_except0=<unknown>, _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray, TensorArrayWrite_2)]]
+E tensorflow/core/client/tensor_c_api.cc:485] TensorArray has inconsistent shapes.  Index 0 has (excepting dimension 0) shape: [] but index 2 has (excepting dimension 0) shape: [1]
+	 [[Node: TensorArrayConcat_1 = TensorArrayConcat[_class=["loc:@TensorArray_4"], dtype=DT_FLOAT, element_shape_except0=<unknown>, _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray_4, TensorArrayWrite_5)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] TensorArray has size zero, but element shape <unknown> is not fully defined. Currently only static shapes are supported when packing zero-size TensorArrays.
+	 [[Node: TensorArrayPack = TensorArrayPack[_class=["loc:@TensorArray"], dtype=DT_FLOAT, element_shape=<unknown>, _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray, TensorArray/Const)]]
+.......W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: TensorArray foo_44: Could not read from TensorArray index 1 because it has not yet been written to.
+E tensorflow/core/client/tensor_c_api.cc:485] TensorArray foo_44: Could not read from TensorArray index 1 because it has not yet been written to.
+	 [[Node: TensorArrayPack = TensorArrayPack[_class=["loc:@TensorArray"], dtype=DT_FLOAT, element_shape=[1,2], _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray, TensorArrayWrite)]]
+.W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: TensorArray foo_45: Could not read index 0 twice because it was cleared after a previous read (perhaps try setting clear_after_read = false?).
+E tensorflow/core/client/tensor_c_api.cc:485] TensorArray foo_45: Could not read index 0 twice because it was cleared after a previous read (perhaps try setting clear_after_read = false?).
+	 [[Node: TensorArrayRead_1 = TensorArrayRead[_class=["loc:@TensorArray"], dtype=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray, TensorArrayRead_1/index, TensorArrayUnpack)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] TensorArray dtype is float but Op requested dtype int64.
+	 [[Node: TensorArrayRead = TensorArrayRead[_class=["loc:@TensorArray"], dtype=DT_INT64, _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray, TensorArrayRead/index, TensorArrayWrite)]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: TensorArray foo_48: Could not read from TensorArray index 1 because it has not yet been written to.
+E tensorflow/core/client/tensor_c_api.cc:485] TensorArray foo_48: Could not read from TensorArray index 1 because it has not yet been written to.
+	 [[Node: TensorArrayRead_1 = TensorArrayRead[_class=["loc:@TensorArray"], dtype=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray, TensorArrayRead_1/index, TensorArrayWrite)]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Tried to read from index -1 but array size is: 3
+E tensorflow/core/client/tensor_c_api.cc:485] Tried to read from index -1 but array size is: 3
+	 [[Node: TensorArrayRead_2 = TensorArrayRead[_class=["loc:@TensorArray"], dtype=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray, TensorArrayRead_2/index, TensorArray/Const)]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Tried to read from index 3 but array size is: 3
+E tensorflow/core/client/tensor_c_api.cc:485] Tried to read from index 3 but array size is: 3
+	 [[Node: TensorArrayRead_3 = TensorArrayRead[_class=["loc:@TensorArray"], dtype=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray, TensorArrayRead_3/index, TensorArray/Const)]]
+..E tensorflow/core/client/tensor_c_api.cc:485] Expected lengths to be a vector, received shape: []
+	 [[Node: TensorArraySplit_1 = TensorArraySplit[T=DT_FLOAT, _class=["loc:@TensorArray"], _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray, TensorArraySplit_1/value, _recv_Placeholder_0, TensorArray/Const)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Expected sum of lengths to be equal to values.shape[0], but sum of lengths is 1 and value's shape is: [3]
+	 [[Node: TensorArraySplit_3 = TensorArraySplit[T=DT_FLOAT, _class=["loc:@TensorArray"], _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray, TensorArraySplit_3/value, TensorArraySplit_2/ToInt64, TensorArray/Const)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Expected value to be at least a vector, but received shape: []
+	 [[Node: TensorArraySplit_5 = TensorArraySplit[T=DT_FLOAT, _class=["loc:@TensorArray"], _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray, TensorArraySplit_5/value, TensorArraySplit_4/ToInt64, TensorArray/Const)]]
+E tensorflow/core/client/tensor_c_api.cc:485] TensorArray's size is not equal to the size of lengths (2 vs. 1), and the TensorArray is not marked as dynamically resizeable
+	 [[Node: TensorArraySplit_7 = TensorArraySplit[T=DT_FLOAT, _class=["loc:@TensorArray_4"], _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray_4, TensorArraySplit_7/value, TensorArraySplit_6/ToInt64, TensorArray_4/Const)]]
+....E tensorflow/core/client/tensor_c_api.cc:485] Input value must have first dimension equal to the array size (2 vs. 3)
+	 [[Node: TensorArrayUnpack = TensorArrayUnpack[T=DT_FLOAT, _class=["loc:@TensorArray"], _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray, TensorArrayUnpack/value, TensorArray/Const)]]
+..W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: TensorArray foo_103: Could not write to TensorArray index 2 because it has already been written to.
+E tensorflow/core/client/tensor_c_api.cc:485] TensorArray foo_103: Could not write to TensorArray index 2 because it has already been written to.
+	 [[Node: TensorArrayWrite_1 = TensorArrayWrite[T=DT_INT32, _class=["loc:@TensorArray"], _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray, TensorArrayWrite_1/index, TensorArrayWrite_1/value, TensorArrayWrite)]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: TensorArray foo_104@grad: Could not aggregate to TensorArray index 1 because the existing shape is [] but the new input shape is [1].
+E tensorflow/core/client/tensor_c_api.cc:485] TensorArray foo_104@grad: Could not aggregate to TensorArray index 1 because the existing shape is [] but the new input shape is [1].
+	 [[Node: TensorArrayWrite_6 = TensorArrayWrite[T=DT_INT32, _class=["loc:@TensorArray"], _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArrayGrad/TensorArrayGrad, TensorArrayWrite_6/index, TensorArrayWrite_6/value, TensorArrayWrite_5)]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: TensorArray foo_106: Could not write to TensorArray index 2 because it has already been written to.
+E tensorflow/core/client/tensor_c_api.cc:485] TensorArray foo_106: Could not write to TensorArray index 2 because it has already been written to.
+	 [[Node: TensorArrayWrite_8 = TensorArrayWrite[T=DT_INT64, _class=["loc:@TensorArray_8"], _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray_8, TensorArrayWrite_8/index, TensorArrayWrite_8/value, TensorArrayWrite_7)]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: TensorArray foo_107@grad: Could not aggregate to TensorArray index 1 because the existing shape is [] but the new input shape is [1].
+E tensorflow/core/client/tensor_c_api.cc:485] TensorArray foo_107@grad: Could not aggregate to TensorArray index 1 because the existing shape is [] but the new input shape is [1].
+	 [[Node: TensorArrayWrite_13 = TensorArrayWrite[T=DT_INT64, _class=["loc:@TensorArray_8"], _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArrayGrad_1/TensorArrayGrad, TensorArrayWrite_13/index, TensorArrayWrite_13/value, TensorArrayWrite_12)]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: TensorArray foo_109: Could not write to TensorArray index 2 because it has already been written to.
+E tensorflow/core/client/tensor_c_api.cc:485] TensorArray foo_109: Could not write to TensorArray index 2 because it has already been written to.
+	 [[Node: TensorArrayWrite_15 = TensorArrayWrite[T=DT_FLOAT, _class=["loc:@TensorArray_16"], _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray_16, TensorArrayWrite_15/index, TensorArrayWrite_15/value, TensorArrayWrite_14)]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: TensorArray foo_110@grad: Could not aggregate to TensorArray index 1 because the existing shape is [] but the new input shape is [1].
+E tensorflow/core/client/tensor_c_api.cc:485] TensorArray foo_110@grad: Could not aggregate to TensorArray index 1 because the existing shape is [] but the new input shape is [1].
+	 [[Node: TensorArrayWrite_20 = TensorArrayWrite[T=DT_FLOAT, _class=["loc:@TensorArray_16"], _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArrayGrad_2/TensorArrayGrad, TensorArrayWrite_20/index, TensorArrayWrite_20/value, TensorArrayWrite_19)]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: TensorArray foo_112: Could not write to TensorArray index 2 because it has already been written to.
+E tensorflow/core/client/tensor_c_api.cc:485] TensorArray foo_112: Could not write to TensorArray index 2 because it has already been written to.
+	 [[Node: TensorArrayWrite_22 = TensorArrayWrite[T=DT_DOUBLE, _class=["loc:@TensorArray_24"], _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray_24, TensorArrayWrite_22/index, TensorArrayWrite_22/value, TensorArrayWrite_21)]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: TensorArray foo_113@grad: Could not aggregate to TensorArray index 1 because the existing shape is [] but the new input shape is [1].
+E tensorflow/core/client/tensor_c_api.cc:485] TensorArray foo_113@grad: Could not aggregate to TensorArray index 1 because the existing shape is [] but the new input shape is [1].
+	 [[Node: TensorArrayWrite_27 = TensorArrayWrite[T=DT_DOUBLE, _class=["loc:@TensorArray_24"], _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArrayGrad_3/TensorArrayGrad, TensorArrayWrite_27/index, TensorArrayWrite_27/value, TensorArrayWrite_26)]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: TensorArray foo_115: Could not write to TensorArray index 2 because it has already been written to.
+E tensorflow/core/client/tensor_c_api.cc:485] TensorArray foo_115: Could not write to TensorArray index 2 because it has already been written to.
+	 [[Node: TensorArrayWrite_29 = TensorArrayWrite[T=DT_COMPLEX64, _class=["loc:@TensorArray_32"], _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray_32, TensorArrayWrite_29/index, TensorArrayWrite_29/value, TensorArrayWrite_28)]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: TensorArray foo_116@grad: Could not aggregate to TensorArray index 1 because the existing shape is [] but the new input shape is [1].
+E tensorflow/core/client/tensor_c_api.cc:485] TensorArray foo_116@grad: Could not aggregate to TensorArray index 1 because the existing shape is [] but the new input shape is [1].
+	 [[Node: TensorArrayWrite_34 = TensorArrayWrite[T=DT_COMPLEX64, _class=["loc:@TensorArray_32"], _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArrayGrad_4/TensorArrayGrad, TensorArrayWrite_34/index, TensorArrayWrite_34/value, TensorArrayWrite_33)]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: TensorArray foo_118: Could not write to TensorArray index 2 because it has already been written to.
+E tensorflow/core/client/tensor_c_api.cc:485] TensorArray foo_118: Could not write to TensorArray index 2 because it has already been written to.
+	 [[Node: TensorArrayWrite_36 = TensorArrayWrite[T=DT_COMPLEX128, _class=["loc:@TensorArray_40"], _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray_40, TensorArrayWrite_36/index, TensorArrayWrite_36/value, TensorArrayWrite_35)]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: TensorArray foo_119@grad: Could not aggregate to TensorArray index 1 because the existing shape is [] but the new input shape is [1].
+E tensorflow/core/client/tensor_c_api.cc:485] TensorArray foo_119@grad: Could not aggregate to TensorArray index 1 because the existing shape is [] but the new input shape is [1].
+	 [[Node: TensorArrayWrite_41 = TensorArrayWrite[T=DT_COMPLEX128, _class=["loc:@TensorArray_40"], _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArrayGrad_5/TensorArrayGrad, TensorArrayWrite_41/index, TensorArrayWrite_41/value, TensorArrayWrite_40)]]
+.W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: TensorArray foo_120: Could not write to TensorArray index 2 because it has already been written to.
+E tensorflow/core/client/tensor_c_api.cc:485] TensorArray foo_120: Could not write to TensorArray index 2 because it has already been written to.
+	 [[Node: TensorArrayWrite_1 = TensorArrayWrite[T=DT_FLOAT, _class=["loc:@TensorArray"], _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray, TensorArrayWrite_1/index, TensorArrayWrite_1/value, TensorArrayWrite)]]
+...E tensorflow/core/client/tensor_c_api.cc:485] TensorArray dtype is float but Op is trying to write dtype string.
+	 [[Node: TensorArrayWrite = TensorArrayWrite[T=DT_STRING, _class=["loc:@TensorArray"], _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray, TensorArrayWrite/index, TensorArrayWrite/value, TensorArray/Const)]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: TensorArray foo_130: Tried to write to index -1 but array is not resizeable and size is: 3
+E tensorflow/core/client/tensor_c_api.cc:485] TensorArray foo_130: Tried to write to index -1 but array is not resizeable and size is: 3
+	 [[Node: TensorArrayWrite_1 = TensorArrayWrite[T=DT_FLOAT, _class=["loc:@TensorArray"], _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray, TensorArrayWrite_1/index, TensorArrayWrite_1/value, TensorArray/Const)]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: TensorArray foo_131: Tried to write to index 3 but array is not resizeable and size is: 3
+E tensorflow/core/client/tensor_c_api.cc:485] TensorArray foo_131: Tried to write to index 3 but array is not resizeable and size is: 3
+	 [[Node: TensorArrayWrite_2 = TensorArrayWrite[T=DT_FLOAT, _class=["loc:@TensorArray"], _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray, TensorArrayWrite_2/index, TensorArrayWrite_2/value, TensorArray/Const)]]
+......................E tensorflow/core/client/tensor_c_api.cc:485] Concat saw a scalar shape at index 0 but requires at least vectors.  Did you mean to call pack?
+	 [[Node: TensorArrayConcat = TensorArrayConcat[_class=["loc:@TensorArray"], dtype=DT_FLOAT, element_shape_except0=<unknown>, _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray, TensorArrayWrite_2)]]
+E tensorflow/core/client/tensor_c_api.cc:485] TensorArray has inconsistent shapes.  Index 0 has (excepting dimension 0) shape: [] but index 2 has (excepting dimension 0) shape: [1]
+	 [[Node: TensorArrayConcat_1 = TensorArrayConcat[_class=["loc:@TensorArray_4"], dtype=DT_FLOAT, element_shape_except0=<unknown>, _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray_4, TensorArrayWrite_5)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] TensorArray has size zero, but element shape <unknown> is not fully defined. Currently only static shapes are supported when packing zero-size TensorArrays.
+	 [[Node: TensorArrayPack = TensorArrayPack[_class=["loc:@TensorArray"], dtype=DT_FLOAT, element_shape=<unknown>, _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray, TensorArray/Const)]]
+.......W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: TensorArray foo_184: Could not read from TensorArray index 1 because it has not yet been written to.
+E tensorflow/core/client/tensor_c_api.cc:485] TensorArray foo_184: Could not read from TensorArray index 1 because it has not yet been written to.
+	 [[Node: TensorArrayPack = TensorArrayPack[_class=["loc:@TensorArray"], dtype=DT_FLOAT, element_shape=[1,2], _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray, TensorArrayWrite)]]
+.W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: TensorArray foo_185: Could not read index 0 twice because it was cleared after a previous read (perhaps try setting clear_after_read = false?).
+E tensorflow/core/client/tensor_c_api.cc:485] TensorArray foo_185: Could not read index 0 twice because it was cleared after a previous read (perhaps try setting clear_after_read = false?).
+	 [[Node: TensorArrayRead_1 = TensorArrayRead[_class=["loc:@TensorArray"], dtype=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray, TensorArrayRead_1/index, TensorArrayUnpack)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] TensorArray dtype is float but Op requested dtype int64.
+	 [[Node: TensorArrayRead = TensorArrayRead[_class=["loc:@TensorArray"], dtype=DT_INT64, _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray, TensorArrayRead/index, TensorArrayWrite)]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: TensorArray foo_188: Could not read from TensorArray index 1 because it has not yet been written to.
+E tensorflow/core/client/tensor_c_api.cc:485] TensorArray foo_188: Could not read from TensorArray index 1 because it has not yet been written to.
+	 [[Node: TensorArrayRead_1 = TensorArrayRead[_class=["loc:@TensorArray"], dtype=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray, TensorArrayRead_1/index, TensorArrayWrite)]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Tried to read from index -1 but array size is: 3
+E tensorflow/core/client/tensor_c_api.cc:485] Tried to read from index -1 but array size is: 3
+	 [[Node: TensorArrayRead_2 = TensorArrayRead[_class=["loc:@TensorArray"], dtype=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray, TensorArrayRead_2/index, TensorArray/Const)]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Tried to read from index 3 but array size is: 3
+E tensorflow/core/client/tensor_c_api.cc:485] Tried to read from index 3 but array size is: 3
+	 [[Node: TensorArrayRead_3 = TensorArrayRead[_class=["loc:@TensorArray"], dtype=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray, TensorArrayRead_3/index, TensorArray/Const)]]
+..E tensorflow/core/client/tensor_c_api.cc:485] Expected lengths to be a vector, received shape: []
+	 [[Node: TensorArraySplit_1 = TensorArraySplit[T=DT_FLOAT, _class=["loc:@TensorArray"], _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray, TensorArraySplit_1/value, _recv_Placeholder_0, TensorArray/Const)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Expected sum of lengths to be equal to values.shape[0], but sum of lengths is 1 and value's shape is: [3]
+	 [[Node: TensorArraySplit_3 = TensorArraySplit[T=DT_FLOAT, _class=["loc:@TensorArray"], _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray, TensorArraySplit_3/value, TensorArraySplit_2/ToInt64, TensorArray/Const)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Expected value to be at least a vector, but received shape: []
+	 [[Node: TensorArraySplit_5 = TensorArraySplit[T=DT_FLOAT, _class=["loc:@TensorArray"], _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray, TensorArraySplit_5/value, TensorArraySplit_4/ToInt64, TensorArray/Const)]]
+E tensorflow/core/client/tensor_c_api.cc:485] TensorArray's size is not equal to the size of lengths (2 vs. 1), and the TensorArray is not marked as dynamically resizeable
+	 [[Node: TensorArraySplit_7 = TensorArraySplit[T=DT_FLOAT, _class=["loc:@TensorArray_4"], _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray_4, TensorArraySplit_7/value, TensorArraySplit_6/ToInt64, TensorArray_4/Const)]]
+....E tensorflow/core/client/tensor_c_api.cc:485] Input value must have first dimension equal to the array size (2 vs. 3)
+	 [[Node: TensorArrayUnpack = TensorArrayUnpack[T=DT_FLOAT, _class=["loc:@TensorArray"], _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray, TensorArrayUnpack/value, TensorArray/Const)]]
+..W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: TensorArray foo_243: Could not write to TensorArray index 2 because it has already been written to.
+E tensorflow/core/client/tensor_c_api.cc:485] TensorArray foo_243: Could not write to TensorArray index 2 because it has already been written to.
+	 [[Node: TensorArrayWrite_1 = TensorArrayWrite[T=DT_INT32, _class=["loc:@TensorArray"], _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray, TensorArrayWrite_1/index, TensorArrayWrite_1/value, TensorArrayWrite)]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: TensorArray foo_244@grad: Could not aggregate to TensorArray index 1 because the existing shape is [] but the new input shape is [1].
+E tensorflow/core/client/tensor_c_api.cc:485] TensorArray foo_244@grad: Could not aggregate to TensorArray index 1 because the existing shape is [] but the new input shape is [1].
+	 [[Node: TensorArrayWrite_6 = TensorArrayWrite[T=DT_INT32, _class=["loc:@TensorArray"], _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArrayGrad/TensorArrayGrad, TensorArrayWrite_6/index, TensorArrayWrite_6/value, TensorArrayWrite_5)]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: TensorArray foo_246: Could not write to TensorArray index 2 because it has already been written to.
+E tensorflow/core/client/tensor_c_api.cc:485] TensorArray foo_246: Could not write to TensorArray index 2 because it has already been written to.
+	 [[Node: TensorArrayWrite_8 = TensorArrayWrite[T=DT_INT64, _class=["loc:@TensorArray_8"], _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray_8, TensorArrayWrite_8/index, TensorArrayWrite_8/value, TensorArrayWrite_7)]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: TensorArray foo_247@grad: Could not aggregate to TensorArray index 1 because the existing shape is [] but the new input shape is [1].
+E tensorflow/core/client/tensor_c_api.cc:485] TensorArray foo_247@grad: Could not aggregate to TensorArray index 1 because the existing shape is [] but the new input shape is [1].
+	 [[Node: TensorArrayWrite_13 = TensorArrayWrite[T=DT_INT64, _class=["loc:@TensorArray_8"], _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArrayGrad_1/TensorArrayGrad, TensorArrayWrite_13/index, TensorArrayWrite_13/value, TensorArrayWrite_12)]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: TensorArray foo_249: Could not write to TensorArray index 2 because it has already been written to.
+E tensorflow/core/client/tensor_c_api.cc:485] TensorArray foo_249: Could not write to TensorArray index 2 because it has already been written to.
+	 [[Node: TensorArrayWrite_15 = TensorArrayWrite[T=DT_FLOAT, _class=["loc:@TensorArray_16"], _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray_16, TensorArrayWrite_15/index, TensorArrayWrite_15/value, TensorArrayWrite_14)]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: TensorArray foo_250@grad: Could not aggregate to TensorArray index 1 because the existing shape is [] but the new input shape is [1].
+E tensorflow/core/client/tensor_c_api.cc:485] TensorArray foo_250@grad: Could not aggregate to TensorArray index 1 because the existing shape is [] but the new input shape is [1].
+	 [[Node: TensorArrayWrite_20 = TensorArrayWrite[T=DT_FLOAT, _class=["loc:@TensorArray_16"], _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArrayGrad_2/TensorArrayGrad, TensorArrayWrite_20/index, TensorArrayWrite_20/value, TensorArrayWrite_19)]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: TensorArray foo_252: Could not write to TensorArray index 2 because it has already been written to.
+E tensorflow/core/client/tensor_c_api.cc:485] TensorArray foo_252: Could not write to TensorArray index 2 because it has already been written to.
+	 [[Node: TensorArrayWrite_22 = TensorArrayWrite[T=DT_DOUBLE, _class=["loc:@TensorArray_24"], _device="/job:localhost/replica:0/task:0/cpu:0"](TensorArray_24, TensorArrayWrite_22/index, TensorArrayWrite_22/value, TensorArrayWrite_21)]]

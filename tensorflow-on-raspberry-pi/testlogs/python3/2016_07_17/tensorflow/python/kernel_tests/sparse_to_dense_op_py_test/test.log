@@ -1,0 +1,24 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+..E tensorflow/core/client/tensor_c_api.cc:485] default_value should be a scalar.
+	 [[Node: SparseToDense = SparseToDense[T=DT_INT32, Tindices=DT_INT32, validate_indices=true, _device="/job:localhost/replica:0/task:0/cpu:0"](SparseToDense/sparse_indices, SparseToDense/output_shape, SparseToDense/sparse_values, SparseToDense/default_value)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] sparse_values has incorrect shape [3], should be [] or [2]
+	 [[Node: SparseToDense = SparseToDense[T=DT_INT32, Tindices=DT_INT32, validate_indices=true, _device="/job:localhost/replica:0/task:0/cpu:0"](SparseToDense/sparse_indices, SparseToDense/output_shape, SparseToDense/sparse_values, SparseToDense/default_value)]]
+..E tensorflow/core/client/tensor_c_api.cc:485] sparse_values has incorrect shape [2,1], should be [] or [2]
+	 [[Node: SparseToDense = SparseToDense[T=DT_INT32, Tindices=DT_INT32, validate_indices=true, _device="/job:localhost/replica:0/task:0/cpu:0"](SparseToDense/sparse_indices, SparseToDense/output_shape, SparseToDense/sparse_values, SparseToDense/default_value)]]
+...W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: indices[1] = [10] is out of bounds: need 0 <= index < [5]
+E tensorflow/core/client/tensor_c_api.cc:485] indices[1] = [10] is out of bounds: need 0 <= index < [5]
+	 [[Node: SparseToDense = SparseToDense[T=DT_FLOAT, Tindices=DT_INT32, validate_indices=true, _device="/job:localhost/replica:0/task:0/cpu:0"](SparseToDense/sparse_indices, SparseToDense/output_shape, SparseToDense/sparse_values, SparseToDense/default_value)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Indices are not valid (out of bounds).  Shape: [5]
+	 [[Node: SparseToDense_1 = SparseToDense[T=DT_FLOAT, Tindices=DT_INT32, validate_indices=false, _device="/job:localhost/replica:0/task:0/cpu:0"](SparseToDense_1/sparse_indices, SparseToDense_1/output_shape, SparseToDense_1/sparse_values, SparseToDense_1/default_value)]]
+.W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: indices[1] = [1] is repeated
+E tensorflow/core/client/tensor_c_api.cc:485] indices[1] = [1] is repeated
+	 [[Node: SparseToDense = SparseToDense[T=DT_FLOAT, Tindices=DT_INT32, validate_indices=true, _device="/job:localhost/replica:0/task:0/cpu:0"](SparseToDense/sparse_indices, SparseToDense/output_shape, SparseToDense/sparse_values, SparseToDense/default_value)]]
+......W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: indices[1] = [1] is out of order
+E tensorflow/core/client/tensor_c_api.cc:485] indices[1] = [1] is out of order
+	 [[Node: SparseToDense = SparseToDense[T=DT_FLOAT, Tindices=DT_INT32, validate_indices=true, _device="/job:localhost/replica:0/task:0/cpu:0"](SparseToDense/sparse_indices, SparseToDense/output_shape, SparseToDense/sparse_values, SparseToDense/default_value)]]
+...
+----------------------------------------------------------------------
+Ran 18 tests in 1.162s
+
+OK

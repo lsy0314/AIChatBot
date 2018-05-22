@@ -1,0 +1,11 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+....WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.BasicLSTMCell object at 0x6deaeff0>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+..WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.BasicLSTMCell object at 0x6d751f70>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+..WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.BasicLSTMCell object at 0x6dc3e8b0>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.BasicLSTMCell object at 0x6d487910>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.BasicLSTMCell object at 0x6d81dc70>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.BasicLSTMCell object at 0x6d81dc70>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.BasicLSTMCell object at 0x6c8968d0>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.BasicLSTMCell object at 0x6dd4e5b0>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+...

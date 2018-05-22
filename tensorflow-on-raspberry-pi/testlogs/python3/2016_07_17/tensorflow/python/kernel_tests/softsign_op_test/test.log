@@ -1,0 +1,16 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+F..
+======================================================================
+FAIL: testGradient (__main__.SoftsignTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/bin/tensorflow/python/kernel_tests/softsign_op_test.runfiles/tensorflow/python/kernel_tests/softsign_op_test.py", line 62, in testGradient
+    self.assertLess(err, 1e-4)
+AssertionError: 0.00095403194 not less than 0.0001
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.934s
+
+FAILED (failures=1)
+softsign (float) gradient err =  0.000954032

@@ -1,0 +1,46 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+............/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/bin/tensorflow/python/kernel_tests/pooling_ops_test.runfiles/tensorflow/python/framework/test_util.py:430: RuntimeWarning: invalid value encountered in absolute
+  cond = np.abs(a - b) > atol + rtol * np.abs(b)
+/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/bin/tensorflow/python/kernel_tests/pooling_ops_test.runfiles/tensorflow/python/framework/test_util.py:430: RuntimeWarning: invalid value encountered in greater
+  cond = np.abs(a - b) > atol + rtol * np.abs(b)
+..........
+----------------------------------------------------------------------
+Ran 22 tests in 30.026s
+
+OK
+avg_pool gradient error =  9.53674e-07
+avg_pool gradient error =  2.74181e-06
+avg_pool gradient error =  1.2517e-06
+avg_pool gradient error =  9.53674e-07
+avg_pool gradient error =  2.5034e-06
+avg_pool gradient error =  2.38419e-07
+avg_pool gradient error =  3.86685e-06
+avg_pool gradient error =  9.53674e-07
+avg_pool gradient error =  1.2517e-06
+avg_pool gradient error =  2.38419e-07
+avg_pool gradient error =  2.02656e-06
+avg_pool gradient error =  1.2517e-06
+avg_pool gradient error =  1.2517e-06
+avg_pool gradient error =  3.86685e-06
+max_pool gradient error =  2.28882e-05
+max_pool gradient error =  0.000549316
+max_pool gradient error =  0.000976562
+max_pool gradient error =  2.28882e-05
+max_pool gradient error =  0.000167847
+max_pool gradient error =  0.000167847
+max_pool gradient error =  0.000167847
+max_pool gradient error =  0.000167847
+max_pool gradient error =  2.28882e-05
+max_pool gradient error =  0.000549316
+max_pool gradient error =  0.000976562
+max_pool gradient error =  2.28882e-05
+max_pool gradient error =  0.000167847
+max_pool gradient error =  0.000167847
+max_pool gradient error =  0.000167847
+max_pool gradient error =  0.000167847
+not close where =  (array([], dtype=int32),)
+not close lhs =  []
+not close rhs =  []
+not close dif =  []
+not close tol =  []

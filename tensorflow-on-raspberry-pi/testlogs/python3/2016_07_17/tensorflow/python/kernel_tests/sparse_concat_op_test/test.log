@@ -1,0 +1,9 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+.......E tensorflow/core/client/tensor_c_api.cc:485] Input shapes must match: expected 3 for dimension 0 but got 2 at position 3
+	 [[Node: SparseConcat = SparseConcat[N=4, T=DT_FLOAT, concat_dim=1, _device="/job:localhost/replica:0/task:0/cpu:0"](Const, Const_3, Const_6, Const_9, Const_1, Const_4, Const_7, Const_10, Const_2, Const_5, Const_8, Const_11)]]
+....
+----------------------------------------------------------------------
+Ran 11 tests in 1.949s
+
+OK

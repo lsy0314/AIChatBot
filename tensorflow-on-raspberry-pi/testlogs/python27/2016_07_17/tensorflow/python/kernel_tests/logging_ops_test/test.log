@@ -1,0 +1,10 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+E tensorflow/core/client/tensor_c_api.cc:485] assertion failed: [Divide-by-zero] [less than x]
+	 [[Node: Assert_1 = Assert[T=[DT_STRING, DT_STRING], summarize=3, _device="/job:localhost/replica:0/task:0/cpu:0"](Less_1, Assert_1/data_0, Assert_1/data_1)]]
+..I tensorflow/core/kernels/logging_ops.cc:79] [4 4 4...][4 4 4...][4 4 4...]
+...
+----------------------------------------------------------------------
+Ran 5 tests in 0.280s
+
+OK

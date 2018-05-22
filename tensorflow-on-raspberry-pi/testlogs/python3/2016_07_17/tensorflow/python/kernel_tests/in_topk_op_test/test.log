@@ -1,0 +1,9 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+E tensorflow/core/client/tensor_c_api.cc:485] targets[1] is out of range
+	 [[Node: InTopK = InTopK[T=DT_INT32, k=2, _device="/job:localhost/replica:0/task:0/cpu:0"](InTopK/predictions, InTopK/targets)]]
+.......
+----------------------------------------------------------------------
+Ran 7 tests in 0.291s
+
+OK

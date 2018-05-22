@@ -1,0 +1,36 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+............................
+----------------------------------------------------------------------
+Ran 28 tests in 7.887s
+
+OK
+matmul input0 gradient err =  1.10134124043e-13
+matmul input0 gradient err =  1.10134124043e-13
+matmul input0 gradient err =  1.65201186064e-13
+matmul input0 gradient err =  7.88258347484e-14
+matmul input1 gradient err =  7.81597009336e-13
+matmul input1 gradient err =  2.27373675443e-13
+matmul input1 gradient err =  9.94759830064e-13
+matmul input1 gradient err =  3.37507799486e-13
+Built without fp16 matmul support, skipping GPU test.
+Built without fp16 matmul support, skipping GPU test.
+Built without fp16 matmul support, skipping GPU test.
+Built without fp16 matmul support, skipping GPU test.
+Built without fp16 matmul support, skipping GPU test.
+Built without fp16 matmul support, skipping GPU test.
+Built without fp16 matmul support, skipping GPU test.
+Built without fp16 matmul support, skipping GPU test.
+Built without fp16 matmul support, skipping GPU test.
+Built without fp16 matmul support, skipping GPU test.
+Built without fp16 matmul support, skipping GPU test.
+Built without fp16 matmul support, skipping GPU test.
+Built without fp16 matmul support, skipping GPU test.
+Built without fp16 matmul support, skipping GPU test.
+Built without fp16 matmul support, skipping GPU test.
+Built without fp16 matmul support, skipping GPU test.
+Built without fp16 matmul support, skipping GPU test.
+Built without fp16 matmul support, skipping GPU test.
+Built without fp16 matmul support, skipping GPU test.
+Built without fp16 matmul support, skipping GPU test.
+Built without fp16 matmul support, skipping GPU test.

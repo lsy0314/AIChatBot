@@ -1,0 +1,15 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/bin/tensorflow/python/kernel_tests/rnn_cell_test.runfiles/tensorflow/python/ops/rnn_cell.py:273: DeprecationWarning: The 'warn' method is deprecated, use 'warning' instead
+  "deprecated.  Use state_is_tuple=True." % self)
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.BasicLSTMCell object at 0x767d5b50>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.BasicLSTMCell object at 0x76b99f30>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+..WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.BasicLSTMCell object at 0x72ebb6f0>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+......./home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/bin/tensorflow/python/kernel_tests/rnn_cell_test.runfiles/tensorflow/python/ops/rnn_cell.py:408: DeprecationWarning: The 'warn' method is deprecated, use 'warning' instead
+  "deprecated.  Use state_is_tuple=True." % self)
+WARNING:tensorflow:<tensorflow.python.ops.rnn_cell.LSTMCell object at 0x6eda0270>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+.........
+----------------------------------------------------------------------
+Ran 18 tests in 11.250s
+
+OK

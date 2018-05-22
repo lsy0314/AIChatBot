@@ -1,0 +1,63 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+FF..E tensorflow/core/client/tensor_c_api.cc:485] The determinant is not finite.
+	 [[Node: BatchMatrixDeterminant = BatchMatrixDeterminant[T=DT_DOUBLE, _device="/job:localhost/replica:0/task:0/cpu:0"](BatchMatrixDeterminant/input)]]
+...
+======================================================================
+FAIL: testBasic (__main__.DeterminantOpTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/determinant_op_test.runfiles/tensorflow/python/kernel_tests/determinant_op_test.py", line 48, in testBasic
+    self._compareDeterminant(np.array([[2., 3.], [3., 4.]]).astype(np.float32))
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/determinant_op_test.runfiles/tensorflow/python/kernel_tests/determinant_op_test.py", line 41, in _compareDeterminant
+    matrix_x, tf.batch_matrix_determinant(matrix_x))
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/determinant_op_test.runfiles/tensorflow/python/kernel_tests/determinant_op_test.py", line 34, in _compareDeterminantBase
+    self.assertAllClose(np_ans, out)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/determinant_op_test.runfiles/tensorflow/python/framework/test_util.py", line 442, in assertAllClose
+    np.testing.assert_allclose(a, b, rtol=rtol, atol=atol)
+  File "/usr/lib/python2.7/dist-packages/numpy/testing/utils.py", line 1183, in assert_allclose
+    verbose=verbose, header=header)
+  File "/usr/lib/python2.7/dist-packages/numpy/testing/utils.py", line 644, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError: 
+Not equal to tolerance rtol=1e-06, atol=1e-06
+
+(mismatch 100.0%)
+ x: array(-1.0, dtype=float32)
+ y: array(254.99993896484375, dtype=float32)
+
+======================================================================
+FAIL: testBasicDouble (__main__.DeterminantOpTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/determinant_op_test.runfiles/tensorflow/python/kernel_tests/determinant_op_test.py", line 59, in testBasicDouble
+    self._compareDeterminant(np.array([[2., 3.], [3., 4.]]).astype(np.float64))
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/determinant_op_test.runfiles/tensorflow/python/kernel_tests/determinant_op_test.py", line 41, in _compareDeterminant
+    matrix_x, tf.batch_matrix_determinant(matrix_x))
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/determinant_op_test.runfiles/tensorflow/python/kernel_tests/determinant_op_test.py", line 34, in _compareDeterminantBase
+    self.assertAllClose(np_ans, out)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/determinant_op_test.runfiles/tensorflow/python/framework/test_util.py", line 442, in assertAllClose
+    np.testing.assert_allclose(a, b, rtol=rtol, atol=atol)
+  File "/usr/lib/python2.7/dist-packages/numpy/testing/utils.py", line 1183, in assert_allclose
+    verbose=verbose, header=header)
+  File "/usr/lib/python2.7/dist-packages/numpy/testing/utils.py", line 644, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError: 
+Not equal to tolerance rtol=1e-06, atol=1e-06
+
+(mismatch 100.0%)
+ x: array(-1.0000000000000004)
+ y: array(255.0000000000001)
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.281s
+
+FAILED (failures=2)
+not close lhs =  -1.0
+not close rhs =  254.999938965
+not close dif =  256.0
+not close tol =  0.000255999938965
+not close lhs =  -1.0
+not close rhs =  255.0
+not close dif =  256.0
+not close tol =  0.000256

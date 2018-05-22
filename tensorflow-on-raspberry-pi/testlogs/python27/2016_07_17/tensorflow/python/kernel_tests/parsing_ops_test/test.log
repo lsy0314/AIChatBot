@@ -1,0 +1,41 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+.....E tensorflow/core/client/tensor_c_api.cc:485] Error while parsing JSON: Expected an object key or }.
+{]
+ ^
+	 [[Node: DecodeJSONExample = DecodeJSONExample[_device="/job:localhost/replica:0/task:0/cpu:0"](Const)]]
+.....W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Name: failing, Key: a, Index: 1.  Number of float values != expected.  values size: 2 but output shape: [1,3]
+E tensorflow/core/client/tensor_c_api.cc:485] Name: failing, Key: a, Index: 1.  Number of float values != expected.  values size: 2 but output shape: [1,3]
+	 [[Node: ParseExample/ParseExample = ParseExample[Ndense=1, Nsparse=0, Tdense=[DT_FLOAT], dense_shapes=[[1,3]], sparse_types=[], _device="/job:localhost/replica:0/task:0/cpu:0"](Const, ParseExample/ParseExample/names, ParseExample/ParseExample/dense_keys_0, ParseExample/Const)]]
+..W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Name: in1, Feature: c is required but could not be found.
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Name: in2, Feature: c is required but could not be found.
+E tensorflow/core/client/tensor_c_api.cc:485] Name: in1, Feature: c is required but could not be found.
+	 [[Node: ParseExample/ParseExample = ParseExample[Ndense=3, Nsparse=1, Tdense=[DT_INT64, DT_STRING, DT_FLOAT], dense_shapes=[[1,3], [3,3], [2]], sparse_types=[DT_INT64], _device="/job:localhost/replica:0/task:0/cpu:0"](ParseExample/ParseExample/serialized, ParseExample/ParseExample/names, ParseExample/ParseExample/sparse_keys_0, ParseExample/ParseExample/dense_keys_0, ParseExample/ParseExample/dense_keys_1, ParseExample/ParseExample/dense_keys_2, ParseExample/Reshape, ParseExample/Reshape_1, ParseExample/Const)]]
+........E tensorflow/core/client/tensor_c_api.cc:485] Name: in1, Feature list: a, Index: 1.  Data types don't match. Expected type: int64  Feature is: float_list {
+  value: 2
+  value: 3
+}
+
+	 [[Node: ParseSingleSequenceExample/ParseSingleSequenceExample = ParseSingleSequenceExample[Ncontext_dense=0, Ncontext_sparse=0, Nfeature_list_dense=1, Nfeature_list_sparse=0, Tcontext_dense=[], context_dense_shapes=[], context_sparse_types=[], feature_list_dense_shapes=[[2]], feature_list_dense_types=[DT_INT64], feature_list_sparse_types=[], _device="/job:localhost/replica:0/task:0/cpu:0"](Const, ParseSingleSequenceExample/ParseSingleSequenceExample/feature_list_dense_missing_assumed_empty, ParseSingleSequenceExample/ParseSingleSequenceExample/feature_list_dense_keys_0, ParseSingleSequenceExample/ParseSingleSequenceExample/debug_name)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] Name: in1, Feature list: a, Index: 0.  Data types don't match. Expected type: int64  Feature is: float_list {
+  value: 2
+  value: 3
+}
+
+	 [[Node: ParseSingleSequenceExample/ParseSingleSequenceExample = ParseSingleSequenceExample[Ncontext_dense=0, Ncontext_sparse=0, Nfeature_list_dense=1, Nfeature_list_sparse=0, Tcontext_dense=[], context_dense_shapes=[], context_sparse_types=[], feature_list_dense_shapes=[[2]], feature_list_dense_types=[DT_INT64], feature_list_sparse_types=[], _device="/job:localhost/replica:0/task:0/cpu:0"](Const, ParseSingleSequenceExample/ParseSingleSequenceExample/feature_list_dense_missing_assumed_empty, ParseSingleSequenceExample/ParseSingleSequenceExample/feature_list_dense_keys_0, ParseSingleSequenceExample/ParseSingleSequenceExample/debug_name)]]
+.W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Name: in1, Key: a, Index: 1.  Number of int64 values != expected.  values size: 3 but output shape: [2]
+E tensorflow/core/client/tensor_c_api.cc:485] Name: in1, Key: a, Index: 1.  Number of int64 values != expected.  values size: 3 but output shape: [2]
+	 [[Node: ParseSingleSequenceExample/ParseSingleSequenceExample = ParseSingleSequenceExample[Ncontext_dense=0, Ncontext_sparse=0, Nfeature_list_dense=1, Nfeature_list_sparse=0, Tcontext_dense=[], context_dense_shapes=[], context_sparse_types=[], feature_list_dense_shapes=[[2]], feature_list_dense_types=[DT_INT64], feature_list_sparse_types=[], _device="/job:localhost/replica:0/task:0/cpu:0"](Const, ParseSingleSequenceExample/ParseSingleSequenceExample/feature_list_dense_missing_assumed_empty, ParseSingleSequenceExample/ParseSingleSequenceExample/feature_list_dense_keys_0, ParseSingleSequenceExample/ParseSingleSequenceExample/debug_name)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] Name: in1, Feature list: a, Index: 2.  Data types don't match. Expected type: int64  Feature is: float_list {
+  value: 2
+  value: 3
+}
+
+	 [[Node: ParseSingleSequenceExample/ParseSingleSequenceExample = ParseSingleSequenceExample[Ncontext_dense=0, Ncontext_sparse=0, Nfeature_list_dense=1, Nfeature_list_sparse=0, Tcontext_dense=[], context_dense_shapes=[], context_sparse_types=[], feature_list_dense_shapes=[[2]], feature_list_dense_types=[DT_INT64], feature_list_sparse_types=[], _device="/job:localhost/replica:0/task:0/cpu:0"](Const, ParseSingleSequenceExample/ParseSingleSequenceExample/feature_list_dense_missing_assumed_empty, ParseSingleSequenceExample/ParseSingleSequenceExample/feature_list_dense_keys_0, ParseSingleSequenceExample/ParseSingleSequenceExample/debug_name)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] Name: in1, Feature list 'a' is required but could not be found.  Did you mean to include it in feature_list_dense_missing_assumed_empty or feature_list_dense_defaults?
+	 [[Node: ParseSingleSequenceExample/ParseSingleSequenceExample = ParseSingleSequenceExample[Ncontext_dense=0, Ncontext_sparse=0, Nfeature_list_dense=1, Nfeature_list_sparse=0, Tcontext_dense=[], context_dense_shapes=[], context_sparse_types=[], feature_list_dense_shapes=[[2]], feature_list_dense_types=[DT_INT64], feature_list_sparse_types=[], _device="/job:localhost/replica:0/task:0/cpu:0"](Const, ParseSingleSequenceExample/ParseSingleSequenceExample/feature_list_dense_missing_assumed_empty, ParseSingleSequenceExample/ParseSingleSequenceExample/feature_list_dense_keys_0, ParseSingleSequenceExample/ParseSingleSequenceExample/debug_name)]]
+........
+----------------------------------------------------------------------
+Ran 32 tests in 2.312s
+
+OK

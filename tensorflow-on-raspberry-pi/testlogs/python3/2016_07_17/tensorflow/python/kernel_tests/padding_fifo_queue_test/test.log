@@ -1,0 +1,69 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+...E tensorflow/core/client/tensor_c_api.cc:485] FIFOQueue '_2_padding_fifo_queue' is closed and has insufficient elements (requested 1, current size 0)
+	 [[Node: padding_fifo_queue_Dequeue = QueueDequeue[_class=["loc:@padding_fifo_queue"], component_types=[DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](padding_fifo_queue)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] FIFOQueue '_3_padding_fifo_queue' is closed and has insufficient elements (requested 1, current size 0)
+	 [[Node: padding_fifo_queue_Dequeue = QueueDequeue[_class=["loc:@padding_fifo_queue"], component_types=[DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](padding_fifo_queue)]]
+..E tensorflow/core/client/tensor_c_api.cc:485] PaddingFIFOQueue '_5_padding_fifo_queue' is closed and has insufficient elements (requested 2, current size 0)
+	 [[Node: padding_fifo_queue_DequeueMany = QueueDequeueMany[_class=["loc:@padding_fifo_queue"], component_types=[DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](padding_fifo_queue, padding_fifo_queue_DequeueMany/n)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] PaddingFIFOQueue '_6_padding_fifo_queue' is closed and has insufficient elements (requested 4, current size 0)
+	 [[Node: padding_fifo_queue_DequeueMany = QueueDequeueMany[_class=["loc:@padding_fifo_queue"], component_types=[DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](padding_fifo_queue, padding_fifo_queue_DequeueMany/n)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] PaddingFIFOQueue '_7_padding_fifo_queue' is closed and has insufficient elements (requested 4, current size 0)
+	 [[Node: padding_fifo_queue_DequeueMany = QueueDequeueMany[_class=["loc:@padding_fifo_queue"], component_types=[DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](padding_fifo_queue, padding_fifo_queue_DequeueMany/n)]]
+..E tensorflow/core/client/tensor_c_api.cc:485] PaddingFIFOQueue '_9_padding_fifo_queue' is closed and has insufficient elements (requested 4, current size 0)
+	 [[Node: padding_fifo_queue_DequeueUpTo = QueueDequeueUpTo[_class=["loc:@padding_fifo_queue"], component_types=[DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](padding_fifo_queue, padding_fifo_queue_DequeueUpTo/n)]]
+.....E tensorflow/core/client/tensor_c_api.cc:485] PaddingFIFOQueue '_14_padding_fifo_queue' is closed and has insufficient elements (requested 1, current size 0)
+	 [[Node: padding_fifo_queue_DequeueMany = QueueDequeueMany[_class=["loc:@padding_fifo_queue"], component_types=[DT_FLOAT, DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](padding_fifo_queue, padding_fifo_queue_DequeueMany/n)]]
+../home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/bin/tensorflow/python/kernel_tests/padding_fifo_queue_test.runfiles/tensorflow/python/kernel_tests/padding_fifo_queue_test.py:35: DeprecationWarning: Please use assertEqual instead.
+  self.assertEquals(tf.string_ref, q.queue_ref.dtype)
+...E tensorflow/core/client/tensor_c_api.cc:485] FIFOQueue '_16_padding_fifo_queue' is closed and has insufficient elements (requested 1, current size 0)
+	 [[Node: padding_fifo_queue_Dequeue = QueueDequeue[_class=["loc:@padding_fifo_queue"], component_types=[DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](padding_fifo_queue)]]
+.............W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Shape mismatch in tuple component 1. Expected [2,?,3], got [2,3,4]
+E tensorflow/core/client/tensor_c_api.cc:485] Shape mismatch in tuple component 1. Expected [2,?,3], got [2,3,4]
+	 [[Node: padding_fifo_queue_EnqueueMany = QueueEnqueueMany[Tcomponents=[DT_INT32, DT_INT32], _class=["loc:@padding_fifo_queue"], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](padding_fifo_queue, padding_fifo_queue_EnqueueMany/component_0, _recv_Placeholder_0)]]
+...E tensorflow/core/client/tensor_c_api.cc:485] PaddingFIFOQueue '_32_padding_fifo_queue' is closed and has insufficient elements (requested 2, current size 0)
+	 [[Node: padding_fifo_queue_DequeueMany = QueueDequeueMany[_class=["loc:@padding_fifo_queue"], component_types=[DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](padding_fifo_queue, padding_fifo_queue_DequeueMany/n)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] FIFOQueue '_33_padding_fifo_queue' is closed.
+	 [[Node: padding_fifo_queue_EnqueueMany = QueueEnqueueMany[Tcomponents=[DT_FLOAT], _class=["loc:@padding_fifo_queue"], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](padding_fifo_queue, padding_fifo_queue_EnqueueMany/component_0)]]
+..E tensorflow/core/client/tensor_c_api.cc:485] FIFOQueue '_35_padding_fifo_queue' is closed.
+	 [[Node: padding_fifo_queue_enqueue = QueueEnqueue[Tcomponents=[DT_FLOAT], _class=["loc:@padding_fifo_queue"], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](padding_fifo_queue, padding_fifo_queue_enqueue/component_0)]]
+..W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Shape mismatch in tuple component 1. Expected [?,3], got [3,4]
+E tensorflow/core/client/tensor_c_api.cc:485] Shape mismatch in tuple component 1. Expected [?,3], got [3,4]
+	 [[Node: padding_fifo_queue_enqueue = QueueEnqueue[Tcomponents=[DT_INT32, DT_INT32], _class=["loc:@padding_fifo_queue"], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](padding_fifo_queue, padding_fifo_queue_enqueue/component_0, _recv_Placeholder_0)]]
+....W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Shared queue 'q_a' has capacity 10 but requested capacity was 15
+E tensorflow/core/client/tensor_c_api.cc:485] Shared queue 'q_a' has capacity 10 but requested capacity was 15
+	 [[Node: padding_fifo_queue_1 = PaddingFIFOQueue[capacity=15, component_types=[DT_FLOAT], container="", shapes=[[]], shared_name="q_a", _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Shared queue 'q_b' has component types float but requested component types were int32
+E tensorflow/core/client/tensor_c_api.cc:485] Shared queue 'q_b' has component types float but requested component types were int32
+	 [[Node: padding_fifo_queue_3 = PaddingFIFOQueue[capacity=10, component_types=[DT_INT32], container="", shapes=[[]], shared_name="q_b", _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Shared queue 'q_c' has component shapes [[]] but requested component shapes were [[1,1,2,3]]
+E tensorflow/core/client/tensor_c_api.cc:485] Shared queue 'q_c' has component shapes [[]] but requested component shapes were [[1,1,2,3]]
+	 [[Node: padding_fifo_queue_5 = PaddingFIFOQueue[capacity=10, component_types=[DT_FLOAT], container="", shapes=[[1,1,2,3]], shared_name="q_c", _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Shared queue 'q_d' has component shapes [[1,1,2,3]] but requested component shapes were [[]]
+E tensorflow/core/client/tensor_c_api.cc:485] Shared queue 'q_d' has component shapes [[1,1,2,3]] but requested component shapes were [[]]
+	 [[Node: padding_fifo_queue_7 = PaddingFIFOQueue[capacity=10, component_types=[DT_FLOAT], container="", shapes=[[]], shared_name="q_d", _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Shared queue 'q_e' has component shapes [[1,1,2,3]] but requested component shapes were [[1,1,2,4]]
+E tensorflow/core/client/tensor_c_api.cc:485] Shared queue 'q_e' has component shapes [[1,1,2,3]] but requested component shapes were [[1,1,2,4]]
+	 [[Node: padding_fifo_queue_9 = PaddingFIFOQueue[capacity=10, component_types=[DT_FLOAT], container="", shapes=[[1,1,2,4]], shared_name="q_e", _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+W tensorflow/core/framework/op_kernel.cc:936] Invalid argument: Shared queue 'q_f' has component types float but requested component types were float, int32
+E tensorflow/core/client/tensor_c_api.cc:485] Shared queue 'q_f' has component types float but requested component types were float, int32
+	 [[Node: padding_fifo_queue_11 = PaddingFIFOQueue[capacity=10, component_types=[DT_FLOAT, DT_INT32], container="", shapes=[[], []], shared_name="q_f", _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+....................W tensorflow/core/kernels/queue_base.cc:294] _57_padding_fifo_queue_1: Skipping cancelled enqueue attempt with queue not closed
+W tensorflow/core/kernels/queue_base.cc:294] _57_padding_fifo_queue_1: Skipping cancelled enqueue attempt with queue not closed
+W tensorflow/core/kernels/queue_base.cc:302] _58_padding_fifo_queue: Skipping cancelled dequeue attempt with queue not closed
+W tensorflow/core/kernels/queue_base.cc:302] _58_padding_fifo_queue: Skipping cancelled dequeue attempt with queue not closed
+E tensorflow/core/client/tensor_c_api.cc:485] Dequeue operation was cancelled
+	 [[Node: padding_fifo_queue_Dequeue = QueueDequeue[_class=["loc:@padding_fifo_queue"], component_types=[DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](padding_fifo_queue)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Dequeue operation was cancelled
+	 [[Node: padding_fifo_queue_DequeueMany = QueueDequeueMany[_class=["loc:@padding_fifo_queue"], component_types=[DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](padding_fifo_queue, padding_fifo_queue_DequeueMany/n)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Enqueue operation was cancelled
+	 [[Node: padding_fifo_queue_1_enqueue = QueueEnqueue[Tcomponents=[DT_FLOAT], _class=["loc:@padding_fifo_queue_1"], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](padding_fifo_queue_1, padding_fifo_queue_1_enqueue/component_0)]]
+E tensorflow/core/client/tensor_c_api.cc:485] Enqueue operation was cancelled
+	 [[Node: padding_fifo_queue_1_EnqueueMany_1 = QueueEnqueueMany[Tcomponents=[DT_FLOAT], _class=["loc:@padding_fifo_queue_1"], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/cpu:0"](padding_fifo_queue_1, padding_fifo_queue_1_EnqueueMany_1/component_0)]]
+..E tensorflow/core/client/tensor_c_api.cc:485] Index must be in the range [0, 2) but got 3
+	 [[Node: RefSelect = RefSelect[N=2, T=DT_STRING, _class=["loc:@padding_fifo_queue"], _device="/job:localhost/replica:0/task:0/cpu:0"](RefSelect/index, padding_fifo_queue, padding_fifo_queue_1)]]
+....
+----------------------------------------------------------------------
+Ran 71 tests in 17.749s
+
+OK

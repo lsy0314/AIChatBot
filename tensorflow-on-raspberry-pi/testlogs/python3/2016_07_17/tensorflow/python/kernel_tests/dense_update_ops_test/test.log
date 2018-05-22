@@ -1,0 +1,11 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+..E tensorflow/core/client/tensor_c_api.cc:485] Attempting to use uninitialized value Variable
+	 [[Node: AssignAdd = AssignAdd[T=DT_INT32, _class=["loc:@Variable"], use_locking=false, _device="/job:localhost/replica:0/task:0/cpu:0"](Variable, Fill_1)]]
+.E tensorflow/core/client/tensor_c_api.cc:485] Attempting to use uninitialized value Variable
+	 [[Node: AssignSub = AssignSub[T=DT_INT32, _class=["loc:@Variable"], use_locking=false, _device="/job:localhost/replica:0/task:0/cpu:0"](Variable, Fill_1)]]
+....
+----------------------------------------------------------------------
+Ran 7 tests in 4.641s
+
+OK

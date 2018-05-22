@@ -1,0 +1,37 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+WARNING:tensorflow:create_partitioned_variables is deprecated.  Use tf.get_variable with a partitioner set, or tf.get_partitioned_variable_list, instead.
+.WARNING:tensorflow:create_partitioned_variables is deprecated.  Use tf.get_variable with a partitioner set, or tf.get_partitioned_variable_list, instead.
+.WARNING:tensorflow:create_partitioned_variables is deprecated.  Use tf.get_variable with a partitioner set, or tf.get_partitioned_variable_list, instead.
+.WARNING:tensorflow:create_partitioned_variables is deprecated.  Use tf.get_variable with a partitioner set, or tf.get_partitioned_variable_list, instead.
+WARNING:tensorflow:create_partitioned_variables is deprecated.  Use tf.get_variable with a partitioner set, or tf.get_partitioned_variable_list, instead.
+WARNING:tensorflow:create_partitioned_variables is deprecated.  Use tf.get_variable with a partitioner set, or tf.get_partitioned_variable_list, instead.
+WARNING:tensorflow:create_partitioned_variables is deprecated.  Use tf.get_variable with a partitioner set, or tf.get_partitioned_variable_list, instead.
+WARNING:tensorflow:create_partitioned_variables is deprecated.  Use tf.get_variable with a partitioner set, or tf.get_partitioned_variable_list, instead.
+WARNING:tensorflow:create_partitioned_variables is deprecated.  Use tf.get_variable with a partitioner set, or tf.get_partitioned_variable_list, instead.
+.WARNING:tensorflow:create_partitioned_variables is deprecated.  Use tf.get_variable with a partitioner set, or tf.get_partitioned_variable_list, instead.
+WARNING:tensorflow:create_partitioned_variables is deprecated.  Use tf.get_variable with a partitioner set, or tf.get_partitioned_variable_list, instead.
+WARNING:tensorflow:create_partitioned_variables is deprecated.  Use tf.get_variable with a partitioner set, or tf.get_partitioned_variable_list, instead.
+WARNING:tensorflow:create_partitioned_variables is deprecated.  Use tf.get_variable with a partitioner set, or tf.get_partitioned_variable_list, instead.
+WARNING:tensorflow:create_partitioned_variables is deprecated.  Use tf.get_variable with a partitioner set, or tf.get_partitioned_variable_list, instead.
+WARNING:tensorflow:create_partitioned_variables is deprecated.  Use tf.get_variable with a partitioner set, or tf.get_partitioned_variable_list, instead.
+WARNING:tensorflow:create_partitioned_variables is deprecated.  Use tf.get_variable with a partitioner set, or tf.get_partitioned_variable_list, instead.
+WARNING:tensorflow:create_partitioned_variables is deprecated.  Use tf.get_variable with a partitioner set, or tf.get_partitioned_variable_list, instead.
+WARNING:tensorflow:create_partitioned_variables is deprecated.  Use tf.get_variable with a partitioner set, or tf.get_partitioned_variable_list, instead.
+.WARNING:tensorflow:create_partitioned_variables is deprecated.  Use tf.get_variable with a partitioner set, or tf.get_partitioned_variable_list, instead.
+.WARNING:tensorflow:create_partitioned_variables is deprecated.  Use tf.get_variable with a partitioner set, or tf.get_partitioned_variable_list, instead.
+WARNING:tensorflow:create_partitioned_variables is deprecated.  Use tf.get_variable with a partitioner set, or tf.get_partitioned_variable_list, instead.
+.WARNING:tensorflow:create_partitioned_variables is deprecated.  Use tf.get_variable with a partitioner set, or tf.get_partitioned_variable_list, instead.
+.WARNING:tensorflow:create_partitioned_variables is deprecated.  Use tf.get_variable with a partitioner set, or tf.get_partitioned_variable_list, instead.
+WARNING:tensorflow:create_partitioned_variables is deprecated.  Use tf.get_variable with a partitioner set, or tf.get_partitioned_variable_list, instead.
+WARNING:tensorflow:create_partitioned_variables is deprecated.  Use tf.get_variable with a partitioner set, or tf.get_partitioned_variable_list, instead.
+WARNING:tensorflow:create_partitioned_variables is deprecated.  Use tf.get_variable with a partitioner set, or tf.get_partitioned_variable_list, instead.
+WARNING:tensorflow:create_partitioned_variables is deprecated.  Use tf.get_variable with a partitioner set, or tf.get_partitioned_variable_list, instead.
+WARNING:tensorflow:create_partitioned_variables is deprecated.  Use tf.get_variable with a partitioner set, or tf.get_partitioned_variable_list, instead.
+WARNING:tensorflow:create_partitioned_variables is deprecated.  Use tf.get_variable with a partitioner set, or tf.get_partitioned_variable_list, instead.
+.WARNING:tensorflow:create_partitioned_variables is deprecated.  Use tf.get_variable with a partitioner set, or tf.get_partitioned_variable_list, instead.
+.....
+----------------------------------------------------------------------
+Ran 14 tests in 21.482s
+
+OK

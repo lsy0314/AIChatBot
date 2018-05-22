@@ -1,0 +1,14 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+.E tensorflow/core/client/tensor_c_api.cc:485] assertion failed: [More than one condition evaluated as True but exclusive=True.  Conditions: (Less_3:0, Less_4:0), Values:] [1 1]
+	 [[Node: case_3/Assert = Assert[T=[DT_STRING, DT_BOOL], summarize=2, _device="/job:localhost/replica:0/task:0/cpu:0"](case_3/Less, case_3/Assert/data_0, case_3/preds_c)]]
+/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/bin/tensorflow/python/kernel_tests/control_flow_ops_py_test.runfiles/tensorflow/python/ops/control_flow_ops.py:2255: DeprecationWarning: The 'warn' method is deprecated, use 'warning' instead
+  "not guaranteed.", name)
+WARNING:tensorflow:case: Provided dictionary of predicate/fn pairs, but exclusive=False.  Order of conditional tests is not guaranteed.
+......................E tensorflow/core/client/tensor_c_api.cc:485] Attempting to use uninitialized value Variable
+	 [[Node: _send_Variable_0 = _Send[T=DT_FLOAT, client_terminated=true, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/cpu:0", send_device_incarnation=-6811239797538787326, tensor_name="Variable:0", _device="/job:localhost/replica:0/task:0/cpu:0"](Variable)]]
+..................E tensorflow/core/client/tensor_c_api.cc:485] The tensor returned for Identity:0 was not valid.
+............./home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-py3-opt/bin/tensorflow/python/kernel_tests/control_flow_ops_py_test.runfiles/tensorflow/python/framework/ops.py:2320: DeprecationWarning: The 'warn' method is deprecated, use 'warning' instead
+  ret.device, colocation_op.device)
+WARNING:tensorflow:Tried to colocate gradients/while/Square_grad/mul/f_acc with an op while/Identity that had a different device: /device:GPU:0 vs /device:CPU:0. Ignoring colocation property.
+................

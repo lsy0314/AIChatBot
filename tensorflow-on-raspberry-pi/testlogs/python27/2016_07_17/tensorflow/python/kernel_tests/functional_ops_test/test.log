@@ -1,0 +1,153 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+-----------------------------------------------------------------------------
+............E tensorflow/core/client/tensor_c_api.cc:485] TensorArray dtype is int64 but Op is trying to write dtype int32.
+	 [[Node: map/while/TensorArrayWrite = TensorArrayWrite[T=DT_INT32, _class=["loc:@map/TensorArray_6"], _device="/job:localhost/replica:0/task:0/cpu:0"](map/while/TensorArrayWrite/RefEnter, map/while/Identity, map/while/add, map/while/Identity_1)]]
+E....E tensorflow/core/client/tensor_c_api.cc:485] TensorArray dtype is int64 but Op is trying to write dtype int32.
+	 [[Node: map/while/TensorArrayWrite_1 = TensorArrayWrite[T=DT_INT32, _class=["loc:@map/TensorArray_3"], _device="/job:localhost/replica:0/task:0/cpu:0"](map/while/TensorArrayWrite_1/RefEnter, map/while/Identity, map/while/mul_1, map/while/Identity_2)]]
+E.............
+======================================================================
+ERROR: testMap_MultiInputSingleOutput (__main__.FunctionalOpsTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/kernel_tests/functional_ops_test.py", line 188, in testMap_MultiInputSingleOutput
+    received = r.eval()
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/framework/ops.py", line 556, in eval
+    return _eval_using_default_session(self, feed_dict, self.graph, session)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/framework/ops.py", line 3637, in _eval_using_default_session
+    return session.run(tensors, feed_dict)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/client/session.py", line 382, in run
+    run_metadata_ptr)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/client/session.py", line 655, in _run
+    feed_dict_string, options, run_metadata)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/client/session.py", line 723, in _do_run
+    target_list, options, run_metadata)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/client/session.py", line 743, in _do_call
+    raise type(e)(node_def, op, message)
+InvalidArgumentError: TensorArray dtype is int64 but Op is trying to write dtype int32.
+	 [[Node: map/while/TensorArrayWrite = TensorArrayWrite[T=DT_INT32, _class=["loc:@map/TensorArray_6"], _device="/job:localhost/replica:0/task:0/cpu:0"](map/while/TensorArrayWrite/RefEnter, map/while/Identity, map/while/add, map/while/Identity_1)]]
+Caused by op u'map/while/TensorArrayWrite', defined at:
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/kernel_tests/functional_ops_test.py", line 371, in <module>
+    tf.test.main()
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/platform/test.py", line 87, in main
+    return googletest.main()
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/platform/googletest.py", line 84, in main
+    benchmark.benchmarks_main(true_main=g_main)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/platform/benchmark.py", line 301, in benchmarks_main
+    true_main()
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/platform/googletest.py", line 58, in g_main
+    return unittest_main(*args, **kwargs)
+  File "/usr/lib/python2.7/unittest/main.py", line 95, in __init__
+    self.runTests()
+  File "/usr/lib/python2.7/unittest/main.py", line 232, in runTests
+    self.result = testRunner.run(self.test)
+  File "/usr/lib/python2.7/unittest/runner.py", line 151, in run
+    test(result)
+  File "/usr/lib/python2.7/unittest/suite.py", line 70, in __call__
+    return self.run(*args, **kwds)
+  File "/usr/lib/python2.7/unittest/suite.py", line 108, in run
+    test(result)
+  File "/usr/lib/python2.7/unittest/suite.py", line 70, in __call__
+    return self.run(*args, **kwds)
+  File "/usr/lib/python2.7/unittest/suite.py", line 108, in run
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 393, in __call__
+    return self.run(*args, **kwds)
+  File "/usr/lib/python2.7/unittest/case.py", line 329, in run
+    testMethod()
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/kernel_tests/functional_ops_test.py", line 186, in testMap_MultiInputSingleOutput
+    dtype=tf.int64)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/ops/functional_ops.py", line 366, in map_fn
+    swap_memory=swap_memory)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/ops/control_flow_ops.py", line 1971, in while_loop
+    result = context.BuildLoop(cond, body, loop_vars)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/ops/control_flow_ops.py", line 1860, in BuildLoop
+    pred, body, original_loop_vars, loop_vars)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/ops/control_flow_ops.py", line 1810, in _BuildLoop
+    body_result = body(*packed_vars_for_body)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/ops/functional_ops.py", line 359, in compute
+    tas = [ta.write(i, value) for (ta, value) in zip(tas, flat_fn_values)]
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/ops/tensor_array_ops.py", line 214, in write
+    name=name)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/ops/gen_data_flow_ops.py", line 1456, in _tensor_array_write
+    name=name)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/framework/op_def_library.py", line 703, in apply_op
+    op_def=op_def)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/framework/ops.py", line 2298, in create_op
+    original_op=self._default_original_op, op_def=op_def)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/framework/ops.py", line 1232, in __init__
+    self._traceback = _extract_stack()
+
+
+======================================================================
+ERROR: testMap_SingleInputMultiOutput (__main__.FunctionalOpsTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/kernel_tests/functional_ops_test.py", line 169, in testMap_SingleInputMultiOutput
+    received = sess.run(r)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/client/session.py", line 382, in run
+    run_metadata_ptr)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/client/session.py", line 655, in _run
+    feed_dict_string, options, run_metadata)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/client/session.py", line 723, in _do_run
+    target_list, options, run_metadata)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/client/session.py", line 743, in _do_call
+    raise type(e)(node_def, op, message)
+InvalidArgumentError: TensorArray dtype is int64 but Op is trying to write dtype int32.
+	 [[Node: map/while/TensorArrayWrite_1 = TensorArrayWrite[T=DT_INT32, _class=["loc:@map/TensorArray_3"], _device="/job:localhost/replica:0/task:0/cpu:0"](map/while/TensorArrayWrite_1/RefEnter, map/while/Identity, map/while/mul_1, map/while/Identity_2)]]
+Caused by op u'map/while/TensorArrayWrite_1', defined at:
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/kernel_tests/functional_ops_test.py", line 371, in <module>
+    tf.test.main()
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/platform/test.py", line 87, in main
+    return googletest.main()
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/platform/googletest.py", line 84, in main
+    benchmark.benchmarks_main(true_main=g_main)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/platform/benchmark.py", line 301, in benchmarks_main
+    true_main()
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/platform/googletest.py", line 58, in g_main
+    return unittest_main(*args, **kwargs)
+  File "/usr/lib/python2.7/unittest/main.py", line 95, in __init__
+    self.runTests()
+  File "/usr/lib/python2.7/unittest/main.py", line 232, in runTests
+    self.result = testRunner.run(self.test)
+  File "/usr/lib/python2.7/unittest/runner.py", line 151, in run
+    test(result)
+  File "/usr/lib/python2.7/unittest/suite.py", line 70, in __call__
+    return self.run(*args, **kwds)
+  File "/usr/lib/python2.7/unittest/suite.py", line 108, in run
+    test(result)
+  File "/usr/lib/python2.7/unittest/suite.py", line 70, in __call__
+    return self.run(*args, **kwds)
+  File "/usr/lib/python2.7/unittest/suite.py", line 108, in run
+    test(result)
+  File "/usr/lib/python2.7/unittest/case.py", line 393, in __call__
+    return self.run(*args, **kwds)
+  File "/usr/lib/python2.7/unittest/case.py", line 329, in run
+    testMethod()
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/kernel_tests/functional_ops_test.py", line 165, in testMap_SingleInputMultiOutput
+    dtype=(tf.int64, tf.int64))
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/ops/functional_ops.py", line 366, in map_fn
+    swap_memory=swap_memory)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/ops/control_flow_ops.py", line 1971, in while_loop
+    result = context.BuildLoop(cond, body, loop_vars)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/ops/control_flow_ops.py", line 1860, in BuildLoop
+    pred, body, original_loop_vars, loop_vars)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/ops/control_flow_ops.py", line 1810, in _BuildLoop
+    body_result = body(*packed_vars_for_body)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/ops/functional_ops.py", line 359, in compute
+    tas = [ta.write(i, value) for (ta, value) in zip(tas, flat_fn_values)]
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/ops/tensor_array_ops.py", line 214, in write
+    name=name)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/ops/gen_data_flow_ops.py", line 1456, in _tensor_array_write
+    name=name)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/framework/op_def_library.py", line 703, in apply_op
+    op_def=op_def)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/framework/ops.py", line 2298, in create_op
+    original_op=self._default_original_op, op_def=op_def)
+  File "/home/pi/.cache/bazel/_bazel_pi/4770c5ca1786316d370c900c0b614a6d/tensorflow/bazel-out/local_linux-opt/bin/tensorflow/python/kernel_tests/functional_ops_test.runfiles/tensorflow/python/framework/ops.py", line 1232, in __init__
+    self._traceback = _extract_stack()
+
+
+----------------------------------------------------------------------
+Ran 31 tests in 19.188s
+
+FAILED (errors=2)
