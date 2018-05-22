@@ -7,7 +7,9 @@ Users talk to chatbots when they are bored. Through it, it is going to create ch
 # Design
 The following figure is the operation structure of artificial intelligence chatbot. First, prepare meaningful data from movie subtitle files. Then we use Google's Tensorflow to prepare for learning. When learning, we use an artificial intelligence network model called RNN. At this time, we can choose CPU or GPU. GPU supports much faster speeds than CPU. The more the more training machine learns, the more he can create a smarter conversation ability like a person.
 
-<img src=https://github.com/Limsuyoun/DeepLearningChatBot/blob/master/image/DDSADAS.JPG border=0 width=350 height=250> </img>
+<img src=https://github.com/Limsuyoun/DeepLearningChatBot/blob/master/image/design.png border=0 width=600 height=400> </img>
+<br>
+Opertion structure to develop artificial intelligence chat bot
 
 # Video
 <img src=https://github.com/Limsuyoun/DeepLearningChatBot/blob/master/image/demo..JPG border=0 width=350 height=250> </img>
